@@ -131,4 +131,4 @@ C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKas
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\TriaYazarKasaRestApiWebApi.pdb
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\TriaYazarKasaRestApiWebApi.genruntimeconfig.cache
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\ref\TriaYazarKasaRestApiWebApi.dll
-C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\TriaYazarKasaRestApiWebApi.sourcelink.json

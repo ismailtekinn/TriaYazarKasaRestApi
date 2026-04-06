@@ -256,16 +256,25 @@ namespace TriaYazarKasaRestApi.Business.Adapters
             _callbackWaiter = new(TaskCreationOptions.RunContinuationsAsynchronously);
             _communication.sendBasket(JsonSerializer.Serialize(payload));
 
-            var callbackJson = await WaitCallbackAsync();
+            string callbackJson;
+            try
+            {
+                callbackJson = await WaitCallbackAsync();
+            }
+            catch (TaskCanceledException)
+            {
+                return PosOperationResult.Fail("Beko ilk callback verisi zamaninda donmedi.");
+            }
+
             var receiptResult = MapReceiptResult(callbackJson);
 
             if (receiptResult == null)
                 return PosOperationResult.Fail("Beko callback verisi cozumlenemedi.");
 
-            if (receiptResult.Status != 0)
+            if (receiptResult.Status != 0 && !HasPaymentProgress(receiptResult))
                 return PosOperationResult.Fail(receiptResult.Message ?? "Beko satis islemi basarisiz.");
 
-            return PosOperationResult.Ok("Satis tamamlandi.", receiptResult);
+            return PosOperationResult.Ok("Sepet Beko cihaza gonderildi.", receiptResult);
         }
 
 
@@ -416,6 +425,10 @@ namespace TriaYazarKasaRestApi.Business.Adapters
                 }).ToList() ?? new List<BekoReceiptPaymentDto>()
             };
         }
+
+        private static bool HasPaymentProgress(BekoReceiptResultDto receiptResult)
+            => receiptResult.Payments.Count > 0;
+
         private sealed class BekoReceiptInfo
         {
             public string? basketID { get; set; }
