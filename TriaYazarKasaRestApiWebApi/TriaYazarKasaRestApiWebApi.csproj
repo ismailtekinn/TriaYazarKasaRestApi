@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.12" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference
+      Include="..\TriaYazarKasaRestApi.Business\TriaYazarKasaRestApi.Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="IntegrationHub">
+      <HintPath>..\TriaYazarKasaRestApi.Business\Libraries\Beko\IntegrationHub.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- <Content Include="..\TriaYazarKasaRestApi.Business\Libraries\Beko\IntegrationHub.dll"
+      Link="IntegrationHub.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content> -->
+    <Content Include="..\TriaYazarKasaRestApi.Business\Libraries\Beko\IntegrationHubCpp.dll"
+      Link="IntegrationHubCpp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\TriaYazarKasaRestApi.Business\Libraries\Beko\libusb-1.0.dll"
+      Link="libusb-1.0.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Certificates\Kurumsal-s1.crt" Link="Certificates\Kurumsal-s1.crt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Certificates\OKC-S1.cer" Link="Certificates\OKC-S1.cer">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Certificates\OKC-S1-SIL.crl" Link="Certificates\OKC-S1-SIL.crl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

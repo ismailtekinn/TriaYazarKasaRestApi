@@ -1,0 +1,1509 @@
+----- Log started at 2026-04-04 14:52:44 ------
+Token Integration Hub Version: 2.1.0
+-------------------------------------------------
+[2026-04-04 14:52:44] [I] ConnectionWrapper: Connection Started
+[2026-04-04 14:52:44] [I] ConnectionAndroid: Connected Device Count : 9
+[2026-04-04 14:52:44] [I] ConnectionAndroid: VID: 3034 PID: 33107
+[2026-04-04 14:52:44] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 14:52:44] [I] ConnectionAndroid: VID: 2522 PID: 8808
+[2026-04-04 14:52:44] [I] ConnectionAndroid: Handle Part Called
+[2026-04-04 14:52:44] [I] ConnectionAndroid: Sent getProtocol
+[2026-04-04 14:52:44] [I] ConnectionAndroid: LibUSB Error: Entity not found
+[2026-04-04 14:52:44] [I] ConnectionAndroid: VID: 7119 PID: 11165
+[2026-04-04 14:52:44] [I] ConnectionAndroid: LibUSB Error: Entity not found
+[2026-04-04 14:52:44] [I] ConnectionAndroid: VID: 32902 PID: 31328
+[2026-04-04 14:52:44] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 14:52:44] [I] ConnectionAndroid: VID: 1507 PID: 1552
+[2026-04-04 14:52:44] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 14:52:44] [I] ConnectionAndroid: VID: 1507 PID: 1574
+[2026-04-04 14:52:44] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 14:52:44] [I] ConnectionAndroid: VID: 6353 PID: 20193
+[2026-04-04 14:52:44] [I] ConnectionAndroid: Handle Part Called
+[2026-04-04 14:52:44] [I] ConnectionAndroid: Sent getProtocol
+[2026-04-04 14:52:44] [I] ConnectionAndroid: Version Code Device: 2
+[2026-04-04 14:52:45] [I] ConnectionAndroid: Accessory Identification Sent
+[2026-04-04 14:52:45] [I] ConnectionAndroid: Attempted To Put Device Into Accessory Mode
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Android Found:
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Interface 0. altSetting 0. Num of endpoints: 2
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Endpoint type 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk
+[2026-04-04 14:52:46] [I] ConnectionAndroid: IN
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Address 129
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Endpoint type 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk
+[2026-04-04 14:52:46] [I] ConnectionAndroid: OUT
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Address 1
+[2026-04-04 14:52:46] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Interface Claimed, Ready To Transfer Data
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Device Added With VID: 3034 PID: 33107
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Device Added With VID: 2522 PID: 8808
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Device Added With VID: 7119 PID: 11165
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Device Added With VID: 32902 PID: 31328
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Device Added With VID: 6353 PID: 11520
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Device Added With VID: 1507 PID: 1552
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Device Added With VID: 1507 PID: 1574
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Device Added With VID: 1133 PID: 50504
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Device Added With VID: 32903 PID: 38
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Claim interface result: 0
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Listening in port
+[2026-04-04 14:52:46] [I] Connection: Sending Hello
+[2026-04-04 14:52:46] [I] Connection: Verification key: asdfg
+[2026-04-04 14:52:46] [I] Connection: Request Type: 4 Enqueued 72 bytes to write.
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Device Initialized
+[2026-04-04 14:52:46] [I] ConnectionWrapper: Connection Android Object Created
+[2026-04-04 14:52:46] [I] ConnectionWrapper: Connection Linux Object Created
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:52:46] [I] ConnectionWrapper: setSerialInCallback called
+[2026-04-04 14:52:46] [I] ConnectionWrapper: Setting serialInCallback for device index: 0
+[2026-04-04 14:52:46] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 14:52:46] [I] ConnectionWrapper: Setting serialInCallback for device index: 1
+[2026-04-04 14:52:46] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 14:52:46] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] ConnectionWrapper: setDeviceStateCallback called
+[2026-04-04 14:52:46] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 0
+[2026-04-04 14:52:46] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 14:52:46] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 1
+[2026-04-04 14:52:46] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 14:52:46] [I] ConnectionAndroid: 72 Bytes Written
+[2026-04-04 14:52:46] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:52:46] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: CURRENT KEY01234567890123456789012345678901
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] TLVProtocol: Type of chunk: 5 - Length of chunk: 1264 - Value of chunk: {"certificate":"-----BEGIN CERTIFICATE-----\nMIIEAzCCA4igAwIBAgIHAMJbSQEg\/TAKBggqhkjOPQQDAzCBzTELMAkGA1UEBhMC\nVFIxGDAWBgNVBAcMD0dlYnplIC0gS29jYWVsaTFHMEUGA1UECgw+VMO8cmtpeWUg\nQmlsaW1zZWwgdmUgVGVrbm9sb2ppayBBcmHFn3TEsXJtYSBLdXJ1bXUgLSBUw5xC\nxLBUQUsxEDAOBgNVBAsMB0LEsExHRU0xSTBHBgNVBAMMQE9kZW1lIEtheWRlZGlj\naSBDaWhheiBFbGVrdHJvbmlrIFNlcnRpZmlrYSBIaXptZXQgU2FnbGF5aWNpc2kt\nUzIwHhcNMjQwMTA0MDU1MjI4WhcNMzUwMTAxMDU1MjI4WjA0MQswCQYDVQQGEwJU\nUjEOMAwGA1UECgwFVE9LRU4xFTATBgNVBAUTDEFWMDAwMDAxNzg5MzB2MBAGByqG\nSM49AgEGBSuBBAAiA2IABLxffbjxZ\/NMi\/xWZSQON3jLB8Bt8\/qX6mMOcvjJD+t0\n8TBzBAoqQxL+KREib39tue8EySAm418AQpWPJWlTa3N4FyiBTgpAWQYPHZVrIse9\nCzwLNx7Bg2K8whSd9ZBWl6OCAcwwggHIMB8GA1UdIwQYMBaAFJ9xpYFJAx9+7iB9\nSY7Ya8c+ryjyMB0GA1UdDgQWBBRbCd5pXenDmTbSfk0hUOnUVDBcwzAOBgNVHQ8B\nAf8EBAMCBaAwgcYGA1UdIASBvjCBuzCBuAYLYIYYAQIBAQUHAQIwgagwKgYIKwYB\nBQUHAgEWHmh0dHA6Ly9kZXBvLmthbXVzbS5nb3YudHIvaWxrZTB6BggrBgEFBQcC\nAjBuDGxCdSBzZXJ0aWZpa2EgaWxlIGlsZ2lsaSBzZXJ0aWZpa2EgdXlndWxhbWEg\nZXNhc2xhcsSxbsSxIG9rdW1hayBpw6dpbiBiZWxpcnRpbGVuIHdlYiBzaXRlc2lu\naSB6aXlhcmV0IGVkaW5pei4wCQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcD\nAQYIKwYBBQUHAwIwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2RlcG8ua2FtdXNt\nLmdvdi50ci9va2MvT0tDLVMyLVNJTC5jcmwwRAYIKwYBBQUHAQEEODA2MDQGCCsG\nAQUFBzAChihodHRwOi8vZGVwby5rYW11c20uZ292LnRyL29rYy9PS0MtUzIuY2Vy\nMAoGCCqGSM49BAMDA2kAMGYCMQCY0eOucYODzz8NRrkU3Rk4iXts69o3dSAYX\/UV\nxQ+BZsgIQr3xwTQvSrG6ZP66BAMCMQDpPESoNzNSwpm0gJngiS7LBOybCBtxkeiZ\n2iowkc6G\/pnM3rvpaN+w2fOjMiAOyUU=\n-----END CERTIFICATE-----\n","sign":"d6c5cec29dc53cedeae1751c38509171500ab87e6727cd8f9a9a30390f245660462cde45828d262f45339bfd5c19bf31bb552b5d060ac2381aa35d454418b72b316d727060b979b6a7616c07c27d86029c643c90c69828525d5b298167f6f6c0"} - Control of chunk: 27621
+[2026-04-04 14:52:46] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 49
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 5
+[2026-04-04 14:52:46] [I] Connection: CERTIFICATE Data Received
+[2026-04-04 14:52:46] [I] Connection: CERTIFICATE Data: {"certificate":"-----BEGIN CERTIFICATE-----\nMIIEAzCCA4igAwIBAgIHAMJbSQEg\/TAKBggqhkjOPQQDAzCBzTELMAkGA1UEBhMC\nVFIxGDAWBgNVBAcMD0dlYnplIC0gS29jYWVsaTFHMEUGA1UECgw+VMO8cmtpeWUg\nQmlsaW1zZWwgdmUgVGVrbm9sb2ppayBBcmHFn3TEsXJtYSBLdXJ1bXUgLSBUw5xC\nxLBUQUsxEDAOBgNVBAsMB0LEsExHRU0xSTBHBgNVBAMMQE9kZW1lIEtheWRlZGlj\naSBDaWhheiBFbGVrdHJvbmlrIFNlcnRpZmlrYSBIaXptZXQgU2FnbGF5aWNpc2kt\nUzIwHhcNMjQwMTA0MDU1MjI4WhcNMzUwMTAxMDU1MjI4WjA0MQswCQYDVQQGEwJU\nUjEOMAwGA1UECgwFVE9LRU4xFTATBgNVBAUTDEFWMDAwMDAxNzg5MzB2MBAGByqG\nSM49AgEGBSuBBAAiA2IABLxffbjxZ\/NMi\/xWZSQON3jLB8Bt8\/qX6mMOcvjJD+t0\n8TBzBAoqQxL+KREib39tue8EySAm418AQpWPJWlTa3N4FyiBTgpAWQYPHZVrIse9\nCzwLNx7Bg2K8whSd9ZBWl6OCAcwwggHIMB8GA1UdIwQYMBaAFJ9xpYFJAx9+7iB9\nSY7Ya8c+ryjyMB0GA1UdDgQWBBRbCd5pXenDmTbSfk0hUOnUVDBcwzAOBgNVHQ8B\nAf8EBAMCBaAwgcYGA1UdIASBvjCBuzCBuAYLYIYYAQIBAQUHAQIwgagwKgYIKwYB\nBQUHAgEWHmh0dHA6Ly9kZXBvLmthbXVzbS5nb3YudHIvaWxrZTB6BggrBgEFBQcC\nAjBuDGxCdSBzZXJ0aWZpa2EgaWxlIGlsZ2lsaSBzZXJ0aWZpa2EgdXlndWxhbWEg\nZXNhc2xhcsSxbsSxIG9rdW1hayBpw6dpbiBiZWxpcnRpbGVuIHdlYiBzaXRlc2lu\naSB6aXlhcmV0IGVkaW5pei4wCQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcD\nAQYIKwYBBQUHAwIwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2RlcG8ua2FtdXNt\nLmdvdi50ci9va2MvT0tDLVMyLVNJTC5jcmwwRAYIKwYBBQUHAQEEODA2MDQGCCsG\nAQUFBzAChihodHRwOi8vZGVwby5rYW11c20uZ292LnRyL29rYy9PS0MtUzIuY2Vy\nMAoGCCqGSM49BAMDA2kAMGYCMQCY0eOucYODzz8NRrkU3Rk4iXts69o3dSAYX\/UV\nxQ+BZsgIQr3xwTQvSrG6ZP66BAMCMQDpPESoNzNSwpm0gJngiS7LBOybCBtxkeiZ\n2iowkc6G\/pnM3rvpaN+w2fOjMiAOyUU=\n-----END CERTIFICATE-----\n","sign":"d6c5cec29dc53cedeae1751c38509171500ab87e6727cd8f9a9a30390f245660462cde45828d262f45339bfd5c19bf31bb552b5d060ac2381aa35d454418b72b316d727060b979b6a7616c07c27d86029c643c90c69828525d5b298167f6f6c0"}
+[2026-04-04 14:52:46] [I] HelperFunctions: Certificate verifying process started
+[2026-04-04 14:52:46] [I] HelperFunctions: Trying to verify certificate
+[2026-04-04 14:52:46] [I] HelperFunctions: -------------------
+[2026-04-04 14:52:46] [I] BIO_Output: Version: 3
+
+[2026-04-04 14:52:46] [I] BIO_Output: Serial: c25b490120fd
+
+[2026-04-04 14:52:46] [I] X509_Info: Issuer: /C=TR/L=Gebze - Kocaeli/O=T\xC3\xBCrkiye Bilimsel ve Teknolojik Ara\xC5\x9Ft\xC4\xB1rma Kurumu - T\xC3\x9CB\xC4\xB0TAK/OU=B\xC4\xB0LGEM/CN=Odeme Kaydedici Cihaz Elektronik Sertifika Hizmet Saglayicisi-S2
+[2026-04-04 14:52:46] [I] X509_Info: Valid From: Jan  4 05:52:28 2024 GMT
+[2026-04-04 14:52:46] [I] X509_Info: Valid Until: Jan  4 05:52:28 2024 GMTJan  1 05:52:28 2035 GMT
+[2026-04-04 14:52:46] [I] X509_Info: Subject: /C=TR/O=TOKEN/serialNumber=AV0000017893
+[2026-04-04 14:52:46] [I] X509_Info: Public Key: Public-Key: (384 bit)
+pub:
+    04:bc:5f:7d:b8:f1:67:f3:4c:8b:fc:56:65:24:0e:
+    37:78:cb:07:c0:6d:f3:fa:97:ea:63:0e:72:f8:c9:
+    0f:eb:74:f1:30:73:04:0a:2a:43:12:fe:29:11:22:
+    6f:7f:6d:b9:ef:04:c9:20:26:e3:5f:00:42:95:8f:
+    25:69:53:6b:73:78:17:28:81:4e:0a:40:59:06:0f:
+    1d:95:6b:22:c7:bd:0b:3c:0b:37:1e:c1:83:62:bc:
+    c2:14:9d:f5:90:56:97
+ASN1 OID: secp384r1
+NIST CURVE: P-384
+
+[2026-04-04 14:52:46] [I] HelperFunctions: -------------------
+[2026-04-04 14:52:46] [I] HelperFunctions: device identifier 0
+[2026-04-04 14:52:46] [I] HelperFunctions: Got certificate public key
+[2026-04-04 14:52:46] [I] HelperFunctions: Sign verificator initialized
+[2026-04-04 14:52:46] [I] HelperFunctions: Certificate content verificator initialized
+[2026-04-04 14:52:46] [I] HelperFunctions: Verification result: 1
+[2026-04-04 14:52:46] [I] HelperFunctions: Signature length: 104
+[2026-04-04 14:52:46] [I] HelperFunctions: Certificate verification successful
+[2026-04-04 14:52:46] [I] Connection: Certificate Verified
+[2026-04-04 14:52:46] [I] Connection: Sharing key
+[2026-04-04 14:52:46] [I] Connection: Request Type: 6 Enqueued 104 bytes to write.
+[2026-04-04 14:52:46] [I] Connection: Encryption Key Sent: 85601719183645892053002866910933
+[2026-04-04 14:52:46] [I] Connection: Key Shared After Certificate
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 50
+[2026-04-04 14:52:46] [I] Connection: serialInQueue Popped
+[2026-04-04 14:52:46] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:52:46] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: CURRENT KEY85601719183645892053002866910933
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:52:46] [E] AES: 083D0000:error:1C800064:Provider routines:ossl_cipher_unpadblock:bad decrypt:providers\implementations\ciphers\ciphercommon_block.c:112:
+
+[2026-04-04 14:52:46] [I] Connection: Sending Error: Not ending or starting with a valid TLV tag. Invalid or corrupted data.
+[2026-04-04 14:52:46] [I] ConnectionAndroid: 104 Bytes Written
+[2026-04-04 14:52:46] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:52:46] [I] Connection: Request Type: 60 Enqueued 136 bytes to write.
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Not ending or starting with a valid TLV tag. Invalid or corrupted data.
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:52:46] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: CURRENT KEY85601719183645892053002866910933
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] TLVProtocol: Type of chunk: 6 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 53696
+[2026-04-04 14:52:46] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:52:46] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 49
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 6
+[2026-04-04 14:52:46] [I] Connection: SHARE_KEY Data Received
+[2026-04-04 14:52:46] [I] Connection: SHARE_KEY Data Received And Data Is OK
+[2026-04-04 14:52:46] [I] Connection: DEVICE_INFO Request Sent
+[2026-04-04 14:52:46] [I] Connection: Request Type: 0 Enqueued 120 bytes to write.
+[2026-04-04 14:52:46] [I] Connection: ConnectionState is 1 (Active)
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 50
+[2026-04-04 14:52:46] [I] Connection: serialInQueue Popped
+[2026-04-04 14:52:46] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:52:46] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: CURRENT KEY85601719183645892053002866910933
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: 120 Bytes Written
+[2026-04-04 14:52:46] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:52:46] [I] TLVProtocol: Type of chunk: 6 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 53696
+[2026-04-04 14:52:46] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 49
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 6
+[2026-04-04 14:52:46] [I] Connection: SHARE_KEY Data Received
+[2026-04-04 14:52:46] [I] Connection: SHARE_KEY Data Received And Data Is OK
+[2026-04-04 14:52:46] [I] Connection: DEVICE_INFO Request Sent
+[2026-04-04 14:52:46] [I] Connection: Request Type: 0 Enqueued 120 bytes to write.
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:52:46] [I] Connection: ConnectionState is 1 (Active)
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 50
+[2026-04-04 14:52:46] [I] Connection: serialInQueue Popped
+[2026-04-04 14:52:46] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:52:46] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: CURRENT KEY85601719183645892053002866910933
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 32 - Value of chunk: AV0000017893 - Control of chunk: 42201
+[2026-04-04 14:52:46] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 49
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 0
+[2026-04-04 14:52:46] [I] Connection: Device Info: AV0000017893
+[2026-04-04 14:52:46] [I] Connection: Device State Callback Invoking
+[2026-04-04 14:52:46] [I] Connection: Device State Callback Invoked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:52:46] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: CURRENT KEY85601719183645892053002866910933
+[2026-04-04 14:52:46] [I] ConnectionAndroid: 120 Bytes Written
+[2026-04-04 14:52:46] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:52:46] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 3510
+[2026-04-04 14:52:46] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:52:46] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Request Type: 2 Enqueued 72 bytes to write.
+[2026-04-04 14:52:46] [I] Connection: FISCAL_INFO Request Sent
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:52:46] [I] Connection: Device Info Could Not Be Sent
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 50
+[2026-04-04 14:52:46] [I] Connection: serialInQueue Popped
+[2026-04-04 14:52:46] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 49
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 0
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 50
+[2026-04-04 14:52:46] [I] Connection: serialInQueue Popped
+[2026-04-04 14:52:46] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:52:46] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: CURRENT KEY85601719183645892053002866910933
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 32 - Value of chunk: AV0000017893 - Control of chunk: 42201
+[2026-04-04 14:52:46] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 49
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 0
+[2026-04-04 14:52:46] [I] Connection: Device Info: AV0000017893
+[2026-04-04 14:52:46] [I] Connection: Device State Callback Invoking
+[2026-04-04 14:52:46] [I] Connection: Device State Callback Invoked
+[2026-04-04 14:52:46] [I] Connection: Device Info Could Not Be Sent
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 50
+[2026-04-04 14:52:46] [I] Connection: serialInQueue Popped
+[2026-04-04 14:52:46] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:52:46] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: CURRENT KEY85601719183645892053002866910933
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 3510
+[2026-04-04 14:52:46] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:52:46] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 49
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 0
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 50
+[2026-04-04 14:52:46] [I] Connection: serialInQueue Popped
+[2026-04-04 14:52:46] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:52:46] [I] ConnectionAndroid: 72 Bytes Written
+[2026-04-04 14:52:46] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:52:46] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: CURRENT KEY85601719183645892053002866910933
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] TLVProtocol: Type of chunk: 2 - Length of chunk: 400 - Value of chunk: {"businessMode":0,"pluCount":5,"plus":[{"barcode":"123456789001","name":"ETI GOFRET","pluNo":1,"price":500,"sectionNo":1,"status":1,"taxPercent":2000,"type":0,"unit":"","vatID":1},{"barcode":"123456789002","name":"ALGIDA MAGNUM","pluNo":2,"price":2500,"sectionNo":1,"status":1,"taxPercent":2000,"type":0,"unit":"","vatID":1},{"barcode":"123456789003","name":"ULUDAG LIMONATA","pluNo":3,"price":2500,"sectionNo":4,"status":1,"taxPercent":0,"type":0,"unit":"","vatID":1},{"barcode":"123456789008","name":"FUSE TEA LIMON","pluNo":4,"price":3000,"sectionNo":4,"status":1,"taxPercent":0,"type":0,"unit":"","vatID":1},{"barcode":"2525255255","name":"parol","pluNo":5,"price":2552,"sectionNo":2,"status":1,"taxPercent":1000,"type":0,"unit":"Adet","vatID":3}],"receiptLimit":525000,"sectionCount":7,"sections":[{"limit":0,"name":"KDV %20","price":100,"sectionNo":1,"status":1,"taxPercent":2000,"type":0},{"limit":0,"name":"KDV %10","price":200,"sectionNo":2,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"KDV  %1","price":300,"sectionNo":3,"status":1,"taxPercent":100,"type":0},{"limit":0,"name":"KDV %0","price":400,"sectionNo":4,"status":1,"taxPercent":0,"type":0},{"limit":0,"name":"KATILIM PAYI","price":500,"sectionNo":5,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"FÝYAT FARKI","price":600,"sectionNo":6,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"POÞET","price":0,"sectionNo":7,"status":1,"taxPercent":2000,"type":0}]} - Control of chunk: 39377
+[2026-04-04 14:52:46] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 49
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 2
+[2026-04-04 14:52:46] [I] Connection: FISCAL_INFO Data Received
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 50
+[2026-04-04 14:52:46] [I] Connection: serialInQueue Popped
+[2026-04-04 14:52:46] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:52:46] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:52:46] [I] ConnectionAndroid: CURRENT KEY85601719183645892053002866910933
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:52:46] [I] TLVProtocol: Type of chunk: 2 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 46715
+[2026-04-04 14:52:46] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:52:46] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:52:46] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 49
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 2
+[2026-04-04 14:52:46] [I] Connection: Received Data Type: 50
+[2026-04-04 14:52:46] [I] Connection: serialInQueue Popped
+[2026-04-04 14:52:46] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:52:46] [I] Connection: Serial In Mutex Locked
+----- Log started at 2026-04-04 14:53:34 ------
+[2026-04-04 14:53:34] [I] ConnectionWrapper: createCommunication calledToken Integration Hub Version: 2.1.0
+
+-------------------------------------------------
+[2026-04-04 14:53:34] [I] ConnectionWrapper: Company Name: TOKEN FINTECH
+[2026-04-04 14:53:34] [I] ConnectionWrapper: Connection Started
+[2026-04-04 14:53:34] [I] ConnectionAndroid: Connected Device Count : 9
+[2026-04-04 14:53:34] [I] ConnectionAndroid: VID: 3034 PID: 33107
+[2026-04-04 14:53:34] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 14:53:34] [I] ConnectionAndroid: VID: 2522 PID: 8808
+[2026-04-04 14:53:34] [I] ConnectionAndroid: Handle Part Called
+[2026-04-04 14:53:34] [I] ConnectionAndroid: Sent getProtocol
+[2026-04-04 14:53:34] [I] ConnectionAndroid: LibUSB Error: Entity not found
+[2026-04-04 14:53:34] [I] ConnectionAndroid: VID: 7119 PID: 11165
+[2026-04-04 14:53:34] [I] ConnectionAndroid: LibUSB Error: Entity not found
+[2026-04-04 14:53:34] [I] ConnectionAndroid: VID: 32902 PID: 31328
+[2026-04-04 14:53:34] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 14:53:34] [I] ConnectionAndroid: VID: 6353 PID: 11520
+[2026-04-04 14:53:34] [I] ConnectionAndroid: Sent getProtocol
+[2026-04-04 14:53:34] [I] ConnectionAndroid: Version Code Device: 2
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Accessory Identification Sent
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Android Found:
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Interface 0. altSetting 0. Num of endpoints: 2
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Endpoint type 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk
+[2026-04-04 14:53:35] [I] ConnectionAndroid: IN
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Address 129
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Endpoint type 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk
+[2026-04-04 14:53:35] [I] ConnectionAndroid: OUT
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Address 1
+[2026-04-04 14:53:35] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Interface Claimed, Ready To Transfer Data
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Device Added With VID: 3034 PID: 33107
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Device Added With VID: 2522 PID: 8808
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Device Added With VID: 7119 PID: 11165
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Device Added With VID: 32902 PID: 31328
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Device Added With VID: 6353 PID: 11520
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Device Added With VID: 1507 PID: 1552
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Device Added With VID: 1507 PID: 1574
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Device Added With VID: 1133 PID: 50504
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Device Added With VID: 32903 PID: 38
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Claim interface result: 0
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Listening in port
+[2026-04-04 14:53:35] [I] Connection: Sending Hello
+[2026-04-04 14:53:35] [I] Connection: Verification key: asdfg
+[2026-04-04 14:53:35] [I] Connection: Request Type: 4 Enqueued 72 bytes to write.
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Device Initialized
+[2026-04-04 14:53:35] [I] ConnectionWrapper: Connection Android Object Created
+[2026-04-04 14:53:35] [I] ConnectionWrapper: Connection Linux Object Created
+[2026-04-04 14:53:35] [I] ConnectionAndroid: 72 Bytes Written
+[2026-04-04 14:53:35] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] ConnectionWrapper: setSerialInCallback called
+[2026-04-04 14:53:35] [I] ConnectionWrapper: Setting serialInCallback for device index: 0
+[2026-04-04 14:53:35] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 14:53:35] [I] ConnectionWrapper: Setting serialInCallback for device index: 1
+[2026-04-04 14:53:35] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 14:53:35] [I] ConnectionWrapper: setDeviceStateCallback called
+[2026-04-04 14:53:35] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 0
+[2026-04-04 14:53:35] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 14:53:35] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 1
+[2026-04-04 14:53:35] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:53:35] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: CURRENT KEY01234567890123456789012345678901
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] TLVProtocol: Type of chunk: 5 - Length of chunk: 1264 - Value of chunk: {"certificate":"-----BEGIN CERTIFICATE-----\nMIIEAzCCA4igAwIBAgIHAMJbSQEg\/TAKBggqhkjOPQQDAzCBzTELMAkGA1UEBhMC\nVFIxGDAWBgNVBAcMD0dlYnplIC0gS29jYWVsaTFHMEUGA1UECgw+VMO8cmtpeWUg\nQmlsaW1zZWwgdmUgVGVrbm9sb2ppayBBcmHFn3TEsXJtYSBLdXJ1bXUgLSBUw5xC\nxLBUQUsxEDAOBgNVBAsMB0LEsExHRU0xSTBHBgNVBAMMQE9kZW1lIEtheWRlZGlj\naSBDaWhheiBFbGVrdHJvbmlrIFNlcnRpZmlrYSBIaXptZXQgU2FnbGF5aWNpc2kt\nUzIwHhcNMjQwMTA0MDU1MjI4WhcNMzUwMTAxMDU1MjI4WjA0MQswCQYDVQQGEwJU\nUjEOMAwGA1UECgwFVE9LRU4xFTATBgNVBAUTDEFWMDAwMDAxNzg5MzB2MBAGByqG\nSM49AgEGBSuBBAAiA2IABLxffbjxZ\/NMi\/xWZSQON3jLB8Bt8\/qX6mMOcvjJD+t0\n8TBzBAoqQxL+KREib39tue8EySAm418AQpWPJWlTa3N4FyiBTgpAWQYPHZVrIse9\nCzwLNx7Bg2K8whSd9ZBWl6OCAcwwggHIMB8GA1UdIwQYMBaAFJ9xpYFJAx9+7iB9\nSY7Ya8c+ryjyMB0GA1UdDgQWBBRbCd5pXenDmTbSfk0hUOnUVDBcwzAOBgNVHQ8B\nAf8EBAMCBaAwgcYGA1UdIASBvjCBuzCBuAYLYIYYAQIBAQUHAQIwgagwKgYIKwYB\nBQUHAgEWHmh0dHA6Ly9kZXBvLmthbXVzbS5nb3YudHIvaWxrZTB6BggrBgEFBQcC\nAjBuDGxCdSBzZXJ0aWZpa2EgaWxlIGlsZ2lsaSBzZXJ0aWZpa2EgdXlndWxhbWEg\nZXNhc2xhcsSxbsSxIG9rdW1hayBpw6dpbiBiZWxpcnRpbGVuIHdlYiBzaXRlc2lu\naSB6aXlhcmV0IGVkaW5pei4wCQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcD\nAQYIKwYBBQUHAwIwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2RlcG8ua2FtdXNt\nLmdvdi50ci9va2MvT0tDLVMyLVNJTC5jcmwwRAYIKwYBBQUHAQEEODA2MDQGCCsG\nAQUFBzAChihodHRwOi8vZGVwby5rYW11c20uZ292LnRyL29rYy9PS0MtUzIuY2Vy\nMAoGCCqGSM49BAMDA2kAMGYCMQCY0eOucYODzz8NRrkU3Rk4iXts69o3dSAYX\/UV\nxQ+BZsgIQr3xwTQvSrG6ZP66BAMCMQDpPESoNzNSwpm0gJngiS7LBOybCBtxkeiZ\n2iowkc6G\/pnM3rvpaN+w2fOjMiAOyUU=\n-----END CERTIFICATE-----\n","sign":"cd3b7c8dd1ded7995da566223bf879cf9e7ebed44f299a5a96c6125741500926dac81f784bdcef9ec619eebd8b12fd8d599964f133cbf3c4c5ec3597b982b4b59b10a64ccd97bb2648928ec19cf487cba7f3f7909d429c2b36b99aee5fc79247"} - Control of chunk: 56777
+[2026-04-04 14:53:35] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 49
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 5
+[2026-04-04 14:53:35] [I] Connection: CERTIFICATE Data Received
+[2026-04-04 14:53:35] [I] Connection: CERTIFICATE Data: {"certificate":"-----BEGIN CERTIFICATE-----\nMIIEAzCCA4igAwIBAgIHAMJbSQEg\/TAKBggqhkjOPQQDAzCBzTELMAkGA1UEBhMC\nVFIxGDAWBgNVBAcMD0dlYnplIC0gS29jYWVsaTFHMEUGA1UECgw+VMO8cmtpeWUg\nQmlsaW1zZWwgdmUgVGVrbm9sb2ppayBBcmHFn3TEsXJtYSBLdXJ1bXUgLSBUw5xC\nxLBUQUsxEDAOBgNVBAsMB0LEsExHRU0xSTBHBgNVBAMMQE9kZW1lIEtheWRlZGlj\naSBDaWhheiBFbGVrdHJvbmlrIFNlcnRpZmlrYSBIaXptZXQgU2FnbGF5aWNpc2kt\nUzIwHhcNMjQwMTA0MDU1MjI4WhcNMzUwMTAxMDU1MjI4WjA0MQswCQYDVQQGEwJU\nUjEOMAwGA1UECgwFVE9LRU4xFTATBgNVBAUTDEFWMDAwMDAxNzg5MzB2MBAGByqG\nSM49AgEGBSuBBAAiA2IABLxffbjxZ\/NMi\/xWZSQON3jLB8Bt8\/qX6mMOcvjJD+t0\n8TBzBAoqQxL+KREib39tue8EySAm418AQpWPJWlTa3N4FyiBTgpAWQYPHZVrIse9\nCzwLNx7Bg2K8whSd9ZBWl6OCAcwwggHIMB8GA1UdIwQYMBaAFJ9xpYFJAx9+7iB9\nSY7Ya8c+ryjyMB0GA1UdDgQWBBRbCd5pXenDmTbSfk0hUOnUVDBcwzAOBgNVHQ8B\nAf8EBAMCBaAwgcYGA1UdIASBvjCBuzCBuAYLYIYYAQIBAQUHAQIwgagwKgYIKwYB\nBQUHAgEWHmh0dHA6Ly9kZXBvLmthbXVzbS5nb3YudHIvaWxrZTB6BggrBgEFBQcC\nAjBuDGxCdSBzZXJ0aWZpa2EgaWxlIGlsZ2lsaSBzZXJ0aWZpa2EgdXlndWxhbWEg\nZXNhc2xhcsSxbsSxIG9rdW1hayBpw6dpbiBiZWxpcnRpbGVuIHdlYiBzaXRlc2lu\naSB6aXlhcmV0IGVkaW5pei4wCQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcD\nAQYIKwYBBQUHAwIwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2RlcG8ua2FtdXNt\nLmdvdi50ci9va2MvT0tDLVMyLVNJTC5jcmwwRAYIKwYBBQUHAQEEODA2MDQGCCsG\nAQUFBzAChihodHRwOi8vZGVwby5rYW11c20uZ292LnRyL29rYy9PS0MtUzIuY2Vy\nMAoGCCqGSM49BAMDA2kAMGYCMQCY0eOucYODzz8NRrkU3Rk4iXts69o3dSAYX\/UV\nxQ+BZsgIQr3xwTQvSrG6ZP66BAMCMQDpPESoNzNSwpm0gJngiS7LBOybCBtxkeiZ\n2iowkc6G\/pnM3rvpaN+w2fOjMiAOyUU=\n-----END CERTIFICATE-----\n","sign":"cd3b7c8dd1ded7995da566223bf879cf9e7ebed44f299a5a96c6125741500926dac81f784bdcef9ec619eebd8b12fd8d599964f133cbf3c4c5ec3597b982b4b59b10a64ccd97bb2648928ec19cf487cba7f3f7909d429c2b36b99aee5fc79247"}
+[2026-04-04 14:53:35] [I] HelperFunctions: Certificate verifying process started
+[2026-04-04 14:53:35] [I] HelperFunctions: Trying to verify certificate
+[2026-04-04 14:53:35] [I] HelperFunctions: -------------------
+[2026-04-04 14:53:35] [I] BIO_Output: Version: 3
+
+[2026-04-04 14:53:35] [I] BIO_Output: Serial: c25b490120fd
+
+[2026-04-04 14:53:35] [I] X509_Info: Issuer: /C=TR/L=Gebze - Kocaeli/O=T\xC3\xBCrkiye Bilimsel ve Teknolojik Ara\xC5\x9Ft\xC4\xB1rma Kurumu - T\xC3\x9CB\xC4\xB0TAK/OU=B\xC4\xB0LGEM/CN=Odeme Kaydedici Cihaz Elektronik Sertifika Hizmet Saglayicisi-S2
+[2026-04-04 14:53:35] [I] X509_Info: Valid From: Jan  4 05:52:28 2024 GMT
+[2026-04-04 14:53:35] [I] X509_Info: Valid Until: Jan  4 05:52:28 2024 GMTJan  1 05:52:28 2035 GMT
+[2026-04-04 14:53:35] [I] X509_Info: Subject: /C=TR/O=TOKEN/serialNumber=AV0000017893
+[2026-04-04 14:53:35] [I] X509_Info: Public Key: Public-Key: (384 bit)
+pub:
+    04:bc:5f:7d:b8:f1:67:f3:4c:8b:fc:56:65:24:0e:
+    37:78:cb:07:c0:6d:f3:fa:97:ea:63:0e:72:f8:c9:
+    0f:eb:74:f1:30:73:04:0a:2a:43:12:fe:29:11:22:
+    6f:7f:6d:b9:ef:04:c9:20:26:e3:5f:00:42:95:8f:
+    25:69:53:6b:73:78:17:28:81:4e:0a:40:59:06:0f:
+    1d:95:6b:22:c7:bd:0b:3c:0b:37:1e:c1:83:62:bc:
+    c2:14:9d:f5:90:56:97
+ASN1 OID: secp384r1
+NIST CURVE: P-384
+
+[2026-04-04 14:53:35] [I] HelperFunctions: -------------------
+[2026-04-04 14:53:35] [I] HelperFunctions: device identifier 0
+[2026-04-04 14:53:35] [I] HelperFunctions: Got certificate public key
+[2026-04-04 14:53:35] [I] HelperFunctions: Sign verificator initialized
+[2026-04-04 14:53:35] [I] HelperFunctions: Certificate content verificator initialized
+[2026-04-04 14:53:35] [I] HelperFunctions: Verification result: 1
+[2026-04-04 14:53:35] [I] HelperFunctions: Signature length: 103
+[2026-04-04 14:53:35] [I] HelperFunctions: Certificate verification successful
+[2026-04-04 14:53:35] [I] Connection: Certificate Verified
+[2026-04-04 14:53:35] [I] Connection: Sharing key
+[2026-04-04 14:53:35] [I] Connection: Request Type: 6 Enqueued 104 bytes to write.
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:53:35] [I] Connection: Encryption Key Sent: 72146282745251494248659819851393
+[2026-04-04 14:53:35] [I] Connection: Key Shared After Certificate
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 50
+[2026-04-04 14:53:35] [I] Connection: serialInQueue Popped
+[2026-04-04 14:53:35] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: 104 Bytes Written
+[2026-04-04 14:53:35] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:53:35] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: CURRENT KEY72146282745251494248659819851393
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:53:35] [E] AES: 1C670000:error:1C800064:Provider routines:ossl_cipher_unpadblock:bad decrypt:providers\implementations\ciphers\ciphercommon_block.c:107:
+
+[2026-04-04 14:53:35] [I] Connection: Sending Error: Not ending or starting with a valid TLV tag. Invalid or corrupted data.
+[2026-04-04 14:53:35] [I] Connection: Request Type: 60 Enqueued 136 bytes to write.
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Not ending or starting with a valid TLV tag. Invalid or corrupted data.
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:53:35] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: CURRENT KEY72146282745251494248659819851393
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] TLVProtocol: Type of chunk: 6 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 62765
+[2026-04-04 14:53:35] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 49
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 6
+[2026-04-04 14:53:35] [I] Connection: SHARE_KEY Data Received
+[2026-04-04 14:53:35] [I] Connection: SHARE_KEY Data Received And Data Is OK
+[2026-04-04 14:53:35] [I] Connection: DEVICE_INFO Request Sent
+[2026-04-04 14:53:35] [I] Connection: Request Type: 0 Enqueued 120 bytes to write.
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:53:35] [I] Connection: ConnectionState is 1 (Active)
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 50
+[2026-04-04 14:53:35] [I] Connection: serialInQueue Popped
+[2026-04-04 14:53:35] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:53:35] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: CURRENT KEY72146282745251494248659819851393
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: 120 Bytes Written
+[2026-04-04 14:53:35] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:53:35] [I] TLVProtocol: Type of chunk: 6 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 62765
+[2026-04-04 14:53:35] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 49
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 6
+[2026-04-04 14:53:35] [I] Connection: SHARE_KEY Data Received
+[2026-04-04 14:53:35] [I] Connection: SHARE_KEY Data Received And Data Is OK
+[2026-04-04 14:53:35] [I] Connection: DEVICE_INFO Request Sent
+[2026-04-04 14:53:35] [I] Connection: Request Type: 0 Enqueued 120 bytes to write.
+[2026-04-04 14:53:35] [I] Connection: ConnectionState is 1 (Active)
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 50
+[2026-04-04 14:53:35] [I] Connection: serialInQueue Popped
+[2026-04-04 14:53:35] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:53:35] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: CURRENT KEY72146282745251494248659819851393
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 32 - Value of chunk: AV0000017893 - Control of chunk: 55962
+[2026-04-04 14:53:35] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 49
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 0
+[2026-04-04 14:53:35] [I] Connection: Device Info: AV0000017893
+[2026-04-04 14:53:35] [I] Connection: Device State Callback Invoking
+[2026-04-04 14:53:35] [I] Connection: Device State Callback Invoked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:53:35] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: CURRENT KEY72146282745251494248659819851393
+[2026-04-04 14:53:35] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 10587
+[2026-04-04 14:53:35] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:53:35] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:53:35] [I] ConnectionAndroid: 120 Bytes Written
+[2026-04-04 14:53:35] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:53:35] [I] Connection: Request Type: 2 Enqueued 72 bytes to write.
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:53:35] [I] Connection: FISCAL_INFO Request Sent
+[2026-04-04 14:53:35] [I] Connection: Device Info Could Not Be Sent
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 50
+[2026-04-04 14:53:35] [I] Connection: serialInQueue Popped
+[2026-04-04 14:53:35] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 49
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 0
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 50
+[2026-04-04 14:53:35] [I] Connection: serialInQueue Popped
+[2026-04-04 14:53:35] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:53:35] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: CURRENT KEY72146282745251494248659819851393
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 32 - Value of chunk: AV0000017893 - Control of chunk: 55962
+[2026-04-04 14:53:35] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 49
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 0
+[2026-04-04 14:53:35] [I] Connection: Device Info: AV0000017893
+[2026-04-04 14:53:35] [I] Connection: Device State Callback Invoking
+[2026-04-04 14:53:35] [I] Connection: Device State Callback Invoked
+[2026-04-04 14:53:35] [I] Connection: Device Info Could Not Be Sent
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 50
+[2026-04-04 14:53:35] [I] Connection: serialInQueue Popped
+[2026-04-04 14:53:35] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:53:35] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: CURRENT KEY72146282745251494248659819851393
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 10587
+[2026-04-04 14:53:35] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:53:35] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 49
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 0
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 50
+[2026-04-04 14:53:35] [I] Connection: serialInQueue Popped
+[2026-04-04 14:53:35] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:53:35] [I] ConnectionAndroid: 72 Bytes Written
+[2026-04-04 14:53:35] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:53:35] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: CURRENT KEY72146282745251494248659819851393
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] TLVProtocol: Type of chunk: 2 - Length of chunk: 400 - Value of chunk: {"businessMode":0,"pluCount":5,"plus":[{"barcode":"123456789001","name":"ETI GOFRET","pluNo":1,"price":500,"sectionNo":1,"status":1,"taxPercent":2000,"type":0,"unit":"","vatID":1},{"barcode":"123456789002","name":"ALGIDA MAGNUM","pluNo":2,"price":2500,"sectionNo":1,"status":1,"taxPercent":2000,"type":0,"unit":"","vatID":1},{"barcode":"123456789003","name":"ULUDAG LIMONATA","pluNo":3,"price":2500,"sectionNo":4,"status":1,"taxPercent":0,"type":0,"unit":"","vatID":1},{"barcode":"123456789008","name":"FUSE TEA LIMON","pluNo":4,"price":3000,"sectionNo":4,"status":1,"taxPercent":0,"type":0,"unit":"","vatID":1},{"barcode":"2525255255","name":"parol","pluNo":5,"price":2552,"sectionNo":2,"status":1,"taxPercent":1000,"type":0,"unit":"Adet","vatID":3}],"receiptLimit":525000,"sectionCount":7,"sections":[{"limit":0,"name":"KDV %20","price":100,"sectionNo":1,"status":1,"taxPercent":2000,"type":0},{"limit":0,"name":"KDV %10","price":200,"sectionNo":2,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"KDV  %1","price":300,"sectionNo":3,"status":1,"taxPercent":100,"type":0},{"limit":0,"name":"KDV %0","price":400,"sectionNo":4,"status":1,"taxPercent":0,"type":0},{"limit":0,"name":"KATILIM PAYI","price":500,"sectionNo":5,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"FÝYAT FARKI","price":600,"sectionNo":6,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"POÞET","price":0,"sectionNo":7,"status":1,"taxPercent":2000,"type":0}]} - Control of chunk: 30063
+[2026-04-04 14:53:35] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:53:35] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 49
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 2
+[2026-04-04 14:53:35] [I] Connection: FISCAL_INFO Data Received
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 50
+[2026-04-04 14:53:35] [I] Connection: serialInQueue Popped
+[2026-04-04 14:53:35] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:53:35] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:53:35] [I] ConnectionAndroid: CURRENT KEY72146282745251494248659819851393
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:53:35] [I] TLVProtocol: Type of chunk: 2 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 37526
+[2026-04-04 14:53:35] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:53:35] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:53:35] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 49
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 2
+[2026-04-04 14:53:35] [I] Connection: Received Data Type: 50
+[2026-04-04 14:53:35] [I] Connection: serialInQueue Popped
+[2026-04-04 14:53:35] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:53:35] [I] Connection: Serial In Mutex Locked
+----- Log started at 2026-04-04 14:54:40 ------
+Token Integration Hub Version: 2.1.0
+-------------------------------------------------
+[2026-04-04 14:54:40] [I] ConnectionWrapper: createCommunication called
+[2026-04-04 14:54:40] [I] ConnectionWrapper: Company Name: TOKEN FINTECH
+[2026-04-04 14:54:40] [I] ConnectionWrapper: Connection Started
+[2026-04-04 14:54:40] [I] ConnectionAndroid: Connected Device Count : 9
+[2026-04-04 14:54:40] [I] ConnectionAndroid: VID: 3034 PID: 33107
+[2026-04-04 14:54:40] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 14:54:40] [I] ConnectionAndroid: VID: 2522 PID: 8808
+[2026-04-04 14:54:40] [I] ConnectionAndroid: Handle Part Called
+[2026-04-04 14:54:40] [I] ConnectionAndroid: Sent getProtocol
+[2026-04-04 14:54:40] [I] ConnectionAndroid: LibUSB Error: Entity not found
+[2026-04-04 14:54:40] [I] ConnectionAndroid: VID: 7119 PID: 11165
+[2026-04-04 14:54:40] [I] ConnectionAndroid: LibUSB Error: Entity not found
+[2026-04-04 14:54:40] [I] ConnectionAndroid: VID: 32902 PID: 31328
+[2026-04-04 14:54:40] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 14:54:40] [I] ConnectionAndroid: VID: 6353 PID: 11520
+[2026-04-04 14:54:40] [I] ConnectionAndroid: Sent getProtocol
+[2026-04-04 14:54:40] [I] ConnectionAndroid: Version Code Device: 2
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Accessory Identification Sent
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Android Found:
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Interface 0. altSetting 0. Num of endpoints: 2
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Endpoint type 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk
+[2026-04-04 14:54:41] [I] ConnectionAndroid: IN
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Address 129
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Endpoint type 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk
+[2026-04-04 14:54:41] [I] ConnectionAndroid: OUT
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Address 1
+[2026-04-04 14:54:41] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Interface Claimed, Ready To Transfer Data
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Device Added With VID: 3034 PID: 33107
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Device Added With VID: 2522 PID: 8808
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Device Added With VID: 7119 PID: 11165
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Device Added With VID: 32902 PID: 31328
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Device Added With VID: 6353 PID: 11520
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Device Added With VID: 1507 PID: 1552
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Device Added With VID: 1507 PID: 1574
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Device Added With VID: 1133 PID: 50504
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Device Added With VID: 32903 PID: 38
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Claim interface result: 0
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Listening in port
+[2026-04-04 14:54:41] [I] Connection: Sending Hello
+[2026-04-04 14:54:41] [I] Connection: Verification key: asdfg
+[2026-04-04 14:54:41] [I] Connection: Request Type: 4 Enqueued 72 bytes to write.
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Device Initialized
+[2026-04-04 14:54:41] [I] ConnectionWrapper: Connection Android Object Created
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:54:41] [I] ConnectionWrapper: Connection Linux Object Created
+[2026-04-04 14:54:41] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] ConnectionWrapper: setSerialInCallback called
+[2026-04-04 14:54:41] [I] ConnectionWrapper: Setting serialInCallback for device index: 0
+[2026-04-04 14:54:41] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 14:54:41] [I] ConnectionWrapper: Setting serialInCallback for device index: 1
+[2026-04-04 14:54:41] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 14:54:41] [I] ConnectionWrapper: setDeviceStateCallback called
+[2026-04-04 14:54:41] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 0
+[2026-04-04 14:54:41] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 14:54:41] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 1
+[2026-04-04 14:54:41] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 14:54:41] [I] ConnectionAndroid: 72 Bytes Written
+[2026-04-04 14:54:41] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:54:41] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: CURRENT KEY01234567890123456789012345678901
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] TLVProtocol: Type of chunk: 5 - Length of chunk: 1264 - Value of chunk: {"certificate":"-----BEGIN CERTIFICATE-----\nMIIEAzCCA4igAwIBAgIHAMJbSQEg\/TAKBggqhkjOPQQDAzCBzTELMAkGA1UEBhMC\nVFIxGDAWBgNVBAcMD0dlYnplIC0gS29jYWVsaTFHMEUGA1UECgw+VMO8cmtpeWUg\nQmlsaW1zZWwgdmUgVGVrbm9sb2ppayBBcmHFn3TEsXJtYSBLdXJ1bXUgLSBUw5xC\nxLBUQUsxEDAOBgNVBAsMB0LEsExHRU0xSTBHBgNVBAMMQE9kZW1lIEtheWRlZGlj\naSBDaWhheiBFbGVrdHJvbmlrIFNlcnRpZmlrYSBIaXptZXQgU2FnbGF5aWNpc2kt\nUzIwHhcNMjQwMTA0MDU1MjI4WhcNMzUwMTAxMDU1MjI4WjA0MQswCQYDVQQGEwJU\nUjEOMAwGA1UECgwFVE9LRU4xFTATBgNVBAUTDEFWMDAwMDAxNzg5MzB2MBAGByqG\nSM49AgEGBSuBBAAiA2IABLxffbjxZ\/NMi\/xWZSQON3jLB8Bt8\/qX6mMOcvjJD+t0\n8TBzBAoqQxL+KREib39tue8EySAm418AQpWPJWlTa3N4FyiBTgpAWQYPHZVrIse9\nCzwLNx7Bg2K8whSd9ZBWl6OCAcwwggHIMB8GA1UdIwQYMBaAFJ9xpYFJAx9+7iB9\nSY7Ya8c+ryjyMB0GA1UdDgQWBBRbCd5pXenDmTbSfk0hUOnUVDBcwzAOBgNVHQ8B\nAf8EBAMCBaAwgcYGA1UdIASBvjCBuzCBuAYLYIYYAQIBAQUHAQIwgagwKgYIKwYB\nBQUHAgEWHmh0dHA6Ly9kZXBvLmthbXVzbS5nb3YudHIvaWxrZTB6BggrBgEFBQcC\nAjBuDGxCdSBzZXJ0aWZpa2EgaWxlIGlsZ2lsaSBzZXJ0aWZpa2EgdXlndWxhbWEg\nZXNhc2xhcsSxbsSxIG9rdW1hayBpw6dpbiBiZWxpcnRpbGVuIHdlYiBzaXRlc2lu\naSB6aXlhcmV0IGVkaW5pei4wCQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcD\nAQYIKwYBBQUHAwIwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2RlcG8ua2FtdXNt\nLmdvdi50ci9va2MvT0tDLVMyLVNJTC5jcmwwRAYIKwYBBQUHAQEEODA2MDQGCCsG\nAQUFBzAChihodHRwOi8vZGVwby5rYW11c20uZ292LnRyL29rYy9PS0MtUzIuY2Vy\nMAoGCCqGSM49BAMDA2kAMGYCMQCY0eOucYODzz8NRrkU3Rk4iXts69o3dSAYX\/UV\nxQ+BZsgIQr3xwTQvSrG6ZP66BAMCMQDpPESoNzNSwpm0gJngiS7LBOybCBtxkeiZ\n2iowkc6G\/pnM3rvpaN+w2fOjMiAOyUU=\n-----END CERTIFICATE-----\n","sign":"ffb4262d47e1e13a4863c7328d952b4c38cab942b00b20b836be4e0d17e18a4e5a05360650509cb4775e6a504fdb6b800e85ff7b3f190ad3c72e9a5d588cb5f2a453d011f1312ce9c33bd2ae3276d3ff6957efffc51798c853294510e7a6d37f"} - Control of chunk: 15361
+[2026-04-04 14:54:41] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 49
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 5
+[2026-04-04 14:54:41] [I] Connection: CERTIFICATE Data Received
+[2026-04-04 14:54:41] [I] Connection: CERTIFICATE Data: {"certificate":"-----BEGIN CERTIFICATE-----\nMIIEAzCCA4igAwIBAgIHAMJbSQEg\/TAKBggqhkjOPQQDAzCBzTELMAkGA1UEBhMC\nVFIxGDAWBgNVBAcMD0dlYnplIC0gS29jYWVsaTFHMEUGA1UECgw+VMO8cmtpeWUg\nQmlsaW1zZWwgdmUgVGVrbm9sb2ppayBBcmHFn3TEsXJtYSBLdXJ1bXUgLSBUw5xC\nxLBUQUsxEDAOBgNVBAsMB0LEsExHRU0xSTBHBgNVBAMMQE9kZW1lIEtheWRlZGlj\naSBDaWhheiBFbGVrdHJvbmlrIFNlcnRpZmlrYSBIaXptZXQgU2FnbGF5aWNpc2kt\nUzIwHhcNMjQwMTA0MDU1MjI4WhcNMzUwMTAxMDU1MjI4WjA0MQswCQYDVQQGEwJU\nUjEOMAwGA1UECgwFVE9LRU4xFTATBgNVBAUTDEFWMDAwMDAxNzg5MzB2MBAGByqG\nSM49AgEGBSuBBAAiA2IABLxffbjxZ\/NMi\/xWZSQON3jLB8Bt8\/qX6mMOcvjJD+t0\n8TBzBAoqQxL+KREib39tue8EySAm418AQpWPJWlTa3N4FyiBTgpAWQYPHZVrIse9\nCzwLNx7Bg2K8whSd9ZBWl6OCAcwwggHIMB8GA1UdIwQYMBaAFJ9xpYFJAx9+7iB9\nSY7Ya8c+ryjyMB0GA1UdDgQWBBRbCd5pXenDmTbSfk0hUOnUVDBcwzAOBgNVHQ8B\nAf8EBAMCBaAwgcYGA1UdIASBvjCBuzCBuAYLYIYYAQIBAQUHAQIwgagwKgYIKwYB\nBQUHAgEWHmh0dHA6Ly9kZXBvLmthbXVzbS5nb3YudHIvaWxrZTB6BggrBgEFBQcC\nAjBuDGxCdSBzZXJ0aWZpa2EgaWxlIGlsZ2lsaSBzZXJ0aWZpa2EgdXlndWxhbWEg\nZXNhc2xhcsSxbsSxIG9rdW1hayBpw6dpbiBiZWxpcnRpbGVuIHdlYiBzaXRlc2lu\naSB6aXlhcmV0IGVkaW5pei4wCQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcD\nAQYIKwYBBQUHAwIwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2RlcG8ua2FtdXNt\nLmdvdi50ci9va2MvT0tDLVMyLVNJTC5jcmwwRAYIKwYBBQUHAQEEODA2MDQGCCsG\nAQUFBzAChihodHRwOi8vZGVwby5rYW11c20uZ292LnRyL29rYy9PS0MtUzIuY2Vy\nMAoGCCqGSM49BAMDA2kAMGYCMQCY0eOucYODzz8NRrkU3Rk4iXts69o3dSAYX\/UV\nxQ+BZsgIQr3xwTQvSrG6ZP66BAMCMQDpPESoNzNSwpm0gJngiS7LBOybCBtxkeiZ\n2iowkc6G\/pnM3rvpaN+w2fOjMiAOyUU=\n-----END CERTIFICATE-----\n","sign":"ffb4262d47e1e13a4863c7328d952b4c38cab942b00b20b836be4e0d17e18a4e5a05360650509cb4775e6a504fdb6b800e85ff7b3f190ad3c72e9a5d588cb5f2a453d011f1312ce9c33bd2ae3276d3ff6957efffc51798c853294510e7a6d37f"}
+[2026-04-04 14:54:41] [I] HelperFunctions: Certificate verifying process started
+[2026-04-04 14:54:41] [I] HelperFunctions: Trying to verify certificate
+[2026-04-04 14:54:41] [I] HelperFunctions: -------------------
+[2026-04-04 14:54:41] [I] BIO_Output: Version: 3
+
+[2026-04-04 14:54:41] [I] BIO_Output: Serial: c25b490120fd
+
+[2026-04-04 14:54:41] [I] X509_Info: Issuer: /C=TR/L=Gebze - Kocaeli/O=T\xC3\xBCrkiye Bilimsel ve Teknolojik Ara\xC5\x9Ft\xC4\xB1rma Kurumu - T\xC3\x9CB\xC4\xB0TAK/OU=B\xC4\xB0LGEM/CN=Odeme Kaydedici Cihaz Elektronik Sertifika Hizmet Saglayicisi-S2
+[2026-04-04 14:54:41] [I] X509_Info: Valid From: Jan  4 05:52:28 2024 GMT
+[2026-04-04 14:54:41] [I] X509_Info: Valid Until: Jan  4 05:52:28 2024 GMTJan  1 05:52:28 2035 GMT
+[2026-04-04 14:54:41] [I] X509_Info: Subject: /C=TR/O=TOKEN/serialNumber=AV0000017893
+[2026-04-04 14:54:41] [I] X509_Info: Public Key: Public-Key: (384 bit)
+pub:
+    04:bc:5f:7d:b8:f1:67:f3:4c:8b:fc:56:65:24:0e:
+    37:78:cb:07:c0:6d:f3:fa:97:ea:63:0e:72:f8:c9:
+    0f:eb:74:f1:30:73:04:0a:2a:43:12:fe:29:11:22:
+    6f:7f:6d:b9:ef:04:c9:20:26:e3:5f:00:42:95:8f:
+    25:69:53:6b:73:78:17:28:81:4e:0a:40:59:06:0f:
+    1d:95:6b:22:c7:bd:0b:3c:0b:37:1e:c1:83:62:bc:
+    c2:14:9d:f5:90:56:97
+ASN1 OID: secp384r1
+NIST CURVE: P-384
+
+[2026-04-04 14:54:41] [I] HelperFunctions: -------------------
+[2026-04-04 14:54:41] [I] HelperFunctions: device identifier 0
+[2026-04-04 14:54:41] [I] HelperFunctions: Got certificate public key
+[2026-04-04 14:54:41] [I] HelperFunctions: Sign verificator initialized
+[2026-04-04 14:54:41] [I] HelperFunctions: Certificate content verificator initialized
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:54:41] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: CURRENT KEY01234567890123456789012345678901
+[2026-04-04 14:54:41] [I] TLVProtocol: Type of chunk: 4 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 50012
+[2026-04-04 14:54:41] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:54:41] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:54:41] [I] HelperFunctions: Verification result: 1
+[2026-04-04 14:54:41] [I] HelperFunctions: Signature length: 103
+[2026-04-04 14:54:41] [I] HelperFunctions: Certificate verification successful
+[2026-04-04 14:54:41] [I] Connection: Certificate Verified
+[2026-04-04 14:54:41] [I] Connection: Sharing key
+[2026-04-04 14:54:41] [I] Connection: Request Type: 6 Enqueued 104 bytes to write.
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:54:41] [I] Connection: Encryption Key Sent: 05322510247623524041402633151407
+[2026-04-04 14:54:41] [I] Connection: Key Shared After Certificate
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 50
+[2026-04-04 14:54:41] [I] Connection: serialInQueue Popped
+[2026-04-04 14:54:41] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 49
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 4
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 50
+[2026-04-04 14:54:41] [I] Connection: serialInQueue Popped
+[2026-04-04 14:54:41] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: 104 Bytes Written
+[2026-04-04 14:54:41] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:54:41] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: CURRENT KEY05322510247623524041402633151407
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] TLVProtocol: Type of chunk: 6 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 19400
+[2026-04-04 14:54:41] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 49
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 6
+[2026-04-04 14:54:41] [I] Connection: SHARE_KEY Data Received
+[2026-04-04 14:54:41] [I] Connection: SHARE_KEY Data Received And Data Is OK
+[2026-04-04 14:54:41] [I] Connection: DEVICE_INFO Request Sent
+[2026-04-04 14:54:41] [I] Connection: Request Type: 0 Enqueued 120 bytes to write.
+[2026-04-04 14:54:41] [I] Connection: ConnectionState is 1 (Active)
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 50
+[2026-04-04 14:54:41] [I] Connection: serialInQueue Popped
+[2026-04-04 14:54:41] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:54:41] [I] ConnectionAndroid: 120 Bytes Written
+[2026-04-04 14:54:41] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:54:41] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: CURRENT KEY05322510247623524041402633151407
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] TLVProtocol: Type of chunk: 6 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 19400
+[2026-04-04 14:54:41] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:54:41] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 49
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 6
+[2026-04-04 14:54:41] [I] Connection: SHARE_KEY Data Received
+[2026-04-04 14:54:41] [I] Connection: SHARE_KEY Data Received And Data Is OK
+[2026-04-04 14:54:41] [I] Connection: DEVICE_INFO Request Sent
+[2026-04-04 14:54:41] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Request Type: 0 Enqueued 120 bytes to write.
+[2026-04-04 14:54:41] [I] Connection: ConnectionState is 1 (Active)
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 50
+[2026-04-04 14:54:41] [I] Connection: serialInQueue Popped
+[2026-04-04 14:54:41] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:54:41] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: CURRENT KEY05322510247623524041402633151407
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 32 - Value of chunk: AV0000017893 - Control of chunk: 37081
+[2026-04-04 14:54:41] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 49
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 0
+[2026-04-04 14:54:41] [I] Connection: Device Info: AV0000017893
+[2026-04-04 14:54:41] [I] Connection: Device State Callback Invoking
+[2026-04-04 14:54:41] [I] Connection: Device State Callback Invoked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:54:41] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: CURRENT KEY05322510247623524041402633151407
+[2026-04-04 14:54:41] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 38846
+[2026-04-04 14:54:41] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:54:41] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:54:41] [I] ConnectionAndroid: 120 Bytes Written
+[2026-04-04 14:54:41] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:54:41] [I] Connection: Request Type: 2 Enqueued 72 bytes to write.
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 14:54:41] [I] Connection: FISCAL_INFO Request Sent
+[2026-04-04 14:54:41] [I] Connection: Device Info Could Not Be Sent
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 50
+[2026-04-04 14:54:41] [I] Connection: serialInQueue Popped
+[2026-04-04 14:54:41] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 49
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 0
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 50
+[2026-04-04 14:54:41] [I] Connection: serialInQueue Popped
+[2026-04-04 14:54:41] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:54:41] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: CURRENT KEY05322510247623524041402633151407
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 32 - Value of chunk: AV0000017893 - Control of chunk: 37081
+[2026-04-04 14:54:41] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 49
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 0
+[2026-04-04 14:54:41] [I] Connection: Device Info: AV0000017893
+[2026-04-04 14:54:41] [I] Connection: Device State Callback Invoking
+[2026-04-04 14:54:41] [I] Connection: Device State Callback Invoked
+[2026-04-04 14:54:41] [I] Connection: Device Info Could Not Be Sent
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 50
+[2026-04-04 14:54:41] [I] Connection: serialInQueue Popped
+[2026-04-04 14:54:41] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:54:41] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: CURRENT KEY05322510247623524041402633151407
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 38846
+[2026-04-04 14:54:41] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:54:41] [I] ConnectionAndroid: 72 Bytes Written
+[2026-04-04 14:54:41] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 49
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 0
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 50
+[2026-04-04 14:54:41] [I] Connection: serialInQueue Popped
+[2026-04-04 14:54:41] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:54:41] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: CURRENT KEY05322510247623524041402633151407
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] TLVProtocol: Type of chunk: 2 - Length of chunk: 400 - Value of chunk: {"businessMode":0,"pluCount":5,"plus":[{"barcode":"123456789001","name":"ETI GOFRET","pluNo":1,"price":500,"sectionNo":1,"status":1,"taxPercent":2000,"type":0,"unit":"","vatID":1},{"barcode":"123456789002","name":"ALGIDA MAGNUM","pluNo":2,"price":2500,"sectionNo":1,"status":1,"taxPercent":2000,"type":0,"unit":"","vatID":1},{"barcode":"123456789003","name":"ULUDAG LIMONATA","pluNo":3,"price":2500,"sectionNo":4,"status":1,"taxPercent":0,"type":0,"unit":"","vatID":1},{"barcode":"123456789008","name":"FUSE TEA LIMON","pluNo":4,"price":3000,"sectionNo":4,"status":1,"taxPercent":0,"type":0,"unit":"","vatID":1},{"barcode":"2525255255","name":"parol","pluNo":5,"price":2552,"sectionNo":2,"status":1,"taxPercent":1000,"type":0,"unit":"Adet","vatID":3}],"receiptLimit":525000,"sectionCount":7,"sections":[{"limit":0,"name":"KDV %20","price":100,"sectionNo":1,"status":1,"taxPercent":2000,"type":0},{"limit":0,"name":"KDV %10","price":200,"sectionNo":2,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"KDV  %1","price":300,"sectionNo":3,"status":1,"taxPercent":100,"type":0},{"limit":0,"name":"KDV %0","price":400,"sectionNo":4,"status":1,"taxPercent":0,"type":0},{"limit":0,"name":"KATILIM PAYI","price":500,"sectionNo":5,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"FÝYAT FARKI","price":600,"sectionNo":6,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"POÞET","price":0,"sectionNo":7,"status":1,"taxPercent":2000,"type":0}]} - Control of chunk: 7712
+[2026-04-04 14:54:41] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:54:41] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 49
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 2
+[2026-04-04 14:54:41] [I] Connection: FISCAL_INFO Data Received
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 50
+[2026-04-04 14:54:41] [I] Connection: serialInQueue Popped
+[2026-04-04 14:54:41] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 14:54:41] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 14:54:41] [I] ConnectionAndroid: CURRENT KEY05322510247623524041402633151407
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] TLVProtocol: Type of chunk: 2 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 11379
+[2026-04-04 14:54:41] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 14:54:41] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 49
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 2
+[2026-04-04 14:54:41] [I] Connection: Received Data Type: 50
+[2026-04-04 14:54:41] [I] Connection: serialInQueue Popped
+[2026-04-04 14:54:41] [I] Connection: Serial In Loop Finished
+[2026-04-04 14:54:41] [I] Connection: Serial In Mutex Locked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 14:54:41] [I] ConnectionAndroid: listenSerial Loop Finished
+----- Log started at 2026-04-04 15:04:55 ------
+Token Integration Hub Version: 2.1.0
+-------------------------------------------------
+[2026-04-04 15:04:55] [I] ConnectionWrapper: createCommunication called
+[2026-04-04 15:04:55] [I] ConnectionWrapper: Company Name: TOKEN FINTECH
+[2026-04-04 15:04:55] [I] ConnectionWrapper: Connection Started
+[2026-04-04 15:04:55] [I] ConnectionAndroid: Connected Device Count : 9
+[2026-04-04 15:04:55] [I] ConnectionAndroid: VID: 3034 PID: 33107
+[2026-04-04 15:04:55] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 15:04:55] [I] ConnectionAndroid: VID: 2522 PID: 8808
+[2026-04-04 15:04:55] [I] ConnectionAndroid: Handle Part Called
+[2026-04-04 15:04:55] [I] ConnectionAndroid: Sent getProtocol
+[2026-04-04 15:04:55] [I] ConnectionAndroid: LibUSB Error: Entity not found
+[2026-04-04 15:04:55] [I] ConnectionAndroid: VID: 7119 PID: 11165
+[2026-04-04 15:04:55] [I] ConnectionAndroid: LibUSB Error: Entity not found
+[2026-04-04 15:04:55] [I] ConnectionAndroid: VID: 32902 PID: 31328
+[2026-04-04 15:04:55] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 15:04:55] [I] ConnectionAndroid: VID: 6353 PID: 11520
+[2026-04-04 15:04:55] [I] ConnectionAndroid: Sent getProtocol
+[2026-04-04 15:04:55] [I] ConnectionAndroid: Version Code Device: 2
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Accessory Identification Sent
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Android Found:
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Interface 0. altSetting 0. Num of endpoints: 2
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Endpoint type 
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Bulk
+[2026-04-04 15:04:56] [I] ConnectionAndroid: IN
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Address 129
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Endpoint type 
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Bulk
+[2026-04-04 15:04:56] [I] ConnectionAndroid: OUT
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Address 1
+[2026-04-04 15:04:56] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Interface Claimed, Ready To Transfer Data
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Device Added With VID: 3034 PID: 33107
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Device Added With VID: 2522 PID: 8808
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Device Added With VID: 7119 PID: 11165
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Device Added With VID: 32902 PID: 31328
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Device Added With VID: 6353 PID: 11520
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Device Added With VID: 1507 PID: 1552
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Device Added With VID: 1507 PID: 1574
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Device Added With VID: 1133 PID: 50504
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Device Added With VID: 32903 PID: 38
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Claim interface result: 0
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Listening in port
+[2026-04-04 15:04:56] [I] Connection: Sending Hello
+[2026-04-04 15:04:56] [I] Connection: Verification key: asdfg
+[2026-04-04 15:04:56] [I] Connection: Request Type: 4 Enqueued 72 bytes to write.
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Device Initialized
+[2026-04-04 15:04:56] [I] ConnectionWrapper: Connection Android Object Created
+[2026-04-04 15:04:56] [I] ConnectionWrapper: Connection Linux Object Created
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 15:04:56] [I] ConnectionWrapper: setSerialInCallback called
+[2026-04-04 15:04:56] [I] ConnectionWrapper: Setting serialInCallback for device index: 0
+[2026-04-04 15:04:56] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 15:04:56] [I] ConnectionWrapper: Setting serialInCallback for device index: 1
+[2026-04-04 15:04:56] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 15:04:56] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:04:56] [I] ConnectionWrapper: setDeviceStateCallback called
+[2026-04-04 15:04:56] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 0
+[2026-04-04 15:04:56] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 15:04:56] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 1
+[2026-04-04 15:04:56] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 15:04:56] [I] ConnectionAndroid: 72 Bytes Written
+[2026-04-04 15:04:56] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:04:56] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:04:56] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:04:56] [I] ConnectionAndroid: CURRENT KEY01234567890123456789012345678901
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] TLVProtocol: Type of chunk: 5 - Length of chunk: 1264 - Value of chunk: {"certificate":"-----BEGIN CERTIFICATE-----\nMIIEAzCCA4igAwIBAgIHAMJbSQEg\/TAKBggqhkjOPQQDAzCBzTELMAkGA1UEBhMC\nVFIxGDAWBgNVBAcMD0dlYnplIC0gS29jYWVsaTFHMEUGA1UECgw+VMO8cmtpeWUg\nQmlsaW1zZWwgdmUgVGVrbm9sb2ppayBBcmHFn3TEsXJtYSBLdXJ1bXUgLSBUw5xC\nxLBUQUsxEDAOBgNVBAsMB0LEsExHRU0xSTBHBgNVBAMMQE9kZW1lIEtheWRlZGlj\naSBDaWhheiBFbGVrdHJvbmlrIFNlcnRpZmlrYSBIaXptZXQgU2FnbGF5aWNpc2kt\nUzIwHhcNMjQwMTA0MDU1MjI4WhcNMzUwMTAxMDU1MjI4WjA0MQswCQYDVQQGEwJU\nUjEOMAwGA1UECgwFVE9LRU4xFTATBgNVBAUTDEFWMDAwMDAxNzg5MzB2MBAGByqG\nSM49AgEGBSuBBAAiA2IABLxffbjxZ\/NMi\/xWZSQON3jLB8Bt8\/qX6mMOcvjJD+t0\n8TBzBAoqQxL+KREib39tue8EySAm418AQpWPJWlTa3N4FyiBTgpAWQYPHZVrIse9\nCzwLNx7Bg2K8whSd9ZBWl6OCAcwwggHIMB8GA1UdIwQYMBaAFJ9xpYFJAx9+7iB9\nSY7Ya8c+ryjyMB0GA1UdDgQWBBRbCd5pXenDmTbSfk0hUOnUVDBcwzAOBgNVHQ8B\nAf8EBAMCBaAwgcYGA1UdIASBvjCBuzCBuAYLYIYYAQIBAQUHAQIwgagwKgYIKwYB\nBQUHAgEWHmh0dHA6Ly9kZXBvLmthbXVzbS5nb3YudHIvaWxrZTB6BggrBgEFBQcC\nAjBuDGxCdSBzZXJ0aWZpa2EgaWxlIGlsZ2lsaSBzZXJ0aWZpa2EgdXlndWxhbWEg\nZXNhc2xhcsSxbsSxIG9rdW1hayBpw6dpbiBiZWxpcnRpbGVuIHdlYiBzaXRlc2lu\naSB6aXlhcmV0IGVkaW5pei4wCQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcD\nAQYIKwYBBQUHAwIwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2RlcG8ua2FtdXNt\nLmdvdi50ci9va2MvT0tDLVMyLVNJTC5jcmwwRAYIKwYBBQUHAQEEODA2MDQGCCsG\nAQUFBzAChihodHRwOi8vZGVwby5rYW11c20uZ292LnRyL29rYy9PS0MtUzIuY2Vy\nMAoGCCqGSM49BAMDA2kAMGYCMQCY0eOucYODzz8NRrkU3Rk4iXts69o3dSAYX\/UV\nxQ+BZsgIQr3xwTQvSrG6ZP66BAMCMQDpPESoNzNSwpm0gJngiS7LBOybCBtxkeiZ\n2iowkc6G\/pnM3rvpaN+w2fOjMiAOyUU=\n-----END CERTIFICATE-----\n","sign":"5810bc98841b6b94237a14a21e925640a80cae5a558340bc0cfd06b769be0bdb43b8e74e5c3dd6a8a859efa6877463243faa8569d4bfeec500102f38c1aa921f860a5836ab6ed3eea0fae09c2c2590029528ba9bb6ade4ed503c7ba75003f747"} - Control of chunk: 61248
+[2026-04-04 15:04:57] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 49
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 5
+[2026-04-04 15:04:57] [I] Connection: CERTIFICATE Data Received
+[2026-04-04 15:04:57] [I] Connection: CERTIFICATE Data: {"certificate":"-----BEGIN CERTIFICATE-----\nMIIEAzCCA4igAwIBAgIHAMJbSQEg\/TAKBggqhkjOPQQDAzCBzTELMAkGA1UEBhMC\nVFIxGDAWBgNVBAcMD0dlYnplIC0gS29jYWVsaTFHMEUGA1UECgw+VMO8cmtpeWUg\nQmlsaW1zZWwgdmUgVGVrbm9sb2ppayBBcmHFn3TEsXJtYSBLdXJ1bXUgLSBUw5xC\nxLBUQUsxEDAOBgNVBAsMB0LEsExHRU0xSTBHBgNVBAMMQE9kZW1lIEtheWRlZGlj\naSBDaWhheiBFbGVrdHJvbmlrIFNlcnRpZmlrYSBIaXptZXQgU2FnbGF5aWNpc2kt\nUzIwHhcNMjQwMTA0MDU1MjI4WhcNMzUwMTAxMDU1MjI4WjA0MQswCQYDVQQGEwJU\nUjEOMAwGA1UECgwFVE9LRU4xFTATBgNVBAUTDEFWMDAwMDAxNzg5MzB2MBAGByqG\nSM49AgEGBSuBBAAiA2IABLxffbjxZ\/NMi\/xWZSQON3jLB8Bt8\/qX6mMOcvjJD+t0\n8TBzBAoqQxL+KREib39tue8EySAm418AQpWPJWlTa3N4FyiBTgpAWQYPHZVrIse9\nCzwLNx7Bg2K8whSd9ZBWl6OCAcwwggHIMB8GA1UdIwQYMBaAFJ9xpYFJAx9+7iB9\nSY7Ya8c+ryjyMB0GA1UdDgQWBBRbCd5pXenDmTbSfk0hUOnUVDBcwzAOBgNVHQ8B\nAf8EBAMCBaAwgcYGA1UdIASBvjCBuzCBuAYLYIYYAQIBAQUHAQIwgagwKgYIKwYB\nBQUHAgEWHmh0dHA6Ly9kZXBvLmthbXVzbS5nb3YudHIvaWxrZTB6BggrBgEFBQcC\nAjBuDGxCdSBzZXJ0aWZpa2EgaWxlIGlsZ2lsaSBzZXJ0aWZpa2EgdXlndWxhbWEg\nZXNhc2xhcsSxbsSxIG9rdW1hayBpw6dpbiBiZWxpcnRpbGVuIHdlYiBzaXRlc2lu\naSB6aXlhcmV0IGVkaW5pei4wCQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcD\nAQYIKwYBBQUHAwIwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2RlcG8ua2FtdXNt\nLmdvdi50ci9va2MvT0tDLVMyLVNJTC5jcmwwRAYIKwYBBQUHAQEEODA2MDQGCCsG\nAQUFBzAChihodHRwOi8vZGVwby5rYW11c20uZ292LnRyL29rYy9PS0MtUzIuY2Vy\nMAoGCCqGSM49BAMDA2kAMGYCMQCY0eOucYODzz8NRrkU3Rk4iXts69o3dSAYX\/UV\nxQ+BZsgIQr3xwTQvSrG6ZP66BAMCMQDpPESoNzNSwpm0gJngiS7LBOybCBtxkeiZ\n2iowkc6G\/pnM3rvpaN+w2fOjMiAOyUU=\n-----END CERTIFICATE-----\n","sign":"5810bc98841b6b94237a14a21e925640a80cae5a558340bc0cfd06b769be0bdb43b8e74e5c3dd6a8a859efa6877463243faa8569d4bfeec500102f38c1aa921f860a5836ab6ed3eea0fae09c2c2590029528ba9bb6ade4ed503c7ba75003f747"}
+[2026-04-04 15:04:57] [I] HelperFunctions: Certificate verifying process started
+[2026-04-04 15:04:57] [I] HelperFunctions: Trying to verify certificate
+[2026-04-04 15:04:57] [I] HelperFunctions: -------------------
+[2026-04-04 15:04:57] [I] BIO_Output: Version: 3
+
+[2026-04-04 15:04:57] [I] BIO_Output: Serial: c25b490120fd
+
+[2026-04-04 15:04:57] [I] X509_Info: Issuer: /C=TR/L=Gebze - Kocaeli/O=T\xC3\xBCrkiye Bilimsel ve Teknolojik Ara\xC5\x9Ft\xC4\xB1rma Kurumu - T\xC3\x9CB\xC4\xB0TAK/OU=B\xC4\xB0LGEM/CN=Odeme Kaydedici Cihaz Elektronik Sertifika Hizmet Saglayicisi-S2
+[2026-04-04 15:04:57] [I] X509_Info: Valid From: Jan  4 05:52:28 2024 GMT
+[2026-04-04 15:04:57] [I] X509_Info: Valid Until: Jan  4 05:52:28 2024 GMTJan  1 05:52:28 2035 GMT
+[2026-04-04 15:04:57] [I] X509_Info: Subject: /C=TR/O=TOKEN/serialNumber=AV0000017893
+[2026-04-04 15:04:57] [I] X509_Info: Public Key: Public-Key: (384 bit)
+pub:
+    04:bc:5f:7d:b8:f1:67:f3:4c:8b:fc:56:65:24:0e:
+    37:78:cb:07:c0:6d:f3:fa:97:ea:63:0e:72:f8:c9:
+    0f:eb:74:f1:30:73:04:0a:2a:43:12:fe:29:11:22:
+    6f:7f:6d:b9:ef:04:c9:20:26:e3:5f:00:42:95:8f:
+    25:69:53:6b:73:78:17:28:81:4e:0a:40:59:06:0f:
+    1d:95:6b:22:c7:bd:0b:3c:0b:37:1e:c1:83:62:bc:
+    c2:14:9d:f5:90:56:97
+ASN1 OID: secp384r1
+NIST CURVE: P-384
+
+[2026-04-04 15:04:57] [I] HelperFunctions: -------------------
+[2026-04-04 15:04:57] [I] HelperFunctions: device identifier 0
+[2026-04-04 15:04:57] [I] HelperFunctions: Got certificate public key
+[2026-04-04 15:04:57] [I] HelperFunctions: Sign verificator initialized
+[2026-04-04 15:04:57] [I] HelperFunctions: Certificate content verificator initialized
+[2026-04-04 15:04:57] [I] HelperFunctions: Verification result: 1
+[2026-04-04 15:04:57] [I] HelperFunctions: Signature length: 102
+[2026-04-04 15:04:57] [I] HelperFunctions: Certificate verification successful
+[2026-04-04 15:04:57] [I] Connection: Certificate Verified
+[2026-04-04 15:04:57] [I] Connection: Sharing key
+[2026-04-04 15:04:57] [I] Connection: Request Type: 6 Enqueued 104 bytes to write.
+[2026-04-04 15:04:57] [I] Connection: Encryption Key Sent: 25899843133175813652832053393925
+[2026-04-04 15:04:57] [I] Connection: Key Shared After Certificate
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 50
+[2026-04-04 15:04:57] [I] Connection: serialInQueue Popped
+[2026-04-04 15:04:57] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:04:57] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:04:57] [I] ConnectionAndroid: CURRENT KEY25899843133175813652832053393925
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: 104 Bytes Written
+[2026-04-04 15:04:57] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 15:04:57] [E] AES: 18900000:error:1C800064:Provider routines:ossl_cipher_unpadblock:bad decrypt:providers\implementations\ciphers\ciphercommon_block.c:107:
+
+[2026-04-04 15:04:57] [I] Connection: Sending Error: Not ending or starting with a valid TLV tag. Invalid or corrupted data.
+[2026-04-04 15:04:57] [I] Connection: Request Type: 60 Enqueued 136 bytes to write.
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Not ending or starting with a valid TLV tag. Invalid or corrupted data.
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:04:57] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:04:57] [I] ConnectionAndroid: CURRENT KEY25899843133175813652832053393925
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] TLVProtocol: Type of chunk: 6 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 53690
+[2026-04-04 15:04:57] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 49
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 6
+[2026-04-04 15:04:57] [I] Connection: SHARE_KEY Data Received
+[2026-04-04 15:04:57] [I] Connection: SHARE_KEY Data Received And Data Is OK
+[2026-04-04 15:04:57] [I] Connection: DEVICE_INFO Request Sent
+[2026-04-04 15:04:57] [I] Connection: Request Type: 0 Enqueued 120 bytes to write.
+[2026-04-04 15:04:57] [I] Connection: ConnectionState is 1 (Active)
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 50
+[2026-04-04 15:04:57] [I] Connection: serialInQueue Popped
+[2026-04-04 15:04:57] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:04:57] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:04:57] [I] ConnectionAndroid: CURRENT KEY25899843133175813652832053393925
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] TLVProtocol: Type of chunk: 6 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 53690
+[2026-04-04 15:04:57] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:04:57] [I] ConnectionAndroid: 120 Bytes Written
+[2026-04-04 15:04:57] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 49
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 6
+[2026-04-04 15:04:57] [I] Connection: SHARE_KEY Data Received
+[2026-04-04 15:04:57] [I] Connection: SHARE_KEY Data Received And Data Is OK
+[2026-04-04 15:04:57] [I] Connection: DEVICE_INFO Request Sent
+[2026-04-04 15:04:57] [I] Connection: Request Type: 0 Enqueued 120 bytes to write.
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 15:04:57] [I] Connection: ConnectionState is 1 (Active)
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 50
+[2026-04-04 15:04:57] [I] Connection: serialInQueue Popped
+[2026-04-04 15:04:57] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:04:57] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:04:57] [I] ConnectionAndroid: CURRENT KEY25899843133175813652832053393925
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 32 - Value of chunk: AV0000017893 - Control of chunk: 63744
+[2026-04-04 15:04:57] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:04:57] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 49
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 0
+[2026-04-04 15:04:57] [I] Connection: Device Info: AV0000017893
+[2026-04-04 15:04:57] [I] Connection: Device State Callback Invoking
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Device State Callback Invoked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: 120 Bytes Written
+[2026-04-04 15:04:57] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:04:57] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:04:57] [I] ConnectionAndroid: CURRENT KEY25899843133175813652832053393925
+[2026-04-04 15:04:57] [I] Connection: Request Type: 2 Enqueued 72 bytes to write.
+[2026-04-04 15:04:57] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 3532
+[2026-04-04 15:04:57] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:04:57] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 15:04:57] [I] Connection: FISCAL_INFO Request Sent
+[2026-04-04 15:04:57] [I] Connection: Device Info Could Not Be Sent
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 50
+[2026-04-04 15:04:57] [I] Connection: serialInQueue Popped
+[2026-04-04 15:04:57] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 49
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 0
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 50
+[2026-04-04 15:04:57] [I] Connection: serialInQueue Popped
+[2026-04-04 15:04:57] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:04:57] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:04:57] [I] ConnectionAndroid: CURRENT KEY25899843133175813652832053393925
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 32 - Value of chunk: AV0000017893 - Control of chunk: 63744
+[2026-04-04 15:04:57] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:04:57] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 49
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 0
+[2026-04-04 15:04:57] [I] Connection: Device Info: AV0000017893
+[2026-04-04 15:04:57] [I] Connection: Device State Callback Invoking
+[2026-04-04 15:04:57] [I] Connection: Device State Callback Invoked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Device Info Could Not Be Sent
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 50
+[2026-04-04 15:04:57] [I] Connection: serialInQueue Popped
+[2026-04-04 15:04:57] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:04:57] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:04:57] [I] ConnectionAndroid: CURRENT KEY25899843133175813652832053393925
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 3532
+[2026-04-04 15:04:57] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 49
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 0
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 50
+[2026-04-04 15:04:57] [I] Connection: serialInQueue Popped
+[2026-04-04 15:04:57] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: 72 Bytes Written
+[2026-04-04 15:04:57] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:04:57] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:04:57] [I] ConnectionAndroid: CURRENT KEY25899843133175813652832053393925
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] TLVProtocol: Type of chunk: 2 - Length of chunk: 400 - Value of chunk: {"businessMode":0,"pluCount":5,"plus":[{"barcode":"123456789001","name":"ETI GOFRET","pluNo":1,"price":500,"sectionNo":1,"status":1,"taxPercent":2000,"type":0,"unit":"","vatID":1},{"barcode":"123456789002","name":"ALGIDA MAGNUM","pluNo":2,"price":2500,"sectionNo":1,"status":1,"taxPercent":2000,"type":0,"unit":"","vatID":1},{"barcode":"123456789003","name":"ULUDAG LIMONATA","pluNo":3,"price":2500,"sectionNo":4,"status":1,"taxPercent":0,"type":0,"unit":"","vatID":1},{"barcode":"123456789008","name":"FUSE TEA LIMON","pluNo":4,"price":3000,"sectionNo":4,"status":1,"taxPercent":0,"type":0,"unit":"","vatID":1},{"barcode":"2525255255","name":"parol","pluNo":5,"price":2552,"sectionNo":2,"status":1,"taxPercent":1000,"type":0,"unit":"Adet","vatID":3}],"receiptLimit":525000,"sectionCount":7,"sections":[{"limit":0,"name":"KDV %20","price":100,"sectionNo":1,"status":1,"taxPercent":2000,"type":0},{"limit":0,"name":"KDV %10","price":200,"sectionNo":2,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"KDV  %1","price":300,"sectionNo":3,"status":1,"taxPercent":100,"type":0},{"limit":0,"name":"KDV %0","price":400,"sectionNo":4,"status":1,"taxPercent":0,"type":0},{"limit":0,"name":"KATILIM PAYI","price":500,"sectionNo":5,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"FÝYAT FARKI","price":600,"sectionNo":6,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"POÞET","price":0,"sectionNo":7,"status":1,"taxPercent":2000,"type":0}]} - Control of chunk: 31169
+[2026-04-04 15:04:57] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:04:57] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 49
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 2
+[2026-04-04 15:04:57] [I] Connection: FISCAL_INFO Data Received
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 50
+[2026-04-04 15:04:57] [I] Connection: serialInQueue Popped
+[2026-04-04 15:04:57] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:04:57] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:04:57] [I] ConnectionAndroid: CURRENT KEY25899843133175813652832053393925
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:04:57] [I] TLVProtocol: Type of chunk: 2 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 46593
+[2026-04-04 15:04:57] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:04:57] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:04:57] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 49
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 2
+[2026-04-04 15:04:57] [I] Connection: Received Data Type: 50
+[2026-04-04 15:04:57] [I] Connection: serialInQueue Popped
+[2026-04-04 15:04:57] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:04:57] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:07:15] [I] ConnectionWrapper: setSerialInCallback called
+[2026-04-04 15:07:15] [I] ConnectionWrapper: Setting serialInCallback for device index: 0
+[2026-04-04 15:07:15] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 15:07:15] [I] ConnectionWrapper: Setting serialInCallback for device index: 1
+[2026-04-04 15:07:15] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 15:07:15] [I] ConnectionWrapper: setDeviceStateCallback called
+[2026-04-04 15:07:15] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 0
+[2026-04-04 15:07:15] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 15:07:15] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 1
+[2026-04-04 15:07:15] [I] Connection: Device State Callback Is Initialized
+----- Log started at 2026-04-04 15:28:04 ------
+Token Integration Hub Version: 2.1.0
+-------------------------------------------------
+[2026-04-04 15:28:04] [I] ConnectionWrapper: createCommunication called
+[2026-04-04 15:28:04] [I] ConnectionWrapper: Company Name: TOKEN FINTECH
+[2026-04-04 15:28:04] [I] ConnectionWrapper: Connection Started
+[2026-04-04 15:28:04] [I] ConnectionAndroid: Connected Device Count : 9
+[2026-04-04 15:28:04] [I] ConnectionAndroid: VID: 3034 PID: 33107
+[2026-04-04 15:28:04] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 15:28:04] [I] ConnectionAndroid: VID: 2522 PID: 8808
+[2026-04-04 15:28:04] [I] ConnectionAndroid: Handle Part Called
+[2026-04-04 15:28:04] [I] ConnectionAndroid: Sent getProtocol
+[2026-04-04 15:28:04] [I] ConnectionAndroid: LibUSB Error: Entity not found
+[2026-04-04 15:28:04] [I] ConnectionAndroid: VID: 7119 PID: 11165
+[2026-04-04 15:28:04] [I] ConnectionAndroid: LibUSB Error: Entity not found
+[2026-04-04 15:28:04] [I] ConnectionAndroid: VID: 32902 PID: 31328
+[2026-04-04 15:28:04] [I] ConnectionAndroid: LibUSB Error: Operation not supported or unimplemented on this platform
+[2026-04-04 15:28:04] [I] ConnectionAndroid: VID: 6353 PID: 11520
+[2026-04-04 15:28:04] [I] ConnectionAndroid: Sent getProtocol
+[2026-04-04 15:28:04] [I] ConnectionAndroid: Version Code Device: 2
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Accessory Identification Sent
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Android Found:
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Interface 0. altSetting 0. Num of endpoints: 2
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Endpoint type 
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Bulk
+[2026-04-04 15:28:05] [I] ConnectionAndroid: IN
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Address 129
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Endpoint type 
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Bulk
+[2026-04-04 15:28:05] [I] ConnectionAndroid: OUT
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Address 1
+[2026-04-04 15:28:05] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Interface Claimed, Ready To Transfer Data
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Device Added With VID: 3034 PID: 33107
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Device Added With VID: 2522 PID: 8808
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Device Added With VID: 7119 PID: 11165
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Device Added With VID: 32902 PID: 31328
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Device Added With VID: 6353 PID: 11520
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Device Added With VID: 1507 PID: 1552
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Device Added With VID: 1507 PID: 1574
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Device Added With VID: 1133 PID: 50504
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Device Added With VID: 32903 PID: 38
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Claim interface result: 0
+[2026-04-04 15:28:05] [I] ConnectionAndroid: Listening in port
+[2026-04-04 15:28:06] [I] Connection: Sending Hello
+[2026-04-04 15:28:06] [I] Connection: Verification key: asdfg
+[2026-04-04 15:28:06] [I] Connection: Request Type: 4 Enqueued 72 bytes to write.
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Device Initialized
+[2026-04-04 15:28:06] [I] ConnectionWrapper: Connection Android Object Created
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 15:28:06] [I] ConnectionWrapper: Connection Linux Object Created
+[2026-04-04 15:28:06] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] ConnectionWrapper: setSerialInCallback called
+[2026-04-04 15:28:06] [I] ConnectionWrapper: Setting serialInCallback for device index: 0
+[2026-04-04 15:28:06] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 15:28:06] [I] ConnectionWrapper: Setting serialInCallback for device index: 1
+[2026-04-04 15:28:06] [I] ConnectionAndroid: 72 Bytes Written
+[2026-04-04 15:28:06] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 15:28:06] [I] ConnectionWrapper: setDeviceStateCallback called
+[2026-04-04 15:28:06] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 0
+[2026-04-04 15:28:06] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 15:28:06] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 1
+[2026-04-04 15:28:06] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 15:28:06] [I] ConnectionWrapper: setSerialInCallback called
+[2026-04-04 15:28:06] [I] ConnectionWrapper: Setting serialInCallback for device index: 0
+[2026-04-04 15:28:06] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 15:28:06] [I] ConnectionWrapper: Setting serialInCallback for device index: 1
+[2026-04-04 15:28:06] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 15:28:06] [I] ConnectionWrapper: setDeviceStateCallback called
+[2026-04-04 15:28:06] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 0
+[2026-04-04 15:28:06] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 15:28:06] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 1
+[2026-04-04 15:28:06] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:28:06] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:28:06] [I] ConnectionAndroid: CURRENT KEY01234567890123456789012345678901
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] TLVProtocol: Type of chunk: 5 - Length of chunk: 1264 - Value of chunk: {"certificate":"-----BEGIN CERTIFICATE-----\nMIIEAzCCA4igAwIBAgIHAMJbSQEg\/TAKBggqhkjOPQQDAzCBzTELMAkGA1UEBhMC\nVFIxGDAWBgNVBAcMD0dlYnplIC0gS29jYWVsaTFHMEUGA1UECgw+VMO8cmtpeWUg\nQmlsaW1zZWwgdmUgVGVrbm9sb2ppayBBcmHFn3TEsXJtYSBLdXJ1bXUgLSBUw5xC\nxLBUQUsxEDAOBgNVBAsMB0LEsExHRU0xSTBHBgNVBAMMQE9kZW1lIEtheWRlZGlj\naSBDaWhheiBFbGVrdHJvbmlrIFNlcnRpZmlrYSBIaXptZXQgU2FnbGF5aWNpc2kt\nUzIwHhcNMjQwMTA0MDU1MjI4WhcNMzUwMTAxMDU1MjI4WjA0MQswCQYDVQQGEwJU\nUjEOMAwGA1UECgwFVE9LRU4xFTATBgNVBAUTDEFWMDAwMDAxNzg5MzB2MBAGByqG\nSM49AgEGBSuBBAAiA2IABLxffbjxZ\/NMi\/xWZSQON3jLB8Bt8\/qX6mMOcvjJD+t0\n8TBzBAoqQxL+KREib39tue8EySAm418AQpWPJWlTa3N4FyiBTgpAWQYPHZVrIse9\nCzwLNx7Bg2K8whSd9ZBWl6OCAcwwggHIMB8GA1UdIwQYMBaAFJ9xpYFJAx9+7iB9\nSY7Ya8c+ryjyMB0GA1UdDgQWBBRbCd5pXenDmTbSfk0hUOnUVDBcwzAOBgNVHQ8B\nAf8EBAMCBaAwgcYGA1UdIASBvjCBuzCBuAYLYIYYAQIBAQUHAQIwgagwKgYIKwYB\nBQUHAgEWHmh0dHA6Ly9kZXBvLmthbXVzbS5nb3YudHIvaWxrZTB6BggrBgEFBQcC\nAjBuDGxCdSBzZXJ0aWZpa2EgaWxlIGlsZ2lsaSBzZXJ0aWZpa2EgdXlndWxhbWEg\nZXNhc2xhcsSxbsSxIG9rdW1hayBpw6dpbiBiZWxpcnRpbGVuIHdlYiBzaXRlc2lu\naSB6aXlhcmV0IGVkaW5pei4wCQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcD\nAQYIKwYBBQUHAwIwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2RlcG8ua2FtdXNt\nLmdvdi50ci9va2MvT0tDLVMyLVNJTC5jcmwwRAYIKwYBBQUHAQEEODA2MDQGCCsG\nAQUFBzAChihodHRwOi8vZGVwby5rYW11c20uZ292LnRyL29rYy9PS0MtUzIuY2Vy\nMAoGCCqGSM49BAMDA2kAMGYCMQCY0eOucYODzz8NRrkU3Rk4iXts69o3dSAYX\/UV\nxQ+BZsgIQr3xwTQvSrG6ZP66BAMCMQDpPESoNzNSwpm0gJngiS7LBOybCBtxkeiZ\n2iowkc6G\/pnM3rvpaN+w2fOjMiAOyUU=\n-----END CERTIFICATE-----\n","sign":"802d8e8b7d2bb19b994c8c42cb5c59678a0c153455e860e096220678f0b00f9f052ab723504d2476a8d5a9501323b472bc821340ceee3ee3e19a4e0a5f5e1ed804a1b08b70ba35dac355da7cca376a9ae6ddc7b684625bba8347dd978ae66b29"} - Control of chunk: 9677
+[2026-04-04 15:28:06] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 49
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 5
+[2026-04-04 15:28:06] [I] Connection: CERTIFICATE Data Received
+[2026-04-04 15:28:06] [I] Connection: CERTIFICATE Data: {"certificate":"-----BEGIN CERTIFICATE-----\nMIIEAzCCA4igAwIBAgIHAMJbSQEg\/TAKBggqhkjOPQQDAzCBzTELMAkGA1UEBhMC\nVFIxGDAWBgNVBAcMD0dlYnplIC0gS29jYWVsaTFHMEUGA1UECgw+VMO8cmtpeWUg\nQmlsaW1zZWwgdmUgVGVrbm9sb2ppayBBcmHFn3TEsXJtYSBLdXJ1bXUgLSBUw5xC\nxLBUQUsxEDAOBgNVBAsMB0LEsExHRU0xSTBHBgNVBAMMQE9kZW1lIEtheWRlZGlj\naSBDaWhheiBFbGVrdHJvbmlrIFNlcnRpZmlrYSBIaXptZXQgU2FnbGF5aWNpc2kt\nUzIwHhcNMjQwMTA0MDU1MjI4WhcNMzUwMTAxMDU1MjI4WjA0MQswCQYDVQQGEwJU\nUjEOMAwGA1UECgwFVE9LRU4xFTATBgNVBAUTDEFWMDAwMDAxNzg5MzB2MBAGByqG\nSM49AgEGBSuBBAAiA2IABLxffbjxZ\/NMi\/xWZSQON3jLB8Bt8\/qX6mMOcvjJD+t0\n8TBzBAoqQxL+KREib39tue8EySAm418AQpWPJWlTa3N4FyiBTgpAWQYPHZVrIse9\nCzwLNx7Bg2K8whSd9ZBWl6OCAcwwggHIMB8GA1UdIwQYMBaAFJ9xpYFJAx9+7iB9\nSY7Ya8c+ryjyMB0GA1UdDgQWBBRbCd5pXenDmTbSfk0hUOnUVDBcwzAOBgNVHQ8B\nAf8EBAMCBaAwgcYGA1UdIASBvjCBuzCBuAYLYIYYAQIBAQUHAQIwgagwKgYIKwYB\nBQUHAgEWHmh0dHA6Ly9kZXBvLmthbXVzbS5nb3YudHIvaWxrZTB6BggrBgEFBQcC\nAjBuDGxCdSBzZXJ0aWZpa2EgaWxlIGlsZ2lsaSBzZXJ0aWZpa2EgdXlndWxhbWEg\nZXNhc2xhcsSxbsSxIG9rdW1hayBpw6dpbiBiZWxpcnRpbGVuIHdlYiBzaXRlc2lu\naSB6aXlhcmV0IGVkaW5pei4wCQYDVR0TBAIwADAdBgNVHSUEFjAUBggrBgEFBQcD\nAQYIKwYBBQUHAwIwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2RlcG8ua2FtdXNt\nLmdvdi50ci9va2MvT0tDLVMyLVNJTC5jcmwwRAYIKwYBBQUHAQEEODA2MDQGCCsG\nAQUFBzAChihodHRwOi8vZGVwby5rYW11c20uZ292LnRyL29rYy9PS0MtUzIuY2Vy\nMAoGCCqGSM49BAMDA2kAMGYCMQCY0eOucYODzz8NRrkU3Rk4iXts69o3dSAYX\/UV\nxQ+BZsgIQr3xwTQvSrG6ZP66BAMCMQDpPESoNzNSwpm0gJngiS7LBOybCBtxkeiZ\n2iowkc6G\/pnM3rvpaN+w2fOjMiAOyUU=\n-----END CERTIFICATE-----\n","sign":"802d8e8b7d2bb19b994c8c42cb5c59678a0c153455e860e096220678f0b00f9f052ab723504d2476a8d5a9501323b472bc821340ceee3ee3e19a4e0a5f5e1ed804a1b08b70ba35dac355da7cca376a9ae6ddc7b684625bba8347dd978ae66b29"}
+[2026-04-04 15:28:06] [I] HelperFunctions: Certificate verifying process started
+[2026-04-04 15:28:06] [I] HelperFunctions: Trying to verify certificate
+[2026-04-04 15:28:06] [I] HelperFunctions: -------------------
+[2026-04-04 15:28:06] [I] BIO_Output: Version: 3
+
+[2026-04-04 15:28:06] [I] BIO_Output: Serial: c25b490120fd
+
+[2026-04-04 15:28:06] [I] X509_Info: Issuer: /C=TR/L=Gebze - Kocaeli/O=T\xC3\xBCrkiye Bilimsel ve Teknolojik Ara\xC5\x9Ft\xC4\xB1rma Kurumu - T\xC3\x9CB\xC4\xB0TAK/OU=B\xC4\xB0LGEM/CN=Odeme Kaydedici Cihaz Elektronik Sertifika Hizmet Saglayicisi-S2
+[2026-04-04 15:28:06] [I] X509_Info: Valid From: Jan  4 05:52:28 2024 GMT
+[2026-04-04 15:28:06] [I] X509_Info: Valid Until: Jan  4 05:52:28 2024 GMTJan  1 05:52:28 2035 GMT
+[2026-04-04 15:28:06] [I] X509_Info: Subject: /C=TR/O=TOKEN/serialNumber=AV0000017893
+[2026-04-04 15:28:06] [I] X509_Info: Public Key: Public-Key: (384 bit)
+pub:
+    04:bc:5f:7d:b8:f1:67:f3:4c:8b:fc:56:65:24:0e:
+    37:78:cb:07:c0:6d:f3:fa:97:ea:63:0e:72:f8:c9:
+    0f:eb:74:f1:30:73:04:0a:2a:43:12:fe:29:11:22:
+    6f:7f:6d:b9:ef:04:c9:20:26:e3:5f:00:42:95:8f:
+    25:69:53:6b:73:78:17:28:81:4e:0a:40:59:06:0f:
+    1d:95:6b:22:c7:bd:0b:3c:0b:37:1e:c1:83:62:bc:
+    c2:14:9d:f5:90:56:97
+ASN1 OID: secp384r1
+NIST CURVE: P-384
+
+[2026-04-04 15:28:06] [I] HelperFunctions: -------------------
+[2026-04-04 15:28:06] [I] HelperFunctions: device identifier 0
+[2026-04-04 15:28:06] [I] HelperFunctions: Got certificate public key
+[2026-04-04 15:28:06] [I] HelperFunctions: Sign verificator initialized
+[2026-04-04 15:28:06] [I] HelperFunctions: Certificate content verificator initialized
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:28:06] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:28:06] [I] ConnectionAndroid: CURRENT KEY01234567890123456789012345678901
+[2026-04-04 15:28:06] [I] TLVProtocol: Type of chunk: 4 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 50012
+[2026-04-04 15:28:06] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:28:06] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:28:06] [I] HelperFunctions: Verification result: 1
+[2026-04-04 15:28:06] [I] HelperFunctions: Signature length: 104
+[2026-04-04 15:28:06] [I] HelperFunctions: Certificate verification successful
+[2026-04-04 15:28:06] [I] Connection: Certificate Verified
+[2026-04-04 15:28:06] [I] Connection: Sharing key
+[2026-04-04 15:28:06] [I] Connection: Request Type: 6 Enqueued 104 bytes to write.
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 15:28:06] [I] Connection: Encryption Key Sent: 98703281455658328601891159847137
+[2026-04-04 15:28:06] [I] Connection: Key Shared After Certificate
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 50
+[2026-04-04 15:28:06] [I] Connection: serialInQueue Popped
+[2026-04-04 15:28:06] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 49
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 4
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 50
+[2026-04-04 15:28:06] [I] Connection: serialInQueue Popped
+[2026-04-04 15:28:06] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: 104 Bytes Written
+[2026-04-04 15:28:06] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:28:06] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:28:06] [I] ConnectionAndroid: CURRENT KEY98703281455658328601891159847137
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] TLVProtocol: Type of chunk: 6 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 10531
+[2026-04-04 15:28:06] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:28:06] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 49
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 6
+[2026-04-04 15:28:06] [I] Connection: SHARE_KEY Data Received
+[2026-04-04 15:28:06] [I] Connection: SHARE_KEY Data Received And Data Is OK
+[2026-04-04 15:28:06] [I] Connection: DEVICE_INFO Request Sent
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Request Type: 0 Enqueued 120 bytes to write.
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 15:28:06] [I] Connection: ConnectionState is 1 (Active)
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 50
+[2026-04-04 15:28:06] [I] Connection: serialInQueue Popped
+[2026-04-04 15:28:06] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:28:06] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:28:06] [I] ConnectionAndroid: CURRENT KEY98703281455658328601891159847137
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] TLVProtocol: Type of chunk: 6 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 10531
+[2026-04-04 15:28:06] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 49
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 6
+[2026-04-04 15:28:06] [I] Connection: SHARE_KEY Data Received
+[2026-04-04 15:28:06] [I] Connection: SHARE_KEY Data Received And Data Is OK
+[2026-04-04 15:28:06] [I] Connection: DEVICE_INFO Request Sent
+[2026-04-04 15:28:06] [I] ConnectionAndroid: 120 Bytes Written
+[2026-04-04 15:28:06] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 15:28:06] [I] Connection: Request Type: 0 Enqueued 120 bytes to write.
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 15:28:06] [I] Connection: ConnectionState is 1 (Active)
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 50
+[2026-04-04 15:28:06] [I] Connection: serialInQueue Popped
+[2026-04-04 15:28:06] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:28:06] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:28:06] [I] ConnectionAndroid: CURRENT KEY98703281455658328601891159847137
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 32 - Value of chunk: AV0000017893 - Control of chunk: 41267
+[2026-04-04 15:28:06] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 49
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 0
+[2026-04-04 15:28:06] [I] Connection: Device Info: AV0000017893
+[2026-04-04 15:28:06] [I] Connection: Device State Callback Invoking
+[2026-04-04 15:28:06] [I] Connection: Device State Callback Invoked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:28:06] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:28:06] [I] ConnectionAndroid: CURRENT KEY98703281455658328601891159847137
+[2026-04-04 15:28:06] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 62805
+[2026-04-04 15:28:06] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:28:06] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:28:06] [I] ConnectionAndroid: 120 Bytes Written
+[2026-04-04 15:28:06] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 15:28:06] [I] Connection: Request Type: 2 Enqueued 72 bytes to write.
+[2026-04-04 15:28:06] [I] Connection: FISCAL_INFO Request Sent
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Trying to write to 1
+[2026-04-04 15:28:06] [I] Connection: Device Info Could Not Be Sent
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 50
+[2026-04-04 15:28:06] [I] Connection: serialInQueue Popped
+[2026-04-04 15:28:06] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 49
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 0
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 50
+[2026-04-04 15:28:06] [I] Connection: serialInQueue Popped
+[2026-04-04 15:28:06] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:28:06] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:28:06] [I] ConnectionAndroid: CURRENT KEY98703281455658328601891159847137
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 32 - Value of chunk: AV0000017893 - Control of chunk: 41267
+[2026-04-04 15:28:06] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 49
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 0
+[2026-04-04 15:28:06] [I] Connection: Device Info: AV0000017893
+[2026-04-04 15:28:06] [I] Connection: Device State Callback Invoking
+[2026-04-04 15:28:06] [I] Connection: Device State Callback Invoked
+[2026-04-04 15:28:06] [I] Connection: Device Info Could Not Be Sent
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 50
+[2026-04-04 15:28:06] [I] Connection: serialInQueue Popped
+[2026-04-04 15:28:06] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:28:06] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:28:06] [I] ConnectionAndroid: CURRENT KEY98703281455658328601891159847137
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] TLVProtocol: Type of chunk: 0 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 62805
+[2026-04-04 15:28:06] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:28:06] [I] ConnectionAndroid: 72 Bytes Written
+[2026-04-04 15:28:06] [I] ConnectionAndroid: sendSerial loop finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 49
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 0
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 50
+[2026-04-04 15:28:06] [I] Connection: serialInQueue Popped
+[2026-04-04 15:28:06] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:28:06] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:28:06] [I] ConnectionAndroid: CURRENT KEY98703281455658328601891159847137
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] TLVProtocol: Type of chunk: 2 - Length of chunk: 400 - Value of chunk: {"businessMode":0,"pluCount":5,"plus":[{"barcode":"123456789001","name":"ETI GOFRET","pluNo":1,"price":500,"sectionNo":1,"status":1,"taxPercent":2000,"type":0,"unit":"","vatID":1},{"barcode":"123456789002","name":"ALGIDA MAGNUM","pluNo":2,"price":2500,"sectionNo":1,"status":1,"taxPercent":2000,"type":0,"unit":"","vatID":1},{"barcode":"123456789003","name":"ULUDAG LIMONATA","pluNo":3,"price":2500,"sectionNo":4,"status":1,"taxPercent":0,"type":0,"unit":"","vatID":1},{"barcode":"123456789008","name":"FUSE TEA LIMON","pluNo":4,"price":3000,"sectionNo":4,"status":1,"taxPercent":0,"type":0,"unit":"","vatID":1},{"barcode":"2525255255","name":"parol","pluNo":5,"price":2552,"sectionNo":2,"status":1,"taxPercent":1000,"type":0,"unit":"Adet","vatID":3}],"receiptLimit":525000,"sectionCount":7,"sections":[{"limit":0,"name":"KDV %20","price":100,"sectionNo":1,"status":1,"taxPercent":2000,"type":0},{"limit":0,"name":"KDV %10","price":200,"sectionNo":2,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"KDV  %1","price":300,"sectionNo":3,"status":1,"taxPercent":100,"type":0},{"limit":0,"name":"KDV %0","price":400,"sectionNo":4,"status":1,"taxPercent":0,"type":0},{"limit":0,"name":"KATILIM PAYI","price":500,"sectionNo":5,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"FÝYAT FARKI","price":600,"sectionNo":6,"status":1,"taxPercent":1000,"type":0},{"limit":0,"name":"POÞET","price":0,"sectionNo":7,"status":1,"taxPercent":2000,"type":0}]} - Control of chunk: 49605
+[2026-04-04 15:28:06] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:28:06] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 49
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 2
+[2026-04-04 15:28:06] [I] Connection: FISCAL_INFO Data Received
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 50
+[2026-04-04 15:28:06] [I] Connection: serialInQueue Popped
+[2026-04-04 15:28:06] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Bulk transfer short read 0
+[2026-04-04 15:28:06] [I] ConnectionAndroid: LibUSB Error: Success
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Read bytes 
+[2026-04-04 15:28:06] [I] ConnectionAndroid: CURRENT KEY98703281455658328601891159847137
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Locked
+[2026-04-04 15:28:06] [I] TLVProtocol: Type of chunk: 2 - Length of chunk: 16 - Value of chunk: OK - Control of chunk: 20120
+[2026-04-04 15:28:06] [I] ConnectionAndroid: TLV Read successfully
+[2026-04-04 15:28:06] [I] ConnectionAndroid: Serial In Mutex Unlocked
+[2026-04-04 15:28:06] [I] ConnectionAndroid: listenSerial Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Wait Finished. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Serial In Queue Is Not Empty. Size of queue is 1
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 49
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 2
+[2026-04-04 15:28:06] [I] Connection: Received Data Type: 50
+[2026-04-04 15:28:06] [I] Connection: serialInQueue Popped
+[2026-04-04 15:28:06] [I] Connection: Serial In Loop Finished
+[2026-04-04 15:28:06] [I] Connection: Serial In Mutex Locked
+[2026-04-04 15:28:09] [I] ConnectionWrapper: setSerialInCallback called
+[2026-04-04 15:28:09] [I] ConnectionWrapper: Setting serialInCallback for device index: 0
+[2026-04-04 15:28:09] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 15:28:09] [I] ConnectionWrapper: Setting serialInCallback for device index: 1
+[2026-04-04 15:28:09] [I] Connection: Serial In Callback Is Initialized
+[2026-04-04 15:28:09] [I] ConnectionWrapper: setDeviceStateCallback called
+[2026-04-04 15:28:09] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 0
+[2026-04-04 15:28:09] [I] Connection: Device State Callback Is Initialized
+[2026-04-04 15:28:09] [I] ConnectionWrapper: Setting deviceStateCallback for device index: 1
+[2026-04-04 15:28:09] [I] Connection: Device State Callback Is Initialized

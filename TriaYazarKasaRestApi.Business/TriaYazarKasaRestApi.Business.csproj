@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- <PlatformTarget>x64</PlatformTarget> -->
+    <PlatformTarget>x86</PlatformTarget>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference
+      Include="..\TriaYazarKasaRestApi.Data.Acces\TriaYazarKasaRestApi.Data.Acces.csproj" />
+    <ProjectReference
+      Include="..\TriaYazarKasaRestApi.Entities\TriaYazarKasaRestApi.Entities.csproj" />
+
+    <Reference Include="Hugin.Common">
+      <HintPath>Libraries\Hugin\Hugin.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Hugin.POS.CompactPrinter.FP300">
+      <HintPath>Libraries\Hugin\Hugin.POS.CompactPrinter.FP300.dll</HintPath>
+    </Reference>
+    <Reference Include="Hugin.GMPCommon">
+      <HintPath>Libraries\Hugin\Hugin.GMPCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Hugin.ExDevice.DiffieHellman">
+      <HintPath>Libraries\Hugin\Hugin.ExDevice.DiffieHellman.dll</HintPath>
+    </Reference>
+    <Reference Include="IntegrationHub">
+      <HintPath>Libraries\Beko\IntegrationHub.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- <Content Include="Libraries\Beko\IntegrationHub.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content> -->
+    <Content Include="Libraries\Beko\IntegrationHubCpp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\Beko\libusb-1.0.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Libraries\Beko\IntegrationHub.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Libraries\Hugin\Hugin.Common.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

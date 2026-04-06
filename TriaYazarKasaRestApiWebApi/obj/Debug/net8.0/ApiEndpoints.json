@@ -1,0 +1,500 @@
+[
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
+    "Method": "SendBasket",
+    "RelativePath": "api/beko/{connectionId}/basket",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.BekoBasketRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.BekoOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
+    "Method": "DeviceInfo",
+    "RelativePath": "api/beko/{connectionId}/device-info",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.BekoOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
+    "Method": "Disconnect",
+    "RelativePath": "api/beko/{connectionId}/disconnect",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.BekoOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
+    "Method": "SendPayment",
+    "RelativePath": "api/beko/{connectionId}/payment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.BekoPaymentRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.BekoOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
+    "Method": "Status",
+    "RelativePath": "api/beko/{connectionId}/status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.BekoOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
+    "Method": "VoidReceipt",
+    "RelativePath": "api/beko/{connectionId}/void",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.BekoOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
+    "Method": "Connect",
+    "RelativePath": "api/beko/connect",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.BekoConnectRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.BekoConnectionResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.ConnectionController",
+    "Method": "GetAutoConnections",
+    "RelativePath": "api/connections/auto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
+    "Method": "CloseReceipt",
+    "RelativePath": "api/hugin/{connectionId}/close-receipt",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.HuginOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
+    "Method": "DeviceInfo",
+    "RelativePath": "api/hugin/{connectionId}/device-info",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.HuginOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
+    "Method": "Disconnect",
+    "RelativePath": "api/hugin/{connectionId}/disconnect",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.HuginOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
+    "Method": "SendJsonDocument",
+    "RelativePath": "api/hugin/{connectionId}/json-document",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.HuginJsonDocumentRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.HuginOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
+    "Method": "AddCardPayment",
+    "RelativePath": "api/hugin/{connectionId}/payment/card",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.HuginCardPaymentRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.HuginOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
+    "Method": "AddCashPayment",
+    "RelativePath": "api/hugin/{connectionId}/payment/cash",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.HuginCashPaymentRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.HuginOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
+    "Method": "Status",
+    "RelativePath": "api/hugin/{connectionId}/status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.HuginOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
+    "Method": "XReport",
+    "RelativePath": "api/hugin/{connectionId}/x-report",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.HuginOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
+    "Method": "ZReport",
+    "RelativePath": "api/hugin/{connectionId}/z-report",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.HuginOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
+    "Method": "Connect",
+    "RelativePath": "api/hugin/connect",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.HuginConnectRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.HuginConnectionResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TriaYazarKasaRestApiWebApi.WeatherForecast, TriaYazarKasaRestApiWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

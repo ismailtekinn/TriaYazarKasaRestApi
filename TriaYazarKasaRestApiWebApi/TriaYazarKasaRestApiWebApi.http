@@ -1,0 +1,6 @@
+@TriaYazarKasaRestApiWebApi_HostAddress = http://localhost:5175
+
+GET {{TriaYazarKasaRestApiWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

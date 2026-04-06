@@ -1,0 +1,4 @@
+27/03/2026 18.21.18.695 : The type initializer for 'Hugin.GMPCommon.MessageBuilder' threw an exception.
+27/03/2026 18.21.18.711 :    at Hugin.ExDevice.T300HSState.AddExDevInfo(GMPGroup& msg)
+   at Hugin.ExDevice.T300Start.GetMessage()
+   at Hugin.ExDevice.T300SecureComm.Connect()

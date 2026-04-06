@@ -1,0 +1,13 @@
+using TriaYazarKasaRestApi.Entities.Enums;
+
+namespace TriaYazarKasaRestApi.Entities.DTOs
+{
+    public class BekoConnectionResponseDto
+    {
+    public Guid ConnectionId { get; set; }
+    public bool IsConnected { get; set; }
+    public PosConnectionStatus Status { get; set; }
+    public string Message { get; set; } = string.Empty;
+    public DateTime ConnectedAt { get; set; }
+    }
+}

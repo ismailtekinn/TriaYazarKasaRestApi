@@ -1,0 +1,21 @@
+28/03/2026 09.27.25.760 : The type initializer for 'Hugin.GMPCommon.MessageBuilder' threw an exception.
+28/03/2026 09.27.25.773 :    at Hugin.ExDevice.T300HSState.AddExDevInfo(GMPGroup& msg)
+   at Hugin.ExDevice.T300Start.GetMessage()
+   at Hugin.ExDevice.T300SecureComm.Connect()
+28/03/2026 09.44.19.378 : The type initializer for 'Hugin.GMPCommon.MessageBuilder' threw an exception.
+28/03/2026 09.44.19.379 :    at Hugin.ExDevice.T300HSState.AddExDevInfo(GMPGroup& msg)
+   at Hugin.ExDevice.T300Start.GetMessage()
+   at Hugin.ExDevice.T300SecureComm.Connect()
+28/03/2026 10.14.08.656 : The type initializer for 'Hugin.GMPCommon.MessageBuilder' threw an exception.
+28/03/2026 10.14.08.667 :    at Hugin.ExDevice.T300HSState.AddExDevInfo(GMPGroup& msg)
+   at Hugin.ExDevice.T300Start.GetMessage()
+   at Hugin.ExDevice.T300SecureComm.Connect()
+28/03/2026 10.37.21.090 :  Root Certificate cannot found
+28/03/2026 10.37.21.095 :    at Hugin.ExDevice.T300SecureComm.LoadCertificates()
+   at Hugin.ExDevice.T300SecureComm.Connect()
+28/03/2026 11.08.56.705 :  Root Certificate cannot found
+28/03/2026 11.08.56.713 :    at Hugin.ExDevice.T300SecureComm.LoadCertificates()
+   at Hugin.ExDevice.T300SecureComm.Connect()
+28/03/2026 12.07.03.182 :  Root Certificate cannot found
+28/03/2026 12.07.03.225 :    at Hugin.ExDevice.T300SecureComm.LoadCertificates()
+   at Hugin.ExDevice.T300SecureComm.Connect()
