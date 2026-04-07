@@ -23,9 +23,9 @@ C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKas
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\TriaYazarKasaRestApi.Data.Acces.AssemblyInfoInputs.cache
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\TriaYazarKasaRestApi.Data.Acces.AssemblyInfo.cs
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\TriaYazarKasaRestApi.Data.Acces.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\TriaYazarKasaRestApi.Data.Acces.sourcelink.json
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\TriaYaza.FDD88FA3.Up2Date
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\TriaYazarKasaRestApi.Data.Acces.dll
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\refint\TriaYazarKasaRestApi.Data.Acces.dll
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\TriaYazarKasaRestApi.Data.Acces.pdb
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\ref\TriaYazarKasaRestApi.Data.Acces.dll
-C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\TriaYazarKasaRestApi.Data.Acces.sourcelink.json

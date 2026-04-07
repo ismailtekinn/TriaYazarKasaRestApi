@@ -40,9 +40,9 @@ C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKas
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Business\obj\Debug\net8.0\TriaYazarKasaRestApi.Business.AssemblyInfoInputs.cache
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Business\obj\Debug\net8.0\TriaYazarKasaRestApi.Business.AssemblyInfo.cs
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Business\obj\Debug\net8.0\TriaYazarKasaRestApi.Business.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Business\obj\Debug\net8.0\TriaYazarKasaRestApi.Business.sourcelink.json
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Business\obj\Debug\net8.0\TriaYaza.8D0AA307.Up2Date
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Business\obj\Debug\net8.0\TriaYazarKasaRestApi.Business.dll
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Business\obj\Debug\net8.0\refint\TriaYazarKasaRestApi.Business.dll
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Business\obj\Debug\net8.0\TriaYazarKasaRestApi.Business.pdb
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Business\obj\Debug\net8.0\ref\TriaYazarKasaRestApi.Business.dll
-C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Business\obj\Debug\net8.0\TriaYazarKasaRestApi.Business.sourcelink.json

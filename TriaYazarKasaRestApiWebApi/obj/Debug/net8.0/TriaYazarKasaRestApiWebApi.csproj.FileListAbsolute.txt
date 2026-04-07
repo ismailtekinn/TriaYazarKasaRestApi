@@ -117,6 +117,7 @@ C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKas
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\TriaYazarKasaRestApiWebApi.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\TriaYazarKasaRestApiWebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\TriaYazarKasaRestApiWebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\TriaYazarKasaRestApiWebApi.sourcelink.json
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -131,4 +132,3 @@ C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKas
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\TriaYazarKasaRestApiWebApi.pdb
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\TriaYazarKasaRestApiWebApi.genruntimeconfig.cache
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\ref\TriaYazarKasaRestApiWebApi.dll
-C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApiWebApi\obj\Debug\net8.0\TriaYazarKasaRestApiWebApi.sourcelink.json

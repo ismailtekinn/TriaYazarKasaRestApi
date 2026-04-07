@@ -57,8 +57,8 @@ namespace TriaYazarKasaRestApi.Business.services
                 ErrorCode = result.ResultCode
             };
         }
-        public Task<BekoOperationResponseDto> GetStatusAsync(Guid connectionId) => ExecuteAsync(connectionId, x => x.GetStatusAsync());
-        public Task<BekoOperationResponseDto> GetDeviceInfoAsync(Guid connectionId) => ExecuteAsync(connectionId, x => x.GetDeviceInfoAsync());
+        public Task<BekoOperationResponseDto> GetStatusAsync(Guid connectionId) => ExecuteWithoutLockAsync(connectionId, x => x.GetStatusAsync());
+        public Task<BekoOperationResponseDto> GetDeviceInfoAsync(Guid connectionId) => ExecuteWithoutLockAsync(connectionId, x => x.GetDeviceInfoAsync());
         public Task<BekoOperationResponseDto> SendBasketAsync(Guid connectionId, BekoBasketRequestDto request) => ExecuteAsync(connectionId, x => x.SendBasketAsync(request));
         public Task<BekoOperationResponseDto> SendPaymentAsync(Guid connectionId, BekoPaymentRequestDto request) => ExecuteAsync(connectionId, x => x.SendPaymentAsync(request));
         public Task<BekoOperationResponseDto> VoidReceiptAsync(Guid connectionId) => ExecuteAsync(connectionId, x => x.VoidReceiptAsync());
@@ -85,6 +85,22 @@ namespace TriaYazarKasaRestApi.Business.services
             {
                 connection.Semaphore.Release();
             }
+        }
+
+        private async Task<BekoOperationResponseDto> ExecuteWithoutLockAsync(Guid connectionId, Func<IBekoAdapter, Task<PosOperationResult>> op)
+        {
+            var connection = _connectionManager.Get(connectionId);
+            if (connection == null)
+                return new BekoOperationResponseDto { Success = false, Message = "Baglanti bulunamadi" };
+
+            var result = await op(connection.Adapter);
+            return new BekoOperationResponseDto
+            {
+                Success = result.Success,
+                Message = result.Message,
+                Data = result.Data,
+                ErrorCode = result.ResultCode
+            };
         }
     }
 }
