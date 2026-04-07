@@ -353,16 +353,22 @@ namespace TriaYazarKasaRestApi.Business.Adapters
             if (!string.IsNullOrWhiteSpace(receiptResult.BasketId))
                 _activeBasketId = receiptResult.BasketId;
 
-            if (receiptResult.Status == 0 && receiptResult.ReceiptNo.GetValueOrDefault() > 0 && receiptResult.ZNo.GetValueOrDefault() > 0)
+            if (IsCompletedReceipt(receiptResult) || IsCanceledOrFailedReceipt(receiptResult))
             {
                 ClearSaleState(false);
                 return;
             }
 
-            if (receiptResult.Payments.Count > 0 || receiptResult.Status == -1)
+            if (receiptResult.Payments.Count > 0)
             {
                 _hasActiveSale = true;
                 _paymentInProgress = true;
+                return;
+            }
+
+            if (receiptResult.Status == -1 && !string.IsNullOrWhiteSpace(receiptResult.Message))
+            {
+                ClearSaleState(false);
                 return;
             }
 
@@ -377,6 +383,50 @@ namespace TriaYazarKasaRestApi.Business.Adapters
             _activeBasketId = null;
             if (clearTimestamp)
                 _lastSaleActivityUtc = null;
+        }
+
+        private static bool IsCompletedReceipt(BekoReceiptResultDto receiptResult)
+            => receiptResult.Status == 0 &&
+               (receiptResult.ReceiptNo.GetValueOrDefault() > 0 ||
+                receiptResult.ZNo.GetValueOrDefault() > 0 ||
+                IsMessage(receiptResult.Message, "OK"));
+
+        private static bool IsCanceledOrFailedReceipt(BekoReceiptResultDto receiptResult)
+        {
+            if (receiptResult.Status > 0)
+                return true;
+
+            if (receiptResult.Status == 0 &&
+                receiptResult.ReceiptNo.GetValueOrDefault() == 0 &&
+                receiptResult.ZNo.GetValueOrDefault() == 0 &&
+                !string.IsNullOrWhiteSpace(receiptResult.BasketId))
+                return true;
+
+            return ContainsAny(receiptResult.Message,
+                "iptal",
+                "basarisiz",
+                "başarısız",
+                "odeme basarisiz",
+                "ödeme başarısız",
+                "void",
+                "cancel");
+        }
+
+        private static bool IsMessage(string? value, string expected)
+            => string.Equals(value?.Trim(), expected, StringComparison.OrdinalIgnoreCase);
+
+        private static bool ContainsAny(string? value, params string[] parts)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                return false;
+
+            foreach (var part in parts)
+            {
+                if (value.Contains(part, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+
+            return false;
         }
 
         private sealed class BekoReceiptInfo
