@@ -9,10 +9,14 @@ namespace TriaYazarKasaRestApi.Business.services
     public class BekoDeviceService : IBekoDeviceService
     {
         private readonly IBekoConnectionManager _connectionManager;
+        private readonly IAutoConnectionStore _autoConnectionStore;
 
-        public BekoDeviceService(IBekoConnectionManager connectionManager)
+        public BekoDeviceService(
+            IBekoConnectionManager connectionManager,
+            IAutoConnectionStore autoConnectionStore)
         {
             _connectionManager = connectionManager;
+            _autoConnectionStore = autoConnectionStore;
         }
 
         public async Task<BekoConnectionResponseDto> ConnectAsync(BekoConnectRequestDto request)
@@ -22,7 +26,10 @@ namespace TriaYazarKasaRestApi.Business.services
             var id = Guid.NewGuid();
 
             if (result.Success)
+            {
                 _connectionManager.Add(new BekoActiveConnection { ConnectionId = id, Adapter = adapter, ConnectedAt = DateTime.UtcNow });
+                _autoConnectionStore.SetBeko(id);
+            }
 
             return new BekoConnectionResponseDto
             {
@@ -48,6 +55,11 @@ namespace TriaYazarKasaRestApi.Business.services
 
             var result = await connection.Adapter.DisconnectAsync();
             _connectionManager.Remove(connectionId);
+
+            if (_autoConnectionStore.BekoConnectionId == connectionId)
+            {
+                _autoConnectionStore.SetBeko(null);
+            }
 
             return new BekoOperationResponseDto
             {

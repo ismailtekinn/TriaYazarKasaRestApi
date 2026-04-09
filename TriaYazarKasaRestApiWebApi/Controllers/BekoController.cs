@@ -19,28 +19,28 @@ namespace TriaYazarKasaRestApiWebApi.Controllers
         public async Task<ActionResult<ApiResponseDto<BekoConnectionResponseDto>>> Connect([FromBody] BekoConnectRequestDto request)
             => Ok(ApiResponseDto<BekoConnectionResponseDto>.Ok(await _bekoDeviceService.ConnectAsync(request)));
 
-        [HttpDelete("{connectionId}/disconnect")]
-        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> Disconnect(Guid connectionId)
-            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.DisconnectAsync(connectionId)));
+        [HttpDelete("{connectionIdB}/disconnect")]
+        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> Disconnect(Guid connectionIdB)
+            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.DisconnectAsync(connectionIdB)));
 
-        [HttpGet("{connectionId}/status")]
-        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> Status(Guid connectionId)
-            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.GetStatusAsync(connectionId)));
+        [HttpGet("{connectionIdB}/status")]
+        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> Status(Guid connectionIdB)
+            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.GetStatusAsync(connectionIdB)));
 
-        [HttpGet("{connectionId}/device-info")]
-        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> DeviceInfo(Guid connectionId)
-            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.GetDeviceInfoAsync(connectionId)));
+        [HttpGet("{connectionIdB}/device-info")]
+        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> DeviceInfo(Guid connectionIdB)
+            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.GetDeviceInfoAsync(connectionIdB)));
 
-        [HttpPost("{connectionId}/basket")]
-        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> SendBasket(Guid connectionId, [FromBody] BekoBasketRequestDto request)
-            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.SendBasketAsync(connectionId, request)));
+        [HttpPost("{connectionIdB}/basket")]
+        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> SendBasket(Guid connectionIdB, [FromBody] BekoBasketRequestDto request)
+            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.SendBasketAsync(connectionIdB, request)));
 
-        [HttpPost("{connectionId}/payment")]
-        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> SendPayment(Guid connectionId, [FromBody] BekoPaymentRequestDto request)
-            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.SendPaymentAsync(connectionId, request)));
+        [HttpPost("{connectionIdB}/payment")]
+        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> SendPayment(Guid connectionIdB, [FromBody] BekoPaymentRequestDto request)
+            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.SendPaymentAsync(connectionIdB, request)));
 
-        [HttpPost("{connectionId}/void")]
-        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> VoidReceipt(Guid connectionId)
-            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.VoidReceiptAsync(connectionId)));
+        [HttpPost("{connectionIdB}/void")]
+        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> VoidReceipt(Guid connectionIdB)
+            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.VoidReceiptAsync(connectionIdB)));
     }
 }

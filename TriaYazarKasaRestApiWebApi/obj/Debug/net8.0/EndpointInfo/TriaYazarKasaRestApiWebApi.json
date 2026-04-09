@@ -808,6 +808,64 @@
         }
       }
     },
+    "/api/unified-sale/{deviceType}": {
+      "post": {
+        "tags": [
+          "UnifiedSale"
+        ],
+        "parameters": [
+          {
+            "name": "deviceType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnifiedSaleRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnifiedSaleRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnifiedSaleRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -1336,6 +1394,22 @@
         },
         "additionalProperties": false
       },
+      "ObjectApiResponseDto": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "PosConnectionStatus": {
         "enum": [
           0,
@@ -1344,6 +1418,245 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "UnifiedAciklamaDto": {
+        "type": "object",
+        "properties": {
+          "aciklamaBilgisi": {
+            "type": "string",
+            "nullable": true
+          },
+          "printStyle": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnifiedBelgeDetayDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "urunAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "barkod": {
+            "type": "string",
+            "nullable": true
+          },
+          "birimFiyat": {
+            "type": "number",
+            "format": "double"
+          },
+          "adet": {
+            "type": "number",
+            "format": "double"
+          },
+          "indirimOran": {
+            "type": "number",
+            "format": "double"
+          },
+          "indirimTutar": {
+            "type": "number",
+            "format": "double"
+          },
+          "departmanNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "birim": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "taxPercent": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnifiedBelgeParamsDto": {
+        "type": "object",
+        "properties": {
+          "ecrZNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ecrBelgeNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "belgeNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "kasiyerAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "saleType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "invoiceType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customerNoType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "invoiceNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "irsaliyeYerineGecer": {
+            "type": "boolean"
+          },
+          "slipCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "katkiPayiTCNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "katkiPayiTutari": {
+            "type": "number",
+            "format": "double"
+          },
+          "katkiPayiNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "satisToplam": {
+            "type": "number",
+            "format": "double"
+          },
+          "toplam": {
+            "type": "number",
+            "format": "double"
+          },
+          "odemeToplami": {
+            "type": "number",
+            "format": "double"
+          },
+          "belgeSabitAltBilgisi": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnifiedAciklamaDto"
+            },
+            "nullable": true
+          },
+          "belgeDetay": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnifiedBelgeDetayDto"
+            },
+            "nullable": true
+          },
+          "odemeDetay": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnifiedOdemeDetayDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnifiedKasiyerDto": {
+        "type": "object",
+        "properties": {
+          "kasiyerNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kasiyerAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "sifre": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnifiedOdemeDetayDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "odemeTipi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "odemeTutar": {
+            "type": "number",
+            "format": "double"
+          },
+          "yazarkasaOdemeTipi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paraUstu": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnifiedSaleRequestDto": {
+        "type": "object",
+        "properties": {
+          "transactionStartParam": {
+            "$ref": "#/components/schemas/UnifiedTransactionStartParamDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnifiedTransactionStartParamDto": {
+        "type": "object",
+        "properties": {
+          "islemTipi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kasiyer": {
+            "$ref": "#/components/schemas/UnifiedKasiyerDto"
+          },
+          "belgeParams": {
+            "$ref": "#/components/schemas/UnifiedBelgeParamsDto"
+          },
+          "yoneticiSifresi": {
+            "type": "string",
+            "nullable": true
+          },
+          "lisansData": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "WeatherForecast": {
         "type": "object",

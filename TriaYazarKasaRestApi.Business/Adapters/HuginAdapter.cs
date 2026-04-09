@@ -200,7 +200,6 @@ namespace TriaYazarKasaRestApi.Business.Adapters
             }
         }
 
-
         public Task<PosOperationResult> SendJsonDocumentAsync(HuginJsonDocumentRequestDto request)
         {
             try
@@ -214,7 +213,7 @@ namespace TriaYazarKasaRestApi.Business.Adapters
                 var jsonOptions = new JsonSerializerOptions
                 {
                     DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-                    PropertyNamingPolicy = null
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
                 };
 
                 var jsonStr = JsonSerializer.Serialize(request, jsonOptions);
@@ -236,7 +235,6 @@ namespace TriaYazarKasaRestApi.Business.Adapters
                 return Task.FromResult(PosOperationResult.Fail($"Json belge gonderilemedi: {ex.Message}"));
             }
         }
-
 
         // ödeme ile ilgili methotlar 
         public Task<PosOperationResult> AddCashPaymentAsync(HuginCashPaymentRequestDto request)
@@ -366,7 +364,6 @@ namespace TriaYazarKasaRestApi.Business.Adapters
                 return Task.FromResult(PosOperationResult.Fail($"Fis kapatilamadi: {ex.Message}"));
             }
         }
-
 
         private bool EnsureConnected(out string errorMessage)
         {

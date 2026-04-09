@@ -9,10 +9,14 @@ namespace TriaYazarKasaRestApi.Business.services
     public class HuginDeviceService : IHuginDeviceService
     {
         private readonly IHuginConnectionManager _connectionManager;
+        private readonly IAutoConnectionStore _autoConnectionStore;
 
-        public HuginDeviceService(IHuginConnectionManager connectionManager)
+        public HuginDeviceService(
+            IHuginConnectionManager connectionManager,
+            IAutoConnectionStore autoConnectionStore)
         {
             _connectionManager = connectionManager;
+            _autoConnectionStore = autoConnectionStore;
         }
 
         public async Task<HuginConnectionResponseDto> ConnectAsync(HuginConnectRequestDto request)
@@ -38,6 +42,8 @@ namespace TriaYazarKasaRestApi.Business.services
                     Adapter = adapter,
                     ConnectedAt = DateTime.UtcNow
                 });
+
+                _autoConnectionStore.SetHugin(connectionId);
             }
 
             return new HuginConnectionResponseDto
@@ -64,6 +70,11 @@ namespace TriaYazarKasaRestApi.Business.services
 
             var result = await connection.Adapter.DisconnectAsync();
             _connectionManager.Remove(connectionId);
+
+            if (_autoConnectionStore.HuginConnectionId == connectionId)
+            {
+                _autoConnectionStore.SetHugin(null);
+            }
 
             return new HuginOperationResponseDto
             {

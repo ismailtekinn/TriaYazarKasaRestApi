@@ -477,6 +477,37 @@
     ]
   },
   {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.UnifiedSaleController",
+    "Method": "Send",
+    "RelativePath": "api/unified-sale/{deviceType}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceType",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.UnifiedSaleRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

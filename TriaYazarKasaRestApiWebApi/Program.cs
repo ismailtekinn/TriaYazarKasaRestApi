@@ -29,6 +29,7 @@ builder.Services.AddSingleton<IHuginConnectionManager, HuginConnectionManager>()
 builder.Services.AddScoped<IHuginDeviceService, HuginDeviceService>();
 builder.Services.AddSingleton<IBekoConnectionManager, BekoConnectionManager>();
 builder.Services.AddScoped<IBekoDeviceService, BekoDeviceService>();
+builder.Services.AddScoped<IUnifiedSaleService, UnifiedSaleService>();
 
 builder.Services.AddSingleton<IAutoConnectionStore, AutoConnectionStore>();
 builder.Services.AddHostedService<PosAutoConnectHostedService>();

@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace TriaYazarKasaRestApi.Entities.DTOs
 {
     public class HuginJsonDocumentRequestDto
@@ -15,11 +17,15 @@ namespace TriaYazarKasaRestApi.Entities.DTOs
         public decimal Quantity { get; set; }
         public decimal Price { get; set; }
         public string? Name { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Barcode { get; set; }
         public int DeptId { get; set; }
         public int Status { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public HuginJsonAdjustmentDto? Adj { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? NoteLine1 { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? NoteLine2 { get; set; }
     }
     public class HuginJsonAdjustmentDto
@@ -27,7 +33,9 @@ namespace TriaYazarKasaRestApi.Entities.DTOs
         public int Type { get; set; }
         public decimal Amount { get; set; }
         public int Percentage { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? NoteLine1 { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? NoteLine2 { get; set; }
     }
 
@@ -43,6 +51,7 @@ namespace TriaYazarKasaRestApi.Entities.DTOs
     {
         public bool CloseReceiptFlag { get; set; } = true;
         public bool BarcodeFlag { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
         public string? Barcode { get; set; }
     }
 

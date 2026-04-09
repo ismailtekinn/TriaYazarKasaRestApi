@@ -87,6 +87,7 @@ namespace TriaYazarKasaRestApiWebApi.Controllers
         }
 
         [HttpPost("{connectionId}/close-receipt")]
+        [HttpPost("{connectionId}/belge-kapat")]
         public async Task<ActionResult<ApiResponseDto<HuginOperationResponseDto>>> CloseReceipt(Guid connectionId)
         {
             var result = await _huginDeviceService.CloseReceiptAsync(connectionId);
