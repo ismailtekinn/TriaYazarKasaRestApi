@@ -34,13 +34,21 @@ namespace TriaYazarKasaRestApi.Business.Adapters
 
         public Task<PosOperationResult> ConnectAsync()
         {
-            var deviceIndex = _communication.getActiveDeviceIndex();
-            if (deviceIndex < 0)
-                return Task.FromResult(PosOperationResult.Fail("Beko cihaz bulunamadi."));
+            try
+            {
+                var deviceIndex = _communication.getActiveDeviceIndex();
+                if (deviceIndex < 0)
+                    return Task.FromResult(PosOperationResult.Fail("Beko cihaz bulunamadi."));
 
-            _isConnected = true;
-            _lastDeviceIndex = deviceIndex;
-            return Task.FromResult(PosOperationResult.Ok("Beko baglantisi hazir.", new { deviceIndex }));
+                _isConnected = true;
+                _lastDeviceIndex = deviceIndex;
+                return Task.FromResult(PosOperationResult.Ok("Beko baglantisi hazir.", new { deviceIndex }));
+            }
+            catch (Exception ex)
+            {
+                MarkCommunicationAsBroken();
+                return Task.FromResult(CreateCommunicationErrorResult("Beko cihaz baglantisi kurulurken USB/driver hatasi olustu.", ex));
+            }
         }
 
         public Task<PosOperationResult> DisconnectAsync()
@@ -52,212 +60,255 @@ namespace TriaYazarKasaRestApi.Business.Adapters
 
         public Task<PosOperationResult> GetStatusAsync()
         {
-            var deviceIndex = _communication.getActiveDeviceIndex();
-            if (deviceIndex < 0)
+            try
             {
-                _isConnected = false;
-                ClearSaleState();
-                return Task.FromResult(PosOperationResult.Ok("Beko durumu alindi.", new
+                var deviceIndex = _communication.getActiveDeviceIndex();
+                if (deviceIndex < 0)
                 {
-                    isConnected = false,
-                    statusCode = "DISCONNECTED",
-                    deviceState = "Cihaz bagli degil.",
-                    isReadyForNewSale = false,
+                    _isConnected = false;
+                    ClearSaleState();
+                    return Task.FromResult(PosOperationResult.Ok("Beko durumu alindi.", new
+                    {
+                        isConnected = false,
+                        statusCode = "DISCONNECTED",
+                        deviceState = "Cihaz bagli degil.",
+                        isReadyForNewSale = false,
+                        hasActiveSale = false,
+                        paymentInProgress = false,
+                        activeBasketId = (string?)null,
+                        lastSaleActivityUtc = _lastSaleActivityUtc
+                    }));
+                }
+
+                _isConnected = true;
+                _lastDeviceIndex = deviceIndex;
+
+                var fiscalInfoRaw = _communication.getFiscalInfo();
+                if (string.IsNullOrWhiteSpace(fiscalInfoRaw))
+                {
+                    return Task.FromResult(PosOperationResult.Ok("Beko durumu alindi.", new
+                    {
+                        isConnected = true,
+                        statusCode = "UNKNOWN",
+                        deviceState = "Fiscal bilgi okunamadi.",
+                        isReadyForNewSale = false,
+                        hasActiveSale = _hasActiveSale,
+                        paymentInProgress = _paymentInProgress,
+                        activeBasketId = _activeBasketId,
+                        lastSaleActivityUtc = _lastSaleActivityUtc
+                    }));
+                }
+
+                _isQuickSaleScreenAvailable =
+                    !fiscalInfoRaw.Contains("ECR HÃ„Â±zlÃ„Â± SatÃ„Â±Ã…Å¸ EkranÃ„Â±nda DeÃ„Å¸il.", StringComparison.OrdinalIgnoreCase) &&
+                    !fiscalInfoRaw.Contains("ECR Hizli Satis Ekraninda Degil.", StringComparison.OrdinalIgnoreCase) &&
+                    !fiscalInfoRaw.Contains("ECR HÃƒâ€Ã‚Â±zlÃƒâ€Ã‚Â± SatÃƒâ€Ã‚Â±Ãƒâ€¦Ã…Â¸ EkranÃƒâ€Ã‚Â±nda DeÃƒâ€Ã…Â¸il.", StringComparison.OrdinalIgnoreCase);
+
+                if (!_isQuickSaleScreenAvailable)
+                {
+                    return Task.FromResult(PosOperationResult.Ok("Beko durum bilgisi alindi.", new
+                    {
+                        isConnected = true,
+                        statusCode = "NOT_ON_QUICK_SALE_SCREEN",
+                        deviceState = "Cihaz hizli satis ekraninda degil.",
+                        isReadyForNewSale = false,
+                        hasActiveSale = _hasActiveSale,
+                        paymentInProgress = _paymentInProgress,
+                        activeBasketId = _activeBasketId,
+                        lastSaleActivityUtc = _lastSaleActivityUtc,
+                        serialNo = _serialNo,
+                        deviceIndex = _lastDeviceIndex
+                    }));
+                }
+
+                if (_hasActiveSale || _paymentInProgress)
+                {
+                    return Task.FromResult(PosOperationResult.Ok("Beko durum bilgisi alindi.", new
+                    {
+                        isConnected = true,
+                        statusCode = "BUSY",
+                        deviceState = "Cihazda aktif satis veya odeme islemi var.",
+                        isReadyForNewSale = false,
+                        hasActiveSale = _hasActiveSale,
+                        paymentInProgress = _paymentInProgress,
+                        activeBasketId = _activeBasketId,
+                        lastSaleActivityUtc = _lastSaleActivityUtc,
+                        serialNo = _serialNo,
+                        deviceIndex = _lastDeviceIndex
+                    }));
+                }
+
+                return Task.FromResult(PosOperationResult.Ok("Beko durum bilgisi alindi.", new
+                {
+                    isConnected = true,
+                    statusCode = "READY",
+                    deviceState = "Cihaz bagli ve yeni satis icin hazir.",
+                    isReadyForNewSale = true,
                     hasActiveSale = false,
                     paymentInProgress = false,
-                    activeBasketId = (string?)null,
-                    lastSaleActivityUtc = _lastSaleActivityUtc
-                }));
-            }
-
-            _isConnected = true;
-            _lastDeviceIndex = deviceIndex;
-
-            var fiscalInfoRaw = _communication.getFiscalInfo();
-            if (string.IsNullOrWhiteSpace(fiscalInfoRaw))
-            {
-                return Task.FromResult(PosOperationResult.Ok("Beko durumu alindi.", new
-                {
-                    isConnected = true,
-                    statusCode = "UNKNOWN",
-                    deviceState = "Fiscal bilgi okunamadi.",
-                    isReadyForNewSale = false,
-                    hasActiveSale = _hasActiveSale,
-                    paymentInProgress = _paymentInProgress,
-                    activeBasketId = _activeBasketId,
-                    lastSaleActivityUtc = _lastSaleActivityUtc
-                }));
-            }
-
-            _isQuickSaleScreenAvailable =
-                !fiscalInfoRaw.Contains("ECR HÄ±zlÄ± SatÄ±ÅŸ EkranÄ±nda DeÄŸil.", StringComparison.OrdinalIgnoreCase) &&
-                !fiscalInfoRaw.Contains("ECR Hizli Satis Ekraninda Degil.", StringComparison.OrdinalIgnoreCase) &&
-                !fiscalInfoRaw.Contains("ECR HÃ„Â±zlÃ„Â± SatÃ„Â±Ã…Å¸ EkranÃ„Â±nda DeÃ„Å¸il.", StringComparison.OrdinalIgnoreCase);
-
-            if (!_isQuickSaleScreenAvailable)
-            {
-                return Task.FromResult(PosOperationResult.Ok("Beko durum bilgisi alindi.", new
-                {
-                    isConnected = true,
-                    statusCode = "NOT_ON_QUICK_SALE_SCREEN",
-                    deviceState = "Cihaz hizli satis ekraninda degil.",
-                    isReadyForNewSale = false,
-                    hasActiveSale = _hasActiveSale,
-                    paymentInProgress = _paymentInProgress,
                     activeBasketId = _activeBasketId,
                     lastSaleActivityUtc = _lastSaleActivityUtc,
                     serialNo = _serialNo,
                     deviceIndex = _lastDeviceIndex
                 }));
             }
-
-            if (_hasActiveSale || _paymentInProgress)
+            catch (Exception ex)
             {
-                return Task.FromResult(PosOperationResult.Ok("Beko durum bilgisi alindi.", new
-                {
-                    isConnected = true,
-                    statusCode = "BUSY",
-                    deviceState = "Cihazda aktif satis veya odeme islemi var.",
-                    isReadyForNewSale = false,
-                    hasActiveSale = _hasActiveSale,
-                    paymentInProgress = _paymentInProgress,
-                    activeBasketId = _activeBasketId,
-                    lastSaleActivityUtc = _lastSaleActivityUtc,
-                    serialNo = _serialNo,
-                    deviceIndex = _lastDeviceIndex
-                }));
+                MarkCommunicationAsBroken();
+                return Task.FromResult(CreateCommunicationErrorResult("Beko durum bilgisi alinirken USB/driver hatasi olustu.", ex));
             }
-
-            return Task.FromResult(PosOperationResult.Ok("Beko durum bilgisi alindi.", new
-            {
-                isConnected = true,
-                statusCode = "READY",
-                deviceState = "Cihaz bagli ve yeni satis icin hazir.",
-                isReadyForNewSale = true,
-                hasActiveSale = false,
-                paymentInProgress = false,
-                activeBasketId = _activeBasketId,
-                lastSaleActivityUtc = _lastSaleActivityUtc,
-                serialNo = _serialNo,
-                deviceIndex = _lastDeviceIndex
-            }));
         }
 
-        public async Task<PosOperationResult> GetDeviceInfoAsync()
-        {
-            EnsureConnected();
-            var json = _communication.getFiscalInfo();
-            return PosOperationResult.Ok("Cihaz bilgisi alindi.", JsonSerializer.Deserialize<object>(json)!);
-        }
+        public Task<PosOperationResult> GetDeviceInfoAsync()
+            => ExecuteCommunicationAsync(
+                "Beko cihaz bilgisi alinirken USB/driver hatasi olustu.",
+                () =>
+                {
+                    EnsureConnected();
+                    var json = _communication.getFiscalInfo();
+                    return PosOperationResult.Ok("Cihaz bilgisi alindi.", JsonSerializer.Deserialize<object>(json)!);
+                });
 
         public async Task<PosOperationResult> SendBasketAsync(BekoBasketRequestDto request)
         {
-            EnsureConnected();
-
-            var payload = new
-            {
-                basketID = request.BasketId,
-                documentType = request.DocumentType,
-                taxFreeAmount = request.TaxFreeAmount,
-                createInvoice = request.CreateInvoice,
-                isWayBill = request.IsWayBill,
-                note = request.Note,
-                items = request.Items.Select(x => new
-                {
-                    barcode = x.Barcode,
-                    name = x.Name,
-                    pluNo = x.PluNo,
-                    price = x.Price,
-                    sectionNo = x.SectionNo,
-                    taxPercent = x.TaxPercent,
-                    type = x.Type,
-                    unit = x.Unit,
-                    vatID = x.VatId,
-                    limit = x.Limit,
-                    quantity = x.Quantity
-                }).ToList(),
-                paymentItems = request.PaymentItems.Select(x => new
-                {
-                    description = x.Description,
-                    amount = x.Amount,
-                    type = x.Type
-                }).ToList()
-            };
-
-            _callbackWaiter = new(TaskCreationOptions.RunContinuationsAsynchronously);
-            _hasActiveSale = true;
-            _paymentInProgress = true;
-            _activeBasketId = request.BasketId;
-            _lastSaleActivityUtc = DateTime.UtcNow;
-
-            _communication.sendBasket(JsonSerializer.Serialize(payload));
-
-            string callbackJson;
             try
             {
-                callbackJson = await WaitCallbackAsync();
+                EnsureConnected();
+
+                var payload = new
+                {
+                    basketID = request.BasketId,
+                    documentType = request.DocumentType,
+                    taxFreeAmount = request.TaxFreeAmount,
+                    createInvoice = request.CreateInvoice,
+                    isWayBill = request.IsWayBill,
+                    note = request.Note,
+                    items = request.Items.Select(x => new
+                    {
+                        barcode = x.Barcode,
+                        name = x.Name,
+                        pluNo = x.PluNo,
+                        price = x.Price,
+                        sectionNo = x.SectionNo,
+                        taxPercent = x.TaxPercent,
+                        type = x.Type,
+                        unit = x.Unit,
+                        vatID = x.VatId,
+                        limit = x.Limit,
+                        quantity = x.Quantity
+                    }).ToList(),
+                    paymentItems = request.PaymentItems.Select(x => new
+                    {
+                        description = x.Description,
+                        amount = x.Amount,
+                        type = x.Type
+                    }).ToList()
+                };
+
+                _callbackWaiter = new(TaskCreationOptions.RunContinuationsAsynchronously);
+                _hasActiveSale = true;
+                _paymentInProgress = true;
+                _activeBasketId = request.BasketId;
+                _lastSaleActivityUtc = DateTime.UtcNow;
+
+                _communication.sendBasket(JsonSerializer.Serialize(payload));
+
+                string callbackJson;
+                try
+                {
+                    callbackJson = await WaitCallbackAsync();
+                }
+                catch (TaskCanceledException)
+                {
+                    return PosOperationResult.Fail("Beko ilk callback verisi zamaninda donmedi.");
+                }
+
+                var receiptResult = MapReceiptResult(callbackJson);
+                if (receiptResult == null)
+                    return PosOperationResult.Fail("Beko callback verisi cozumlenemedi.");
+
+                UpdateSaleState(receiptResult);
+
+                if (receiptResult.Status != 0 && !HasPaymentProgress(receiptResult))
+                    return PosOperationResult.Fail(receiptResult.Message ?? "Beko satis islemi basarisiz.");
+
+                return PosOperationResult.Ok("Sepet Beko cihaza gonderildi.", receiptResult);
             }
-            catch (TaskCanceledException)
+            catch (Exception ex)
             {
-                return PosOperationResult.Fail("Beko ilk callback verisi zamaninda donmedi.");
+                MarkCommunicationAsBroken();
+                return CreateCommunicationErrorResult("Beko sepet gonderimi sirasinda USB/driver hatasi olustu.", ex);
             }
-
-            var receiptResult = MapReceiptResult(callbackJson);
-            if (receiptResult == null)
-                return PosOperationResult.Fail("Beko callback verisi cozumlenemedi.");
-
-            UpdateSaleState(receiptResult);
-
-            if (receiptResult.Status != 0 && !HasPaymentProgress(receiptResult))
-                return PosOperationResult.Fail(receiptResult.Message ?? "Beko satis islemi basarisiz.");
-
-            return PosOperationResult.Ok("Sepet Beko cihaza gonderildi.", receiptResult);
         }
 
         public async Task<PosOperationResult> SendPaymentAsync(BekoPaymentRequestDto request)
         {
-            EnsureConnected();
-
-            _callbackWaiter = new(TaskCreationOptions.RunContinuationsAsynchronously);
-            var result = _communication.sendPayment(JsonSerializer.Serialize(new
+            try
             {
-                description = request.Description,
-                amount = request.Amount,
-                type = request.Type
-            }));
+                EnsureConnected();
 
-            if (result != 1)
-                return PosOperationResult.Fail("Odeme istegi Beko cihaza gonderilemedi.", result);
+                _callbackWaiter = new(TaskCreationOptions.RunContinuationsAsynchronously);
+                var result = _communication.sendPayment(JsonSerializer.Serialize(new
+                {
+                    description = request.Description,
+                    amount = request.Amount,
+                    type = request.Type
+                }));
 
-            var callbackJson = await WaitCallbackAsync();
-            var receiptResult = MapReceiptResult(callbackJson);
+                if (result != 1)
+                    return PosOperationResult.Fail("Odeme istegi Beko cihaza gonderilemedi.", result);
 
-            if (receiptResult == null)
-                return PosOperationResult.Fail("Beko odeme callback verisi cozumlenemedi.");
+                var callbackJson = await WaitCallbackAsync();
+                var receiptResult = MapReceiptResult(callbackJson);
 
-            UpdateSaleState(receiptResult);
+                if (receiptResult == null)
+                    return PosOperationResult.Fail("Beko odeme callback verisi cozumlenemedi.");
 
-            if (receiptResult.Status != 0 && !string.Equals(receiptResult.Message, "OK", StringComparison.OrdinalIgnoreCase))
-                return PosOperationResult.Fail(receiptResult.Message ?? "Odeme basarisiz.");
+                UpdateSaleState(receiptResult);
 
-            return PosOperationResult.Ok("Odeme sonucu alindi.", receiptResult);
+                if (receiptResult.Status != 0 && !string.Equals(receiptResult.Message, "OK", StringComparison.OrdinalIgnoreCase))
+                    return PosOperationResult.Fail(receiptResult.Message ?? "Odeme basarisiz.");
+
+                return PosOperationResult.Ok("Odeme sonucu alindi.", receiptResult);
+            }
+            catch (TaskCanceledException)
+            {
+                return PosOperationResult.Fail("Beko odeme callback verisi zamaninda donmedi.");
+            }
+            catch (Exception ex)
+            {
+                MarkCommunicationAsBroken();
+                return CreateCommunicationErrorResult("Beko odeme gonderimi sirasinda USB/driver hatasi olustu.", ex);
+            }
         }
 
         public async Task<PosOperationResult> VoidReceiptAsync()
         {
-            EnsureConnected();
+            try
+            {
+                EnsureConnected();
 
-            _callbackWaiter = new(TaskCreationOptions.RunContinuationsAsynchronously);
-            _communication.sendPayment("{\"isVoid\": true}");
-            var callbackJson = await WaitCallbackAsync();
+                _callbackWaiter = new(TaskCreationOptions.RunContinuationsAsynchronously);
+                _communication.sendPayment("{\"isVoid\": true}");
+                var callbackJson = await WaitCallbackAsync();
 
-            var receiptResult = MapReceiptResult(callbackJson);
-            if (receiptResult != null)
-                UpdateSaleState(receiptResult);
-            else
-                ClearSaleState();
+                var receiptResult = MapReceiptResult(callbackJson);
+                if (receiptResult != null)
+                    UpdateSaleState(receiptResult);
+                else
+                    ClearSaleState();
 
-            return PosOperationResult.Ok("Fis iptal sonucu alindi.", JsonSerializer.Deserialize<object>(callbackJson)!);
+                return PosOperationResult.Ok("Fis iptal sonucu alindi.", JsonSerializer.Deserialize<object>(callbackJson)!);
+            }
+            catch (TaskCanceledException)
+            {
+                return PosOperationResult.Fail("Beko fis iptal callback verisi zamaninda donmedi.");
+            }
+            catch (Exception ex)
+            {
+                MarkCommunicationAsBroken();
+                return CreateCommunicationErrorResult("Beko fis iptal islemi sirasinda USB/driver hatasi olustu.", ex);
+            }
         }
 
         private async Task<string> WaitCallbackAsync()
@@ -275,30 +326,73 @@ namespace TriaYazarKasaRestApi.Business.Adapters
 
         private void SerialInCallback(int type, [MarshalAs(UnmanagedType.BStr)] string value)
         {
-            _lastCallbackType = type;
-            _lastCallbackValue = value;
-            _lastCallbackAtUtc = DateTime.UtcNow;
+            try
+            {
+                _lastCallbackType = type;
+                _lastCallbackValue = value;
+                _lastCallbackAtUtc = DateTime.UtcNow;
 
-            if (type == 9)
-                _isQuickSaleScreenAvailable = false;
+                if (type == 9)
+                    _isQuickSaleScreenAvailable = false;
 
-            _callbackWaiter?.TrySetResult(value);
+                _callbackWaiter?.TrySetResult(value);
 
-            var receiptResult = MapReceiptResult(value);
-            if (receiptResult != null)
-                UpdateSaleState(receiptResult);
+                var receiptResult = MapReceiptResult(value);
+                if (receiptResult != null)
+                    UpdateSaleState(receiptResult);
+            }
+            catch
+            {
+                MarkCommunicationAsBroken();
+                _callbackWaiter?.TrySetException(new InvalidOperationException("Beko callback verisi islenirken hata olustu."));
+            }
         }
 
         private void DeviceStateCallback(bool isConnected, [MarshalAs(UnmanagedType.BStr)] string id)
         {
-            _isConnected = isConnected;
-            _serialNo = id;
-            _lastCallbackAtUtc = DateTime.UtcNow;
-            if (!isConnected)
+            try
             {
-                _isQuickSaleScreenAvailable = false;
-                ClearSaleState();
+                _isConnected = isConnected;
+                _serialNo = id;
+                _lastCallbackAtUtc = DateTime.UtcNow;
+                if (!isConnected)
+                {
+                    _isQuickSaleScreenAvailable = false;
+                    ClearSaleState();
+                }
             }
+            catch
+            {
+                MarkCommunicationAsBroken();
+            }
+        }
+
+        private void MarkCommunicationAsBroken()
+        {
+            _isConnected = false;
+            _isQuickSaleScreenAvailable = false;
+            ClearSaleState();
+        }
+
+        private Task<PosOperationResult> ExecuteCommunicationAsync(string errorMessage, Func<PosOperationResult> operation)
+        {
+            try
+            {
+                return Task.FromResult(operation());
+            }
+            catch (Exception ex)
+            {
+                MarkCommunicationAsBroken();
+                return Task.FromResult(CreateCommunicationErrorResult(errorMessage, ex));
+            }
+        }
+
+        private static PosOperationResult CreateCommunicationErrorResult(string message, Exception ex)
+        {
+            if (!string.IsNullOrWhiteSpace(ex.Message))
+                message = $"{message} Detay: {ex.Message}";
+
+            return PosOperationResult.Fail(message);
         }
 
         private static BekoReceiptInfo? TryDeserializeReceiptInfo(string? json)
@@ -402,12 +496,13 @@ namespace TriaYazarKasaRestApi.Business.Adapters
                 !string.IsNullOrWhiteSpace(receiptResult.BasketId))
                 return true;
 
-            return ContainsAny(receiptResult.Message,
+            return ContainsAny(
+                receiptResult.Message,
                 "iptal",
                 "basarisiz",
-                "başarısız",
+                "baÅŸarÄ±sÄ±z",
                 "odeme basarisiz",
-                "ödeme başarısız",
+                "Ã¶deme baÅŸarÄ±sÄ±z",
                 "void",
                 "cancel");
         }

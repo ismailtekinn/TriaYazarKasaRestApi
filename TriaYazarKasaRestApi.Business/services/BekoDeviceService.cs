@@ -21,24 +21,43 @@ namespace TriaYazarKasaRestApi.Business.services
 
         public async Task<BekoConnectionResponseDto> ConnectAsync(BekoConnectRequestDto request)
         {
-            var adapter = new BekoAdapter(request.Token);
-            var result = await adapter.ConnectAsync();
-            var id = Guid.NewGuid();
-
-            if (result.Success)
+            try
             {
-                _connectionManager.Add(new BekoActiveConnection { ConnectionId = id, Adapter = adapter, ConnectedAt = DateTime.UtcNow });
-                _autoConnectionStore.SetBeko(id);
+                var adapter = new BekoAdapter(request.Token);
+                var result = await adapter.ConnectAsync();
+                var id = Guid.NewGuid();
+
+                if (result.Success)
+                {
+                    _connectionManager.Add(new BekoActiveConnection
+                    {
+                        ConnectionId = id,
+                        Adapter = adapter,
+                        ConnectedAt = DateTime.UtcNow
+                    });
+                    _autoConnectionStore.SetBeko(id);
+                }
+
+                return new BekoConnectionResponseDto
+                {
+                    ConnectionId = id,
+                    IsConnected = result.Success,
+                    Status = result.Success ? PosConnectionStatus.Connected : PosConnectionStatus.Error,
+                    Message = result.Message,
+                    ConnectedAt = DateTime.UtcNow
+                };
             }
-
-            return new BekoConnectionResponseDto
+            catch (Exception ex)
             {
-                ConnectionId = id,
-                IsConnected = result.Success,
-                Status = result.Success ? PosConnectionStatus.Connected : PosConnectionStatus.Error,
-                Message = result.Message,
-                ConnectedAt = DateTime.UtcNow
-            };
+                return new BekoConnectionResponseDto
+                {
+                    ConnectionId = Guid.Empty,
+                    IsConnected = false,
+                    Status = PosConnectionStatus.Error,
+                    Message = $"Beko baglantisi kurulamadi. Detay: {ex.Message}",
+                    ConnectedAt = DateTime.UtcNow
+                };
+            }
         }
 
         public async Task<BekoOperationResponseDto> DisconnectAsync(Guid connectionId)
@@ -69,11 +88,21 @@ namespace TriaYazarKasaRestApi.Business.services
                 ErrorCode = result.ResultCode
             };
         }
-        public Task<BekoOperationResponseDto> GetStatusAsync(Guid connectionId) => ExecuteWithoutLockAsync(connectionId, x => x.GetStatusAsync());
-        public Task<BekoOperationResponseDto> GetDeviceInfoAsync(Guid connectionId) => ExecuteWithoutLockAsync(connectionId, x => x.GetDeviceInfoAsync());
-        public Task<BekoOperationResponseDto> SendBasketAsync(Guid connectionId, BekoBasketRequestDto request) => ExecuteAsync(connectionId, x => x.SendBasketAsync(request));
-        public Task<BekoOperationResponseDto> SendPaymentAsync(Guid connectionId, BekoPaymentRequestDto request) => ExecuteAsync(connectionId, x => x.SendPaymentAsync(request));
-        public Task<BekoOperationResponseDto> VoidReceiptAsync(Guid connectionId) => ExecuteAsync(connectionId, x => x.VoidReceiptAsync());
+
+        public Task<BekoOperationResponseDto> GetStatusAsync(Guid connectionId)
+            => ExecuteWithoutLockAsync(connectionId, x => x.GetStatusAsync());
+
+        public Task<BekoOperationResponseDto> GetDeviceInfoAsync(Guid connectionId)
+            => ExecuteWithoutLockAsync(connectionId, x => x.GetDeviceInfoAsync());
+
+        public Task<BekoOperationResponseDto> SendBasketAsync(Guid connectionId, BekoBasketRequestDto request)
+            => ExecuteAsync(connectionId, x => x.SendBasketAsync(request));
+
+        public Task<BekoOperationResponseDto> SendPaymentAsync(Guid connectionId, BekoPaymentRequestDto request)
+            => ExecuteAsync(connectionId, x => x.SendPaymentAsync(request));
+
+        public Task<BekoOperationResponseDto> VoidReceiptAsync(Guid connectionId)
+            => ExecuteAsync(connectionId, x => x.VoidReceiptAsync());
 
         private async Task<BekoOperationResponseDto> ExecuteAsync(Guid connectionId, Func<IBekoAdapter, Task<PosOperationResult>> op)
         {
@@ -93,6 +122,14 @@ namespace TriaYazarKasaRestApi.Business.services
                     ErrorCode = result.ResultCode
                 };
             }
+            catch (Exception ex)
+            {
+                return new BekoOperationResponseDto
+                {
+                    Success = false,
+                    Message = $"Beko cihaz islemi sirasinda beklenmeyen hata olustu. Detay: {ex.Message}"
+                };
+            }
             finally
             {
                 connection.Semaphore.Release();
@@ -105,14 +142,25 @@ namespace TriaYazarKasaRestApi.Business.services
             if (connection == null)
                 return new BekoOperationResponseDto { Success = false, Message = "Baglanti bulunamadi" };
 
-            var result = await op(connection.Adapter);
-            return new BekoOperationResponseDto
+            try
             {
-                Success = result.Success,
-                Message = result.Message,
-                Data = result.Data,
-                ErrorCode = result.ResultCode
-            };
+                var result = await op(connection.Adapter);
+                return new BekoOperationResponseDto
+                {
+                    Success = result.Success,
+                    Message = result.Message,
+                    Data = result.Data,
+                    ErrorCode = result.ResultCode
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BekoOperationResponseDto
+                {
+                    Success = false,
+                    Message = $"Beko cihaz sorgusu sirasinda beklenmeyen hata olustu. Detay: {ex.Message}"
+                };
+            }
         }
     }
 }
