@@ -9,6 +9,8 @@ namespace TriaYazarKasaRestApi.Business.Interfaces
         Task<BekoOperationResponseDto> GetStatusAsync(Guid connectionId);
         Task<BekoOperationResponseDto> GetDeviceInfoAsync(Guid connectionId);
         Task<BekoOperationResponseDto> SendBasketAsync(Guid connectionId, BekoBasketRequestDto request);
+        Task<BekoOperationResponseDto> SendBasketAsync2(Guid connectionId, BekoBasketRequestDto request);
+        Task<BekoOperationResponseDto> GetBasketOperationStatusAsync(Guid connectionId, string basketId);
         Task<BekoOperationResponseDto> SendPaymentAsync(Guid connectionId, BekoPaymentRequestDto request);
         Task<BekoOperationResponseDto> VoidReceiptAsync(Guid connectionId);
     }

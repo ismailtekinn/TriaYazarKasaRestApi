@@ -1,10 +1,15 @@
+using System.Text.Json;
 using TriaYazarKasaRestApi.Business.Interfaces;
 using TriaYazarKasaRestApi.Entities.DTOs;
 
 namespace TriaYazarKasaRestApiWebApi.HostedServices
 {
-    public class PosAutoConnectHostedService : IHostedService
+    public class PosAutoConnectHostedService : BackgroundService
     {
+        private static readonly TimeSpan BekoMonitorInterval = TimeSpan.FromSeconds(5);
+        private static readonly TimeSpan BekoRetryDelay = TimeSpan.FromSeconds(3);
+        private const string BekoToken = "TOKEN FINTECH";
+
         private readonly IServiceProvider _serviceProvider;
         private readonly ILogger<PosAutoConnectHostedService> _logger;
 
@@ -16,12 +21,41 @@ namespace TriaYazarKasaRestApiWebApi.HostedServices
             _logger = logger;
         }
 
-        public async Task StartAsync(CancellationToken cancellationToken)
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            await EnsureHuginConnectedAsync(stoppingToken);
+
+            while (!stoppingToken.IsCancellationRequested)
+            {
+                try
+                {
+                    await EnsureBekoConnectedAsync(stoppingToken);
+                }
+                catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
+                {
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Beko baglanti izleme dongusu hatasi.");
+                }
+
+                try
+                {
+                    await Task.Delay(BekoMonitorInterval, stoppingToken);
+                }
+                catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
+                {
+                    break;
+                }
+            }
+        }
+
+        private async Task EnsureHuginConnectedAsync(CancellationToken cancellationToken)
         {
             using var scope = _serviceProvider.CreateScope();
 
             var huginDeviceService = scope.ServiceProvider.GetRequiredService<IHuginDeviceService>();
-            var bekoDeviceService = scope.ServiceProvider.GetRequiredService<IBekoDeviceService>();
             var autoConnectionStore = scope.ServiceProvider.GetRequiredService<IAutoConnectionStore>();
 
             try
@@ -45,56 +79,107 @@ namespace TriaYazarKasaRestApiWebApi.HostedServices
                     _logger.LogWarning("Hugin otomatik baglanamadi. Mesaj: {Message}", huginConnectResponse.Message);
                 }
             }
+            catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+            {
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Hugin otomatik baglanti hatasi.");
             }
+        }
 
-            try
+        private async Task EnsureBekoConnectedAsync(CancellationToken cancellationToken)
+        {
+            using var scope = _serviceProvider.CreateScope();
+
+            var bekoDeviceService = scope.ServiceProvider.GetRequiredService<IBekoDeviceService>();
+            var autoConnectionStore = scope.ServiceProvider.GetRequiredService<IAutoConnectionStore>();
+
+            var connectionId = autoConnectionStore.BekoConnectionId;
+            if (connectionId is null)
+            {
+                await TryConnectBekoAsync(bekoDeviceService, autoConnectionStore, cancellationToken);
+                return;
+            }
+
+            var statusResponse = await bekoDeviceService.GetStatusAsync(connectionId.Value);
+            if (statusResponse.Success && IsBekoConnected(statusResponse.Data))
+                return;
+
+            _logger.LogWarning(
+                "Beko baglantisi kullanilamaz durumda. Mevcut ConnectionId: {ConnectionId}, Mesaj: {Message}",
+                connectionId.Value,
+                statusResponse.Message);
+
+            await SafeDisconnectBekoAsync(bekoDeviceService, autoConnectionStore, connectionId.Value);
+            await TryConnectBekoAsync(bekoDeviceService, autoConnectionStore, cancellationToken);
+        }
+
+        private async Task TryConnectBekoAsync(
+            IBekoDeviceService bekoDeviceService,
+            IAutoConnectionStore autoConnectionStore,
+            CancellationToken cancellationToken)
+        {
+            for (int i = 0; i < 5 && !cancellationToken.IsCancellationRequested; i++)
             {
                 var bekoConnectResponse = await bekoDeviceService.ConnectAsync(new BekoConnectRequestDto
                 {
-                    Token = "TOKEN FINTECH"
+                    Token = BekoToken
                 });
 
                 if (bekoConnectResponse.IsConnected)
                 {
                     autoConnectionStore.SetBeko(bekoConnectResponse.ConnectionId);
                     _logger.LogInformation("Beko otomatik baglandi. ConnectionId: {ConnectionId}", bekoConnectResponse.ConnectionId);
-                }
-                else
-                {
-                    _logger.LogWarning("Beko otomatik baglanamadi. Mesaj: {Message}", bekoConnectResponse.Message);
+                    return;
                 }
 
-                for (int i = 0; i < 5; i++)
-                {
-                    bekoConnectResponse = await bekoDeviceService.ConnectAsync(new BekoConnectRequestDto
-                    {
-                        Token = "TOKEN FINTECH"
-                    });
+                _logger.LogWarning(
+                    "Beko otomatik baglanti denemesi basarisiz. Deneme: {TryNo}, Mesaj: {Message}",
+                    i + 1,
+                    bekoConnectResponse.Message);
 
-                    if (bekoConnectResponse.IsConnected)
-                    {
-                        autoConnectionStore.SetBeko(bekoConnectResponse.ConnectionId);
-                        _logger.LogInformation("Beko otomatik baglandi. ConnectionId: {ConnectionId}", bekoConnectResponse.ConnectionId);
-                        break;
-                    }
-
-                    _logger.LogWarning("Beko otomatik baglanti denemesi basarisiz. Deneme: {TryNo}, Mesaj: {Message}", i + 1, bekoConnectResponse.Message);
-
-                    await Task.Delay(3000, cancellationToken);
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Beko otomatik baglanti hatasi.");
+                await Task.Delay(BekoRetryDelay, cancellationToken);
             }
         }
 
-        public Task StopAsync(CancellationToken cancellationToken)
+        private async Task SafeDisconnectBekoAsync(
+            IBekoDeviceService bekoDeviceService,
+            IAutoConnectionStore autoConnectionStore,
+            Guid connectionId)
         {
-            return Task.CompletedTask;
+            try
+            {
+                await bekoDeviceService.DisconnectAsync(connectionId);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Beko baglantisi temizlenirken hata olustu. ConnectionId: {ConnectionId}", connectionId);
+            }
+            finally
+            {
+                if (autoConnectionStore.BekoConnectionId == connectionId)
+                    autoConnectionStore.SetBeko(null);
+            }
+        }
+
+        private static bool IsBekoConnected(object? data)
+        {
+            if (data is null)
+                return false;
+
+            try
+            {
+                using var document = JsonDocument.Parse(JsonSerializer.Serialize(data));
+                if (!document.RootElement.TryGetProperty("isConnected", out var isConnectedElement))
+                    return false;
+
+                return isConnectedElement.ValueKind == JsonValueKind.True;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ using TriaYazarKasaRestApi.Business.manager;
 using TriaYazarKasaRestApi.Business.services;
 using TriaYazarKasaRestApi.Data.Acces.Data;
 using TriaYazarKasaRestApiWebApi.HostedServices;
+using TriaYazarKasaRestApiWebApi.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Hugin DLL'leri sertifika ve benzeri dosyalari calisma dizinine gore ariyor.
@@ -27,11 +28,20 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddSingleton<IHuginConnectionManager, HuginConnectionManager>();
 builder.Services.AddScoped<IHuginDeviceService, HuginDeviceService>();
-builder.Services.AddSingleton<IBekoConnectionManager, BekoConnectionManager>();
-builder.Services.AddScoped<IBekoDeviceService, BekoDeviceService>();
+builder.Services.AddHttpClient<IBekoDeviceService, BekoWorkerProxyService>(client =>
+{
+    client.BaseAddress = new Uri(BekoWorkerHostedService.WorkerUrl);
+    client.Timeout = TimeSpan.FromSeconds(35);
+});
+builder.Services.AddHttpClient("BekoWorker", client =>
+{
+    client.BaseAddress = new Uri(BekoWorkerHostedService.WorkerUrl);
+    client.Timeout = TimeSpan.FromSeconds(35);
+});
 builder.Services.AddScoped<IUnifiedSaleService, UnifiedSaleService>();
 
 builder.Services.AddSingleton<IAutoConnectionStore, AutoConnectionStore>();
+builder.Services.AddHostedService<BekoWorkerHostedService>();
 builder.Services.AddHostedService<PosAutoConnectHostedService>();
 var app = builder.Build();
 

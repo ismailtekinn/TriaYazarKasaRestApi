@@ -35,6 +35,14 @@ namespace TriaYazarKasaRestApiWebApi.Controllers
         public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> SendBasket(Guid connectionIdB, [FromBody] BekoBasketRequestDto request)
             => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.SendBasketAsync(connectionIdB, request)));
 
+        [HttpPost("{connectionIdB}/basket2")]
+        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> SendBasket2(Guid connectionIdB, [FromBody] BekoBasketRequestDto request)
+            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.SendBasketAsync2(connectionIdB, request)));
+
+        [HttpGet("{connectionIdB}/basket2/{basketId}")]
+        public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> GetBasketStatus2(Guid connectionIdB, string basketId)
+            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.GetBasketOperationStatusAsync(connectionIdB, basketId)));
+
         [HttpPost("{connectionIdB}/payment")]
         public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> SendPayment(Guid connectionIdB, [FromBody] BekoPaymentRequestDto request)
             => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.SendPaymentAsync(connectionIdB, request)));

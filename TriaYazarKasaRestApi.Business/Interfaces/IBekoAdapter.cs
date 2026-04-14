@@ -12,6 +12,8 @@ namespace TriaYazarKasaRestApi.Business.Interfaces
         Task<PosOperationResult> GetStatusAsync();
         Task<PosOperationResult> GetDeviceInfoAsync();
         Task<PosOperationResult> SendBasketAsync(BekoBasketRequestDto request);
+        Task<PosOperationResult> SendBasketAsync2(BekoBasketRequestDto request);
+        Task<PosOperationResult> GetBasketOperationStatusAsync(string basketId);
         Task<PosOperationResult> SendPaymentAsync(BekoPaymentRequestDto request);
         Task<PosOperationResult> VoidReceiptAsync();
     }

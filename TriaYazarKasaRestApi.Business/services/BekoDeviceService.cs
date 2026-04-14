@@ -10,20 +10,23 @@ namespace TriaYazarKasaRestApi.Business.services
     {
         private readonly IBekoConnectionManager _connectionManager;
         private readonly IAutoConnectionStore _autoConnectionStore;
+        private readonly IBekoBasketOperationStore _basketOperationStore;
 
         public BekoDeviceService(
             IBekoConnectionManager connectionManager,
-            IAutoConnectionStore autoConnectionStore)
+            IAutoConnectionStore autoConnectionStore,
+            IBekoBasketOperationStore basketOperationStore)
         {
             _connectionManager = connectionManager;
             _autoConnectionStore = autoConnectionStore;
+            _basketOperationStore = basketOperationStore;
         }
 
         public async Task<BekoConnectionResponseDto> ConnectAsync(BekoConnectRequestDto request)
         {
             try
             {
-                var adapter = new BekoAdapter(request.Token);
+                var adapter = new BekoAdapter(_basketOperationStore, request.Token);
                 var result = await adapter.ConnectAsync();
                 var id = Guid.NewGuid();
 
@@ -97,6 +100,12 @@ namespace TriaYazarKasaRestApi.Business.services
 
         public Task<BekoOperationResponseDto> SendBasketAsync(Guid connectionId, BekoBasketRequestDto request)
             => ExecuteAsync(connectionId, x => x.SendBasketAsync(request));
+
+        public Task<BekoOperationResponseDto> SendBasketAsync2(Guid connectionId, BekoBasketRequestDto request)
+            => ExecuteAsync(connectionId, x => x.SendBasketAsync2(request));
+
+        public Task<BekoOperationResponseDto> GetBasketOperationStatusAsync(Guid connectionId, string basketId)
+            => ExecuteWithoutLockAsync(connectionId, x => x.GetBasketOperationStatusAsync(basketId));
 
         public Task<BekoOperationResponseDto> SendPaymentAsync(Guid connectionId, BekoPaymentRequestDto request)
             => ExecuteAsync(connectionId, x => x.SendPaymentAsync(request));
