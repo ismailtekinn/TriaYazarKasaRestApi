@@ -32,7 +32,7 @@ namespace TriaYazarKasaRestApi.Data.Acces.Models
         [MaxLength(100)]
         public string? Uuid { get; set; }
 
-        public string? PaymentsJson { get; set; }
+        public string? SaleJson { get; set; }
 
         public string? ReceiptResultJson { get; set; }
     }

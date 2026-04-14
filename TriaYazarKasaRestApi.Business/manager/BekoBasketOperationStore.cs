@@ -84,12 +84,10 @@ namespace TriaYazarKasaRestApi.Business.manager
                 CreatedAtUtc = dto.CreatedAtUtc,
                 UpdatedAtUtc = dto.UpdatedAtUtc,
                 IsFinal = dto.IsFinal,
+                SaleJson = dto.SaleJson,
                 ReceiptNo = dto.ReceiptResult?.ReceiptNo,
                 ZNo = dto.ReceiptResult?.ZNo,
                 Uuid = dto.ReceiptResult?.Uuid,
-                PaymentsJson = dto.ReceiptResult?.Payments.Count > 0
-                    ? JsonSerializer.Serialize(dto.ReceiptResult.Payments, JsonOptions)
-                    : null,
                 ReceiptResultJson = dto.ReceiptResult == null
                     ? null
                     : JsonSerializer.Serialize(dto.ReceiptResult, JsonOptions)
@@ -104,12 +102,10 @@ namespace TriaYazarKasaRestApi.Business.manager
             record.CreatedAtUtc = dto.CreatedAtUtc;
             record.UpdatedAtUtc = dto.UpdatedAtUtc;
             record.IsFinal = dto.IsFinal;
+            record.SaleJson = dto.SaleJson;
             record.ReceiptNo = dto.ReceiptResult?.ReceiptNo;
             record.ZNo = dto.ReceiptResult?.ZNo;
             record.Uuid = dto.ReceiptResult?.Uuid;
-            record.PaymentsJson = dto.ReceiptResult?.Payments.Count > 0
-                ? JsonSerializer.Serialize(dto.ReceiptResult.Payments, JsonOptions)
-                : null;
             record.ReceiptResultJson = dto.ReceiptResult == null
                 ? null
                 : JsonSerializer.Serialize(dto.ReceiptResult, JsonOptions);
@@ -119,15 +115,14 @@ namespace TriaYazarKasaRestApi.Business.manager
         {
             var receiptResult = DeserializeReceiptResult(record);
 
-            if (receiptResult == null && (record.ReceiptNo.HasValue || record.ZNo.HasValue || !string.IsNullOrWhiteSpace(record.Uuid) || !string.IsNullOrWhiteSpace(record.PaymentsJson)))
+            if (receiptResult == null && (record.ReceiptNo.HasValue || record.ZNo.HasValue || !string.IsNullOrWhiteSpace(record.Uuid)))
             {
                 receiptResult = new BekoReceiptResultDto
                 {
                     BasketId = record.BasketId,
                     ReceiptNo = record.ReceiptNo,
                     ZNo = record.ZNo,
-                    Uuid = record.Uuid,
-                    Payments = DeserializePayments(record.PaymentsJson)
+                    Uuid = record.Uuid
                 };
             }
 
@@ -140,6 +135,7 @@ namespace TriaYazarKasaRestApi.Business.manager
                 CreatedAtUtc = record.CreatedAtUtc,
                 UpdatedAtUtc = record.UpdatedAtUtc,
                 IsFinal = record.IsFinal,
+                SaleJson = record.SaleJson,
                 ReceiptResult = receiptResult
             };
         }
@@ -156,19 +152,8 @@ namespace TriaYazarKasaRestApi.Business.manager
             receiptResult.ReceiptNo ??= record.ReceiptNo;
             receiptResult.ZNo ??= record.ZNo;
             receiptResult.Uuid ??= record.Uuid;
-            if (receiptResult.Payments.Count == 0)
-                receiptResult.Payments = DeserializePayments(record.PaymentsJson);
 
             return receiptResult;
-        }
-
-        private static List<BekoReceiptPaymentDto> DeserializePayments(string? paymentsJson)
-        {
-            if (string.IsNullOrWhiteSpace(paymentsJson))
-                return new List<BekoReceiptPaymentDto>();
-
-            return JsonSerializer.Deserialize<List<BekoReceiptPaymentDto>>(paymentsJson, JsonOptions)
-                ?? new List<BekoReceiptPaymentDto>();
         }
     }
 }

@@ -9,6 +9,7 @@ namespace TriaYazarKasaRestApi.Entities.DTOs
         public DateTime CreatedAtUtc { get; set; }
         public DateTime UpdatedAtUtc { get; set; }
         public bool IsFinal { get; set; }
+        public string? SaleJson { get; set; }
         public BekoReceiptResultDto? ReceiptResult { get; set; }
     }
 }

@@ -180,43 +180,17 @@ namespace TriaYazarKasaRestApi.Business.Adapters
             {
                 EnsureConnected();
 
-                var payload = new
-                {
-                    basketID = request.BasketId,
-                    documentType = request.DocumentType,
-                    taxFreeAmount = request.TaxFreeAmount,
-                    createInvoice = request.CreateInvoice,
-                    isWayBill = request.IsWayBill,
-                    note = request.Note,
-                    items = request.Items.Select(x => new
-                    {
-                        barcode = x.Barcode,
-                        name = x.Name,
-                        pluNo = x.PluNo,
-                        price = x.Price,
-                        sectionNo = x.SectionNo,
-                        taxPercent = x.TaxPercent,
-                        type = x.Type,
-                        unit = x.Unit,
-                        vatID = x.VatId,
-                        limit = x.Limit,
-                        quantity = x.Quantity
-                    }).ToList(),
-                    paymentItems = request.PaymentItems.Select(x => new
-                    {
-                        description = x.Description,
-                        amount = x.Amount,
-                        type = x.Type
-                    }).ToList()
-                };
+                var payloadJson = CreateBasketPayloadJson(request);
+                var now = DateTime.UtcNow;
 
                 _callbackWaiter = new(TaskCreationOptions.RunContinuationsAsynchronously);
                 _hasActiveSale = true;
                 _paymentInProgress = true;
                 _activeBasketId = request.BasketId;
-                _lastSaleActivityUtc = DateTime.UtcNow;
+                _lastSaleActivityUtc = now;
 
-                _communication.sendBasket(JsonSerializer.Serialize(payload));
+                _communication.sendBasket(payloadJson);
+                SavePendingBasketOperation(request.BasketId, payloadJson, now);
 
                 string callbackJson;
                 try
@@ -252,55 +226,15 @@ namespace TriaYazarKasaRestApi.Business.Adapters
             {
                 EnsureConnected();
 
-                var payload = new
-                {
-                    basketID = request.BasketId,
-                    documentType = request.DocumentType,
-                    taxFreeAmount = request.TaxFreeAmount,
-                    createInvoice = request.CreateInvoice,
-                    isWayBill = request.IsWayBill,
-                    note = request.Note,
-                    items = request.Items.Select(x => new
-                    {
-                        barcode = x.Barcode,
-                        name = x.Name,
-                        pluNo = x.PluNo,
-                        price = x.Price,
-                        sectionNo = x.SectionNo,
-                        taxPercent = x.TaxPercent,
-                        type = x.Type,
-                        unit = x.Unit,
-                        vatID = x.VatId,
-                        limit = x.Limit,
-                        quantity = x.Quantity
-                    }).ToList(),
-                    paymentItems = request.PaymentItems.Select(x => new
-                    {
-                        description = x.Description,
-                        amount = x.Amount,
-                        type = x.Type
-                    }).ToList()
-                };
-
+                var payloadJson = CreateBasketPayloadJson(request);
                 var now = DateTime.UtcNow;
-                var operation = new BekoBasketOperationStatusDto
-                {
-                    BasketId = request.BasketId,
-                    OperationId = request.BasketId,
-                    StatusCode = "PENDING",
-                    StatusMessage = "Sepet Beko cihaza gonderildi, sonuc bekleniyor.",
-                    CreatedAtUtc = now,
-                    UpdatedAtUtc = now,
-                    IsFinal = false
-                };
-
-                _basketOperationStore.Set(operation);
                 _hasActiveSale = true;
                 _paymentInProgress = true;
                 _activeBasketId = request.BasketId;
                 _lastSaleActivityUtc = now;
 
-                _communication.sendBasket(JsonSerializer.Serialize(payload));
+                _communication.sendBasket(payloadJson);
+                var operation = SavePendingBasketOperation(request.BasketId, payloadJson, now);
 
                 return Task.FromResult(PosOperationResult.Ok("Sepet Beko cihaza gonderildi, sonuc bekleniyor.", new BekoBasketAsyncResponseDto
                 {
@@ -569,6 +503,59 @@ namespace TriaYazarKasaRestApi.Business.Adapters
             waiter.TrySetException(new InvalidOperationException(message));
             if (ReferenceEquals(_callbackWaiter, waiter))
                 _callbackWaiter = null;
+        }
+
+        private BekoBasketOperationStatusDto SavePendingBasketOperation(string basketId, string payloadJson, DateTime now)
+        {
+            var operation = new BekoBasketOperationStatusDto
+            {
+                BasketId = basketId,
+                OperationId = basketId,
+                StatusCode = "PENDING",
+                StatusMessage = "Sepet Beko cihaza gonderildi, sonuc bekleniyor.",
+                CreatedAtUtc = now,
+                UpdatedAtUtc = now,
+                IsFinal = false,
+                SaleJson = payloadJson
+            };
+
+            _basketOperationStore.Set(operation);
+            return operation;
+        }
+
+        private static string CreateBasketPayloadJson(BekoBasketRequestDto request)
+        {
+            var payload = new
+            {
+                basketID = request.BasketId,
+                documentType = request.DocumentType,
+                taxFreeAmount = request.TaxFreeAmount,
+                createInvoice = request.CreateInvoice,
+                isWayBill = request.IsWayBill,
+                note = request.Note,
+                items = request.Items.Select(x => new
+                {
+                    barcode = x.Barcode,
+                    name = x.Name,
+                    pluNo = x.PluNo,
+                    price = x.Price,
+                    sectionNo = x.SectionNo,
+                    taxPercent = x.TaxPercent,
+                    type = x.Type,
+                    unit = x.Unit,
+                    vatID = x.VatId,
+                    limit = x.Limit,
+                    quantity = x.Quantity
+                }).ToList(),
+                paymentItems = request.PaymentItems.Select(x => new
+                {
+                    description = x.Description,
+                    amount = x.Amount,
+                    type = x.Type
+                }).ToList()
+            };
+
+            return JsonSerializer.Serialize(payload);
         }
 
         private void UpdateBasketOperation(BekoReceiptResultDto receiptResult)
