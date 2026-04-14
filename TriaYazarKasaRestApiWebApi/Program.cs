@@ -22,9 +22,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseInMemoryDatabase("HuginDb"));
+// builder.Services.AddDbContext<ApplicationDbContext>(options =>
+//     options.UseInMemoryDatabase("HuginDb"));
 
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddSingleton<IHuginConnectionManager, HuginConnectionManager>();
 builder.Services.AddScoped<IHuginDeviceService, HuginDeviceService>();
@@ -44,6 +47,12 @@ builder.Services.AddSingleton<IAutoConnectionStore, AutoConnectionStore>();
 builder.Services.AddHostedService<BekoWorkerHostedService>();
 builder.Services.AddHostedService<PosAutoConnectHostedService>();
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dbContext.Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

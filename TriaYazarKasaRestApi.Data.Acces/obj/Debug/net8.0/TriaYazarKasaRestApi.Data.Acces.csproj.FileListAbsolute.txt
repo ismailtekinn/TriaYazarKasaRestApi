@@ -29,3 +29,5 @@ C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKas
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\refint\TriaYazarKasaRestApi.Data.Acces.dll
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\TriaYazarKasaRestApi.Data.Acces.pdb
 C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\ref\TriaYazarKasaRestApi.Data.Acces.dll
+C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\bin\Debug\net8.0\TriaYazarKasaRestApi.Data.Acces.runtimeconfig.json
+C:\Users\Administrator\Documents\TriaYazarKasa\TriaYazarKasaRestApi\TriaYazarKasaRestApi.Data.Acces\obj\Debug\net8.0\TriaYazarKasaRestApi.Data.Acces.genruntimeconfig.cache
