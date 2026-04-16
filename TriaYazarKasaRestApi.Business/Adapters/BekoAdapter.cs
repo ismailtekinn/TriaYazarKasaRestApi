@@ -169,9 +169,27 @@ namespace TriaYazarKasaRestApi.Business.Adapters
                 "Beko cihaz bilgisi alinirken USB/driver hatasi olustu.",
                 () =>
                 {
-                    EnsureConnected();
+                    var deviceIndex = GetConnectedDeviceIndex(allowReconnect: true);
+                    if (deviceIndex < 0)
+                        throw new InvalidOperationException("Beko cihazi bagli degil.");
+
+                    _isConnected = true;
+                    _lastDeviceIndex = deviceIndex;
+
                     var json = _communication.getFiscalInfo();
-                    return PosOperationResult.Ok("Cihaz bilgisi alindi.", JsonSerializer.Deserialize<object>(json)!);
+                    var fiscalInfo = string.IsNullOrWhiteSpace(json)
+                        ? default
+                        : JsonSerializer.Deserialize<JsonElement>(json);
+
+                    return PosOperationResult.Ok("Cihaz bilgisi alindi.", new BekoDeviceInfoDto
+                    {
+                        IsConnected = true,
+                        ActiveDeviceIndex = deviceIndex,
+                        SelectedDeviceId = _serialNo,
+                        LastConnectedDeviceId = _lastConnectedSerialNo,
+                        LastCallbackAtUtc = _lastCallbackAtUtc,
+                        FiscalInfo = fiscalInfo
+                    });
                 });
 
         public async Task<PosOperationResult> SendBasketAsync(BekoBasketRequestDto request)

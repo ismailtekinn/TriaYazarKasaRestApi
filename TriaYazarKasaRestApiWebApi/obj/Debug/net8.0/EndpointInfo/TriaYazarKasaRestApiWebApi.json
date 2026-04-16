@@ -53,14 +53,14 @@
         }
       }
     },
-    "/api/beko/{connectionId}/disconnect": {
+    "/api/beko/{connectionIdB}/disconnect": {
       "delete": {
         "tags": [
           "Beko"
         ],
         "parameters": [
           {
-            "name": "connectionId",
+            "name": "connectionIdB",
             "in": "path",
             "required": true,
             "schema": {
@@ -93,14 +93,14 @@
         }
       }
     },
-    "/api/beko/{connectionId}/status": {
+    "/api/beko/{connectionIdB}/status": {
       "get": {
         "tags": [
           "Beko"
         ],
         "parameters": [
           {
-            "name": "connectionId",
+            "name": "connectionIdB",
             "in": "path",
             "required": true,
             "schema": {
@@ -133,14 +133,14 @@
         }
       }
     },
-    "/api/beko/{connectionId}/device-info": {
+    "/api/beko/{connectionIdB}/device-info": {
       "get": {
         "tags": [
           "Beko"
         ],
         "parameters": [
           {
-            "name": "connectionId",
+            "name": "connectionIdB",
             "in": "path",
             "required": true,
             "schema": {
@@ -173,14 +173,14 @@
         }
       }
     },
-    "/api/beko/{connectionId}/basket": {
+    "/api/beko/{connectionIdB}/basket": {
       "post": {
         "tags": [
           "Beko"
         ],
         "parameters": [
           {
-            "name": "connectionId",
+            "name": "connectionIdB",
             "in": "path",
             "required": true,
             "schema": {
@@ -232,14 +232,121 @@
         }
       }
     },
-    "/api/beko/{connectionId}/payment": {
+    "/api/beko/{connectionIdB}/basket2": {
       "post": {
         "tags": [
           "Beko"
         ],
         "parameters": [
           {
-            "name": "connectionId",
+            "name": "connectionIdB",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BekoBasketRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BekoBasketRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BekoBasketRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BekoOperationResponseDtoApiResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BekoOperationResponseDtoApiResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BekoOperationResponseDtoApiResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/beko/{connectionIdB}/basket2/{basketId}": {
+      "get": {
+        "tags": [
+          "Beko"
+        ],
+        "parameters": [
+          {
+            "name": "connectionIdB",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "basketId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BekoOperationResponseDtoApiResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BekoOperationResponseDtoApiResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BekoOperationResponseDtoApiResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/beko/{connectionIdB}/payment": {
+      "post": {
+        "tags": [
+          "Beko"
+        ],
+        "parameters": [
+          {
+            "name": "connectionIdB",
             "in": "path",
             "required": true,
             "schema": {
@@ -291,14 +398,14 @@
         }
       }
     },
-    "/api/beko/{connectionId}/void": {
+    "/api/beko/{connectionIdB}/void": {
       "post": {
         "tags": [
           "Beko"
         ],
         "parameters": [
           {
-            "name": "connectionId",
+            "name": "connectionIdB",
             "in": "path",
             "required": true,
             "schema": {
@@ -327,6 +434,18 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/beko/debug/usb-devices": {
+      "get": {
+        "tags": [
+          "BekoDebug"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -808,6 +927,46 @@
         }
       }
     },
+    "/api/hugin/{connectionId}/belge-kapat": {
+      "post": {
+        "tags": [
+          "Hugin"
+        ],
+        "parameters": [
+          {
+            "name": "connectionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HuginOperationResponseDtoApiResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HuginOperationResponseDtoApiResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HuginOperationResponseDtoApiResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/unified-sale/{deviceType}": {
       "post": {
         "tags": [
@@ -859,45 +1018,6 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponseDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
                 }
               }
             }
@@ -1652,29 +1772,6 @@
             "nullable": true
           },
           "lisansData": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "WeatherForecast": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "temperatureC": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "summary": {
             "type": "string",
             "nullable": true
           }

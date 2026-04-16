@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TriaYazarKasaRestApi.Entities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10a082c2288113d58d05e154feec3c9e1350cfb4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd63ed65c2c42fbe00039849f738961e5da47d56")]
 [assembly: System.Reflection.AssemblyProductAttribute("TriaYazarKasaRestApi.Entities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TriaYazarKasaRestApi.Entities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

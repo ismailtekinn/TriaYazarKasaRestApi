@@ -2,13 +2,13 @@
   {
     "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
     "Method": "SendBasket",
-    "RelativePath": "api/beko/{connectionId}/basket",
+    "RelativePath": "api/beko/{connectionIdB}/basket",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "connectionId",
+        "Name": "connectionIdB",
         "Type": "System.Guid",
         "IsRequired": true
       },
@@ -32,14 +32,76 @@
   },
   {
     "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
-    "Method": "DeviceInfo",
-    "RelativePath": "api/beko/{connectionId}/device-info",
+    "Method": "SendBasket2",
+    "RelativePath": "api/beko/{connectionIdB}/basket2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionIdB",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.BekoBasketRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.BekoOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
+    "Method": "GetBasketStatus2",
+    "RelativePath": "api/beko/{connectionIdB}/basket2/{basketId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "connectionId",
+        "Name": "connectionIdB",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "basketId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.BekoOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
+    "Method": "DeviceInfo",
+    "RelativePath": "api/beko/{connectionIdB}/device-info",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionIdB",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -59,13 +121,13 @@
   {
     "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
     "Method": "Disconnect",
-    "RelativePath": "api/beko/{connectionId}/disconnect",
+    "RelativePath": "api/beko/{connectionIdB}/disconnect",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "connectionId",
+        "Name": "connectionIdB",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -85,13 +147,13 @@
   {
     "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
     "Method": "SendPayment",
-    "RelativePath": "api/beko/{connectionId}/payment",
+    "RelativePath": "api/beko/{connectionIdB}/payment",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "connectionId",
+        "Name": "connectionIdB",
         "Type": "System.Guid",
         "IsRequired": true
       },
@@ -116,13 +178,13 @@
   {
     "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
     "Method": "Status",
-    "RelativePath": "api/beko/{connectionId}/status",
+    "RelativePath": "api/beko/{connectionIdB}/status",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "connectionId",
+        "Name": "connectionIdB",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -142,13 +204,13 @@
   {
     "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoController",
     "Method": "VoidReceipt",
-    "RelativePath": "api/beko/{connectionId}/void",
+    "RelativePath": "api/beko/{connectionIdB}/void",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "connectionId",
+        "Name": "connectionIdB",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -192,6 +254,16 @@
     ]
   },
   {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.BekoDebugController",
+    "Method": "ListUsbDevices",
+    "RelativePath": "api/beko/debug/usb-devices",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.ConnectionController",
     "Method": "GetAutoConnections",
     "RelativePath": "api/connections/auto",
@@ -200,6 +272,32 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
+    "Method": "CloseReceipt",
+    "RelativePath": "api/hugin/{connectionId}/belge-kapat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "connectionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TriaYazarKasaRestApi.Entities.DTOs.ApiResponseDto\u00601[[TriaYazarKasaRestApi.Entities.DTOs.HuginOperationResponseDto, TriaYazarKasaRestApi.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.HuginController",
@@ -506,26 +604,5 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "TriaYazarKasaRestApiWebApi.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[TriaYazarKasaRestApiWebApi.WeatherForecast, TriaYazarKasaRestApiWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]
