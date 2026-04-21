@@ -8,6 +8,7 @@ using TriaYazarKasaRestApi.Data.Acces.Data;
 using TriaYazarKasaRestApiWebApi.HostedServices;
 using TriaYazarKasaRestApiWebApi.Services;
 var builder = WebApplication.CreateBuilder(args);
+const string CorsPolicyName = "cors";
 
 // Hugin DLL'leri sertifika ve benzeri dosyalari calisma dizinine gore ariyor.
 Directory.SetCurrentDirectory(AppContext.BaseDirectory);
@@ -18,7 +19,25 @@ Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(CorsPolicyName, policy =>
+        policy
+            .WithOrigins(
+                "http://10.0.2.2:5175",
+                "https://10.0.2.2:5175",
+                "http://10.0.2.16:5175",
+                "https://10.0.2.16:5175",
+                "http://192.168.0.65:8081",
+                "https://192.168.0.65:8081",
+                "http://localhost:8081",
+                "https://localhost:8081"
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials()
+    );
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -62,6 +81,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(CorsPolicyName);
 
 app.UseAuthorization();
 

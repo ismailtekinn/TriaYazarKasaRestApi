@@ -9,19 +9,41 @@ namespace TriaYazarKasaRestApiWebApi.Controllers
     public class BekoController : ControllerBase
     {
         private readonly IBekoDeviceService _bekoDeviceService;
+        private readonly IAutoConnectionStore _autoConnectionStore;
 
-        public BekoController(IBekoDeviceService bekoDeviceService)
+        public BekoController(
+            IBekoDeviceService bekoDeviceService,
+            IAutoConnectionStore autoConnectionStore)
         {
             _bekoDeviceService = bekoDeviceService;
+            _autoConnectionStore = autoConnectionStore;
         }
 
         [HttpPost("connect")]
         public async Task<ActionResult<ApiResponseDto<BekoConnectionResponseDto>>> Connect([FromBody] BekoConnectRequestDto request)
-            => Ok(ApiResponseDto<BekoConnectionResponseDto>.Ok(await _bekoDeviceService.ConnectAsync(request)));
+        {
+            var result = await _bekoDeviceService.ConnectAsync(request);
+
+            if (result.IsConnected && result.ConnectionId != Guid.Empty)
+            {
+                _autoConnectionStore.SetBeko(result.ConnectionId);
+            }
+
+            return Ok(ApiResponseDto<BekoConnectionResponseDto>.Ok(result));
+        }
 
         [HttpDelete("{connectionIdB}/disconnect")]
         public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> Disconnect(Guid connectionIdB)
-            => Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(await _bekoDeviceService.DisconnectAsync(connectionIdB)));
+        {
+            var result = await _bekoDeviceService.DisconnectAsync(connectionIdB);
+
+            if (result.Success && _autoConnectionStore.BekoConnectionId == connectionIdB)
+            {
+                _autoConnectionStore.SetBeko(null);
+            }
+
+            return Ok(ApiResponseDto<BekoOperationResponseDto>.Ok(result));
+        }
 
         [HttpGet("{connectionIdB}/status")]
         public async Task<ActionResult<ApiResponseDto<BekoOperationResponseDto>>> Status(Guid connectionIdB)
